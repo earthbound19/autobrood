@@ -1,0 +1,1 @@
+del *.flam3-err

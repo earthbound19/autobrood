@@ -1,0 +1,88 @@
+This is mathematical expressions calculator. You can use it at command
+prompt just like this:
+        math 4*sin(30)/(5-1)
+        math /h                will display a short help message.
+or
+        math /r 2^3/cos(pi) 
+
+/r tells the program to use radians.  Above means "2 raised to power 3
+divided by cos(3.1415926536), the result is -8.
+
+You can use it also interactively by entering only:
+
+    math
+
+You will then see the welcome screen. Next you can continue entering
+expressions and watching results, possibly using 26 memory registers
+(named with single letter a..z) available to store intermediate
+results. 
+
+Version 2.0 adds possibility to define 20 user functions. To use this
+feature start interactive math and type:
+
+        def:name(p0,p1,...,p9)=expression
+
+The name of a function may be a combination of 2 to 6 letters and
+digits, starting with a letter. p0 to p9 are formal parameters, you
+can have from 0 to 10 of this parameters. Examples of function
+definitions:
+
+   def:cot(p0) = 1/tan(p0)    defines function cotangent
+   def:const=-15.67           defines some constant
+   def:doubx=2*x              returns double contents of register x 
+   def:dst(p0,p1) = sqrt(p0*p0 + p1*p1)
+
+You can use these functions in your calculations like this:
+
+   5 + dst(3*5.7, cos(25)*x)
+
+You can also separate several expressions with commas. They will be
+executed in sequence and the last result will be printed. Example:
+
+   x = 2, y = x+3, y + y
+
+will print 10.
+
+Standard functions:     
+acos(x)     arccosine of x
+asin(x)     arcsine of x
+atan(x)     arctangent of x
+cos(x)      cosine of x
+sin(x)      sine of x
+tan(x)      tangent of x
+deg(x)      change radians into degrees
+rad(x)      change degrees into radians
+exp(x)      exponential value of x (base is math e=2.71828183 constant)
+ln(x)       natural logarithm of x (base e)
+log(x)      base 10 logarithm of x
+round(x)    round the value x to the nearest integer
+sqrt(x)     square root of x (x must be positive or 0)
+abs(x)      absolute (non-negative) value of x
+cosh(x)     hyperbolic cosine of x
+sinh(x)     hyperbolic sine of x
+tanh(x)     hyperbolic tangent of x
+pi          PI constant (3.1415926536...)
+last        previously calculated value
+
+Operators:
++(add)  -(subtract, minus)  *(multiply)  /(divide)  %(modulo)  ^(exponent)
+'=' assigns a value to one letter memory register (for later use), e.g.
+                 x = sin(30)/(5*log(2) - 2^3)
+
+
+One letter commands:
+/d  set angle unit to Degrees            /q  Quit (or press Ctrl-C)
+    (default at start)                   /r  set angle unit to Radians
+/h  to see Help                          /s  Show a...z memory registers
+/f  display User Defined Functions       /c  clear all functions & regs.
+/v  saVe                                 /l  load
+
+This program is in public domain and may be freely distributed.
+
+    Greg Kochaniak, Hyperionics
+    3146 Chestnut Street, Murrysville PA 15668, USA
+    email: gregko@hyperionics.com,
+    http://www.hyperionics.com
+    
+
+

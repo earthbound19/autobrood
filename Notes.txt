@@ -1,0 +1,18 @@
+What done the split of all 242.xml.txt into individual .xml (later .flam3) files for every sheep in the flock was this command:
+
+cygwin command:
+xml_split all_242.xml
+
+. . . and somehow I installed something on cygwin to get that command. xml twig?
+
+previous, working, far less efficient method, from bash:
+
+# RE: http://www.labnol.org/software/wget-command-examples/28750/
+wget --execute robots=off --recursive --no-parent --accept flam3,html --no-clobber http://electricsheep.com/archives/generation-242/
+
+----
+There are 2,013,183 possible children among all the sheep in generation 242, if you mutate each pair three different ways.
+
+http://www.wolframalpha.com/input/?i=combinations+of+1159+select+2
+
+It is feasible to thus cross-breed them all and render thumbnails for all of them. But it may be an enormous undertaking.

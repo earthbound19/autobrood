@@ -1,0 +1,1 @@
+ren *.rendering-thumb *.flam3
