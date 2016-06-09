@@ -1,7 +1,7 @@
 CALL set-env
 
 SET numRandomSheep=12
-SET getGenomeBatch=fetch-random-genomes-flock-202-only.bat
+SET getGenomeBatch=fetch-random-genomes-flock-242-only.bat
 REM SET getGenomeBatch=fetch-random-genomes.bat
 
 IF NOT EXIST brood mkdir brood
