@@ -3,4 +3,6 @@ Scripts to mass crossbreed, select and render fractal flames (e.g. "Electric She
 
 Necessary dependencies are included.
 
-Double-click examples\example-brood-1\double-click-me.bat to get an idea how it works. Also explore the batch-scripts directory and the _resources.7z archive (7zip required). 
+Double-click examples\example-brood-1\double-click-me.bat to get an idea how it works. Also explore the batch-scripts directory and the _resources.7z archive (7zip required).
+
+At this writing, many of the scripts are defunct for various reasons and need reworking, but many of them work, also.
