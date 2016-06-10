@@ -1,5 +1,5 @@
 ss=.35
-qs=1
+qs=3
 
 find . -iname \*.flam3 -o -iname \*.flame > fractal_flames_list.txt
 mapfile -t fractal_flames_list < fractal_flames_list.txt
