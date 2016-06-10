@@ -50,8 +50,9 @@ set ss=1
 IF DEFINED %qs (
 	REM DO NOTHING
 ) ELSE (
+set qs=11
 REM set qs=4.3
-set qs=2.8
+REM set qs=3.2
 	)
 
 	REM alternate .png settings (for very high res masters, I prefer png with
