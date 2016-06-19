@@ -3,7 +3,7 @@ ECHO OFF
 SETLOCAL ENABLEDELAYEDEXPANSION
 
 IF NOT EXIST children mkdir children
-SET nick=openhatch
+SET nick=earthbound
 SET url=http://earthbound.io
 
 FOR %%S IN (*.flame, *.flam3) DO	(

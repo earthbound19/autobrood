@@ -5,4 +5,6 @@ SET PATH=%PATH%;%CD%
 cd ..
 cd bin
 SET PATH=%PATH%;%CD%
-cd ..
+cd fractorium_openCL_GPU_fractal_flames
+SET PATH=%PATH%;%CD%
+cd ..\..

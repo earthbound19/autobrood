@@ -1,0 +1,130 @@
+<flames>
+<flame version="EMBER-WIN-0.9.9.6" time="0" name="0_of_0_of_electricsheep.242.00030_x_electricsheep.242.00098_x_0_" size="800 592" center="-1.11038 -1.03242" scale="149.558" rotate="-355.58" supersample="2" filter="1" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" background="0 0 0" brightness="60.6461" gamma="3.98015" highlight_power="-1" vibrancy="1" estimator_radius="11" estimator_minimum="0" estimator_curve="0.6" gamma_threshold="0.01" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" palette_mode="step" interpolation="linear" interpolation_type="log" plugins="linear spherical fan flatten sinusoidal polar disc waves julian heart" new_linear="1" curves="0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 ">
+   <xform weight="0.129462" color="0" var_color="1" color_speed="0.228656" name="" animate="0" linear="0.201175" spherical="0.0090689" fan="0.789756" flatten="1" coefs="0.25666 0.286347 0.313608 -0.287286 0.531401 -2.8693" opacity="1"/>
+   <xform weight="0.192665" color="1" var_color="1" color_speed="0.5" name="" animate="1" linear="0.197439" sinusoidal="0.00384168" polar="0.00947614" disc="0.789756" waves="0.00589057" flatten="1" coefs="-0.26269 2.85467 -0.329174 4.04048 1.75281 -1.55902" opacity="1"/>
+   <xform weight="0.372238" color="0" var_color="1" color_speed="0.105122" name="" animate="0" linear="1" flatten="1" coefs="-0.0432157 0.840808 -0.769177 0.171284 0.472874 -1.63959" opacity="1"/>
+   <xform weight="0.306425" color="1" var_color="1" color_speed="0.105122" name="" animate="0" linear="1" flatten="1" coefs="-1 0 0 1 0 0" opacity="1"/>
+   <xform weight="0.220537" color="0" var_color="1" color_speed="0.5" name="" animate="1" linear="0.44585" spherical="0.55415" flatten="1" coefs="-0.231433 -0.380429 0.873021 -0.229164 1.10692 0.874053" opacity="1"/>
+   <xform weight="0.0751228" color="1" var_color="1" color_speed="0.5" name="" animate="1" linear="0.448083" spherical="0.551917" flatten="1" coefs="-1.84141 -0.101831 -0.208102 0.567411 0.808567 0.85206" opacity="1"/>
+   <xform weight="0.20434" color="0" var_color="1" color_speed="0.5" name="" animate="1" linear="1" flatten="1" coefs="0.03755 0.961148 -0.671251 -0.437846 0.347461 -0.936268" opacity="1"/>
+   <xform weight="0.5" color="1" var_color="1" color_speed="0" name="" animate="0" linear="1" flatten="1" coefs="0.970724 -0.240199 0.240199 0.970724 0.158212 0.123431" opacity="1"/>
+   <xform weight="0.129462" color="0" var_color="1" color_speed="0.228656" name="" animate="0" linear="0.201175" spherical="0.0090689" fan="0.789756" flatten="1" coefs="0.25666 0.286347 0.313608 -0.287286 0.531401 -2.8693" opacity="1"/>
+   <xform weight="0.192665" color="1" var_color="1" color_speed="0.5" name="" animate="1" linear="0.197439" sinusoidal="0.00384168" polar="0.00947614" disc="0.789756" waves="0.00589057" flatten="1" coefs="-0.26269 2.85467 -0.329174 4.04048 1.75281 -1.55902" opacity="1"/>
+   <xform weight="0.372238" color="0" var_color="1" color_speed="0.105122" name="" animate="0" linear="1" flatten="1" coefs="-0.0432157 0.840808 -0.769177 0.171284 0.472874 -1.63959" opacity="1"/>
+   <xform weight="0.306425" color="1" var_color="1" color_speed="0.105122" name="" animate="0" linear="1" flatten="1" coefs="-1 0 0 1 0 0" opacity="1"/>
+   <xform weight="1.46046" color="0" var_color="1" color_speed="0.5" name="" animate="1" disc="0.863079" flatten="1" coefs="-0.497156 0.538243 -0.538243 -0.497156 0 0" opacity="1"/>
+   <xform weight="0.5" color="1" var_color="1" color_speed="0.5" name="" animate="1" julian="1" julian_dist="-1" julian_power="2" flatten="1" coefs="0.158645 0.474164 -0.474164 0.158645 0.09429 -0.549713" opacity="1"/>
+   <xform weight="0.25" color="0" var_color="1" color_speed="0.5" name="" animate="1" heart="1.65959" julian="0.301658" julian_dist="1" julian_power="71" flatten="1" coefs="0.876786 -0.306078 0.694949 -0.262586 0.464835 0.454933" opacity="1"/>
+   <xform weight="0.25" color="1" var_color="1" color_speed="0.9" name="" animate="1" julian="1" julian_dist="1" julian_power="3" flatten="1" coefs="0.059857 0.496404 -0.496404 0.059857 -0.353045 -0.234807" opacity="1"/>
+   <palette count="256" format="RGB">
+      5b779c5b7397597193576e8f576b8c536787536383515f7f
+      4f5e7b4f5b774b57734b536f494f6b474e6746496343475f
+      43435b413f573f3c533c384f3c374b3b3346382f41372c3c
+      342838342734cf6e03cf6b04ce6b04c76b04c76b05bf6705
+      bf6705bf6705bd6606b76306b66107b55f07b35b08af5309
+      af5308af4f07af4706af4306af3f06af3f05af3805ae3404
+      ad3004a72f041a5b4f195f4f196153186353176757166b57
+      156e591c6f5f2473632b736733776b3879713f7b77477e7b
+      9e028797048797058793067f8e08798d09738d0a6f8c0a6b
+      870a63870a5b86095b85085e7f085e7f08667f096f7b097b
+      6f087b69077b6306775f05775303714f026e490169410063
+      3c006338005f30005b2f005b280059240057230057150053
+      1600531000570f00590a005e08015f010063000163000563
+      000763000b63001066001263001566001763002067002467
+      00286bd7dededbe2e0e0e7e3e3eae5e7efe8ecf3eceff6ee
+      f3fbf1f8fef3fbfff6fefff8fffffbfffffdffffffffffff
+      fffffffffffffffffffffffdfdfffbf6fff8f1fff4ecfef3
+      e7fbefe0f6ecdbf3ead6eee7cfeae3cae5e2c5e2debedcdc
+      b9d9d9b4d6d6add1d4a8cdd1a3c8cf9cc5cc97c0c892bcc6
+      8bb7c386b4c081b0be7cabba75a8b770a3b56b9fb2649ab0
+      5f97ad5a93aa538ea84e8ba44986a342829f3d7d9c387a9a
+      3276972c7193276e9222698e1b668b166089105d860a5884
+      05548100517d004c7c004978004476004073003b7000386e
+      00326b002f67002c6600276200235f001e5d001b5a001658
+      00125400105300104f000f4e000f4a000d49000b45000b44
+      000a40000a3e00083b00063900063600053400053100032f
+      00012c00012a0300270800250d002212002017001e1b001b
+      2000192500162a00142f001034000f39000b3e000a440006
+      4700054c00015100005600005b00006000006600006b0000
+      7000007300007800007d000097ef4695ee478fed43eda73f
+      eca63b8fe7388fe7348fe73097e3339cdf309fdf2fdf9f2c
+      dfa527df9f20df9d12e39e0ce69d06e79e03e79701e79700
+   </palette>
+   <edit date="Sat Jun 18 00:54:01 Mountain Daylight Time 2016" action="edit">
+      <edit date="" nick="openhatch" url="http://earthbound.io" action="cross union improved colors" filename="C:/Users/Tia/AppData/Roaming/Fractorium/esHybridTest.flam3" index="0">
+         <edit date="" nick="openhatch" url="http://earthbound.io" action="cross union cmap_cross 0: 113 236 reframed2 improved colors" filename="electricsheep_242.0030_and_el" index="0">
+            <edit date="Tue Nov  6 23:56:07 UTC 2007" id="30" action="cross alternate 1: 1 0 0 0 improved colors" filename="electricsheep_242.0030.breedi" index="0">
+               <edit date="Tue Nov  6 23:52:01 UTC 2007" id="26" action="clone brood" filename="p0" index="0">
+                  <edit date="Tue Nov  6 23:19:12 UTC 2007" id="23" action="mutate xform reframed improved colors" filename="upload" index="0">
+                     <edit date="Tue Nov  6 10:41:49 UTC 2007" id="6" action="clone brood" filename="spex" index="0">
+                        <edit date="Tue Nov  6 10:31:26 UTC 2007" id="1" action="cross interpolate 0.987194 1 cmap_cross 0: 26 50 64 trunc 1 12 trunc 1 9" filename="upload" index="0">
+                           <edit date="Sun Mar 26 15:47:47 PST 2006" action="genebank 198 10916" filename="genebank.flam3" index="421"/>
+                           <edit date="Sun Mar 26 15:48:07 PST 2006" action="genebank 198 22864" filename="genebank.flam3" index="618"/>
+                        </edit>
+                     </edit>
+                  </edit>
+               </edit>
+               <edit date="Tue Nov  6 23:52:08 UTC 2007" id="27" action="clone brood" filename="p1" index="0">
+                  <edit date="Tue Nov  6 23:19:29 UTC 2007" id="23" action="mutate xform" filename="upload" index="0">
+                     <edit date="Tue Nov  6 10:41:49 UTC 2007" id="6" action="clone brood" filename="spex" index="0">
+                        <edit date="Tue Nov  6 10:31:26 UTC 2007" id="1" action="cross interpolate 0.987194 1 cmap_cross 0: 26 50 64 trunc 1 12 trunc 1 9" filename="upload" index="0">
+                           <edit date="Sun Mar 26 15:47:47 PST 2006" action="genebank 198 10916" filename="genebank.flam3" index="421"/>
+                           <edit date="Sun Mar 26 15:48:07 PST 2006" action="genebank 198 22864" filename="genebank.flam3" index="618"/>
+                        </edit>
+                     </edit>
+                  </edit>
+               </edit>
+            </edit>
+            <edit date="Sat Nov 10 16:41:51 UTC 2007" nick="Ursitti" url="evolutionjamblog.blogspot.com/" id="98" action="clone upload" filename="electricsheep_242.0098.flam3" index="0">
+               <edit filename="upload" index="0"/>
+            </edit>
+         </edit>
+         <edit date="" nick="openhatch" url="http://earthbound.io" action="cross union improved colors" filename="electricsheep_242.0030_and_el" index="0">
+            <edit date="Tue Nov  6 23:56:07 UTC 2007" id="30" action="cross alternate 1: 1 0 0 0 improved colors" filename="electricsheep_242.0030.breedi" index="0">
+               <edit date="Tue Nov  6 23:52:01 UTC 2007" id="26" action="clone brood" filename="p0" index="0">
+                  <edit date="Tue Nov  6 23:19:12 UTC 2007" id="23" action="mutate xform reframed improved colors" filename="upload" index="0">
+                     <edit date="Tue Nov  6 10:41:49 UTC 2007" id="6" action="clone brood" filename="spex" index="0">
+                        <edit date="Tue Nov  6 10:31:26 UTC 2007" id="1" action="cross interpolate 0.987194 1 cmap_cross 0: 26 50 64 trunc 1 12 trunc 1 9" filename="upload" index="0">
+                           <edit date="Sun Mar 26 15:47:47 PST 2006" action="genebank 198 10916" filename="genebank.flam3" index="421"/>
+                           <edit date="Sun Mar 26 15:48:07 PST 2006" action="genebank 198 22864" filename="genebank.flam3" index="618"/>
+                        </edit>
+                     </edit>
+                  </edit>
+               </edit>
+               <edit date="Tue Nov  6 23:52:08 UTC 2007" id="27" action="clone brood" filename="p1" index="0">
+                  <edit date="Tue Nov  6 23:19:29 UTC 2007" id="23" action="mutate xform" filename="upload" index="0">
+                     <edit date="Tue Nov  6 10:41:49 UTC 2007" id="6" action="clone brood" filename="spex" index="0">
+                        <edit date="Tue Nov  6 10:31:26 UTC 2007" id="1" action="cross interpolate 0.987194 1 cmap_cross 0: 26 50 64 trunc 1 12 trunc 1 9" filename="upload" index="0">
+                           <edit date="Sun Mar 26 15:47:47 PST 2006" action="genebank 198 10916" filename="genebank.flam3" index="421"/>
+                           <edit date="Sun Mar 26 15:48:07 PST 2006" action="genebank 198 22864" filename="genebank.flam3" index="618"/>
+                        </edit>
+                     </edit>
+                  </edit>
+               </edit>
+            </edit>
+            <edit date="Tue Nov 27 17:27:54 UTC 2007" id="926" action="clone brood" filename="electricsheep_242.0926.flam3" index="0">
+               <edit date="Tue Nov 27 04:10:24 UTC 2007" id="887" action="cross alternate 0: 1 0 0 0 improved colors" filename="upload" index="0">
+                  <edit date="Sun Nov 25 23:07:03 UTC 2007" id="779" action="clone brood" filename="spex" index="0">
+                     <edit date="Sun Nov 25 22:28:14 UTC 2007" id="774" action="mutate xform reframed improved colors" filename="upload" index="0">
+                        <edit date="Fri Nov 16 15:33:18 UTC 2007" nick="Ursitti" url="evolutionjamblog.blogspot.com/" id="300" action="clone upload" filename="spex" index="0">
+                           <edit filename="upload" index="0"/>
+                        </edit>
+                     </edit>
+                  </edit>
+                  <edit date="Sun Nov 25 23:06:59 UTC 2007" id="778" action="clone brood" filename="spex" index="0">
+                     <edit date="Sun Nov 25 22:27:48 UTC 2007" id="774" action="cross alternate 1: 1 0 cmap_cross 0: 43 49 107 178 198 improved colors" filename="upload" index="0">
+                        <edit date="Wed Nov  7 22:04:32 UTC 2007" nick="Ursitti" url="evolutionjamblog.blogspot.com/" id="50" action="clone upload" filename="spex" index="0">
+                           <edit filename="upload" index="0"/>
+                        </edit>
+                        <edit date="Wed Nov  7 22:04:32 UTC 2007" nick="Ursitti" url="evolutionjamblog.blogspot.com/" id="50" action="clone upload" filename="spex" index="0">
+                           <edit filename="upload" index="0"/>
+                        </edit>
+                     </edit>
+                  </edit>
+               </edit>
+            </edit>
+         </edit>
+      </edit>
+   </edit>
+</flame>
+</flames>
