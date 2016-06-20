@@ -7,9 +7,12 @@
 
 # ALSO NOTE: this is hard-coded for 8 digits. If you change that you must change the final (cludge) line of the script to match the number of digits.
 
-# TO DO: accept parameters for nframes, qs, and ss values.
-
-# TO DO: bug fix: frame 0 is unsynced. Maybe it's actually the last frame?
+# KNOWN ISSUES and
+# TO DO: fix whatever is consistently wrecking or dropping frames 8 and 9 of the generated sequence as "invalid" (or something like that). If you prune the animation .flam3 file to the 8th and 9th flames, manually export them with xml_split and render them, they are valid. Goofy. ?
+# Use flam3-genome instead? It's possible fractorium is skipping frames. :/
+# Batch rename anim. frames?
+# Bug fix: frame 0 is unsynced. Maybe it's actually the last frame?
+# Accept parameters for nframes, qs, and ss values.
 
 if [ ! -d anim_frames ]; then mkdir anim_frames; fi
 
@@ -24,46 +27,56 @@ cat head.txt _alles.flam3 tail.txt > temp.txt
 rm _alles.flam3 head.txt tail.txt
 mv temp.txt _alles.flam3
 
-		# BUG WORKAROUND; weirder yet is that if I copy the following with a cp command, it copies it in some way that breaks the ability to properly read it in any xml viewer?! So use the cat command instead:
-		cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
+# !~-~-~-~-~-~-~-~-~-~-
+# BEGIN OPTION: USE FLAM3-GENOME--comment out the code under USE EMBER-GENOME (below) if you use (uncomment) this section:
+			# BUG WORKAROUND; see comments under USE EMBERGENOME -> BUG WORKAROUND:
+					# cat /cygdrive/c/autobrood/bin/flam3-palettes.xml > flam3-palettes.xml
+	# echo set noedits=1 > flam3GenomeTempBatch.bat
+	# echo set nframes=180 >> flam3GenomeTempBatch.bat
+	# echo set progress=1 >> flam3GenomeTempBatch.bat
+	# echo set sequence=_alles.flam3 >> flam3GenomeTempBatch.bat
+	# echo flam3-genome \> _alles_anim.flam3 >> flam3GenomeTempBatch.bat
+	# chmod 777 flam3GenomeTempBatch.bat
+	# cygstart flam3GenomeTempBatch.bat
+	# mv flam3GenomeTempBatch.bat flam3GenomeTempBatch.bat.txt
+	# rm flam3GenomeTempBatch.bat
+# END OPTION: USE FLAM3-GENOME
+# !~-~-~-~-~-~-~-~-~-~-
 
-EmberGenome.exe --noedits --nframes=180 --progress --sequence=_alles.flam3 > _alles_anim.flam3
-# unused: --earlyclip --sp 
+# !~-~-~-~-~-~-~-~-~-~-
+# BEGIN OPTION: USE EMBERGENOME--comment out the code under USE FLAM3-GENOME (above) if you use (uncomment) this section:
+			# BUG WORKAROUND; weirder yet is that if I copy the following with a cp command, it copies it in some way that breaks the ability to properly read it in any xml viewer?! So use the cat command instead:
+					cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
+	EmberGenome.exe --noedits --nframes=180 --progress --sequence=_alles.flam3 > _alles_anim.flam3
+	# unused: --earlyclip --sp 
+# END OPTION: USE EMBERGENOME
+# !~-~-~-~-~-~-~-~-~-~-
 
 		# CLEANUP BUG WORKAROUND:
 		rm flam3-palettes.xml
 
-if [ ! -d anim ]; then mkdir anim; fi
-mv _alles.flam3 ./anim/_alles.flam3
+if [ ! -d anim_xml ]; then mkdir anim_xml; fi
+mv _alles.flam3 ./anim_xml/_alles.flam3
 
 # because I prefer to have individual .flam3 files for each frame of the render (to set multiple computers batch rendering them, or to isolate a specific frame more easily for renders):
-xml_split _alles_anim.flam3
-mv ./_alles_anim.flam3 ./anim
+
+# TO DO: learn if there's a way to pad these to begin with on export from xml_split; . . .
+# DONE. Option for number of digits to pad output file numbering for xml_split is -n <number> e.g. -n 7.
+
+xml_split -n 7 _alles_anim.flam3
+mv ./_alles_anim.flam3 ./anim_xml
 # Because the resulting 00 frame .flam3 is always bogus:
-rm _alles_anim-00.flam3
+rm _alles_anim-0000000.flam3
 
-mv ./anim ..
-
-# TO DO: learn if there's a way to pad these to begin with on export from xml_split;
-# fix up non-zero-padded file names with too many zero pads (just in case, you know. MANY). Thanks to: http://stackoverflow.com/a/3700146/1397555
-for file in _alles_anim-[0-9]*.flam3; do
-	# strip the prefix ("_alles_anim") off the file name
-	postfile=${file#_alles_anim}
-	# strip the postfix (".flam3") off the file name
-	number=${postfile%.flam3}
-	# rename
-	mv ${file} ./$(printf _alles_anim_fr%07d.flam3 $number)
-done
+mv ./anim_xml ..
 
 # cludge for file name problem with 0th frame:
-mv _alles_anim_fr0000000.flam3 _alles_anim_fr-000000.flam3
+# mv _alles_anim_fr0000000.flam3 _alles_anim_fr-000000.flam3
+# -- nah, just delete that first frame until I get this fixed:
+rm _alles_anim_fr0000000.flam3
 
-ffmpeg -y -r 29.97 -f image2 -i _alles_anim_fr-%06d.flam3.png -vcodec utvideo -r 29.97 _alles_anim.avi
-ffmpeg -y -i _alles_anim.avi -filter:v "crop=1280:720:x:y" -crf 32 _alles_anim.mp4
-
-if [ ! -d vid ]; then mkdir vid; fi
-mv _alles_anim.avi ./vid/_alles_anim.avi
-mv _alles_anim.mp4 ./vid/_alles_anim.mp4
+# Optional:
+render-flames-anim-fractorium.sh
 
 cd ..
 
