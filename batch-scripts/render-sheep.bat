@@ -43,7 +43,9 @@ REM set ss=2 will make an 2560x1600 image.
 REM set ss=3 will make an 3840x2400 image.
 REM set ss=3.2 will make an 4096x3072 image.
 REM set ss=2
-set ss=1
+REM NOTE: this is weirdly flaky with changing numbers and detecting whether a file at target resolution was already created. (TO DO: fix that bug). It *may* be that rounding isn't working (if that's being done?) and/or that flam3-render will only accept ss variables that are whole numbers without decimal expression.
+echo ss not defined, setting to script default.
+set ss=2
 	)
 
 
@@ -72,7 +74,7 @@ set jpeg=100
 	)
 IF NOT EXIST image-output mkdir image-output
 set enable_jpeg_comments=1
-set nick=RAH
+set nick=earthbound
 REM set url=http://richardalexanderhall.com/blog/category/art/electric-sheep/
 REM set url=http://earthbound.io/blog/category/art
 REM ============================================
@@ -196,7 +198,7 @@ FOR /F %%N in ('MATH.EXE /n !x!*!ss!') do set x=%%N
 		REM note, in the next command, the use of the carat ^ symbol as an "escape" character for the
 		REM parenthesis() needed by MATH.EXE's round function. For example you could run "MATH.EXE round(3708.8)"
 		REM from the command line to obtain 3708, but this FOR loop's paramaters, in parenthesis, get confused with
-		REM the parenthesis in that MATCH.EXE round function--to tell the command line to ignore the inner
+		REM the parenthesis in that MATH.EXE round function--to tell the command line to ignore the inner
 		REM parenthesis as having nothing to do with the parenthesis for the FOR loop, the carat ^ escape
 		REM symbol is used. See http://en.wikipedia.org/wiki/Escape_character#Windows_Command_Prompt
 FOR /F %%N in ('MATH.EXE /n round^(!x!^)') do set x=%%N
@@ -211,8 +213,8 @@ FOR /F %%N in ('MATH.EXE /n round^(!y!^)') do set y=%%N
 
 	IF !x!==0 IF !y!==0	(
 	ECHO The size of the image was incorrectly
-	ECHO calculated as 0 x 0.  cc.exe may be missing
-	ECHO from the bin folder; re-extract auto-brood.zip.
+	ECHO calculated as 0 x 0. MATH.exe may be missing
+	ECHO from the bin folder.
 				) ELSE (
 	ECHO Size of image times ss will be !x! x !y! ..
 					)
