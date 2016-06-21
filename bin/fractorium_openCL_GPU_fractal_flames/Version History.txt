@@ -50,7 +50,7 @@
 	-Get rid of selection border on summary tab xform tree cells.
 	-Only add variations from Xml that have a non-zero weight. There seemed to be spurious flattens coming from Apo with a weight of 0.
 	-Get rid of leftover artifacts that would appear on preview thumbnails when either switching SP/DP or re-rendering previews.
-	-Filename extension was not being appended on Linux when saving as Xml, thus making it impossible to drag that file back in becase drop is filtered on extension.
+	-Filename extension was not being appended on Linux when saving as Xml, thus making it impossible to drag that file back in because drop is filtered on extension.
 	-Continuous update was broken.
 	-Force repaint on xform selection checkbox change to ensure circles are immediately drawn around selected xforms.
 	-dc_perlin was crashing on Nvidia when using SP.

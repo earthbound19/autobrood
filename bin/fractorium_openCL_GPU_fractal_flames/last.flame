@@ -1,58 +1,43 @@
 <flames>
-<flame version="EMBER-WIN-0.9.9.6" time="0" name="electricsheep.242.00133" size="800 592" center="0.0527792 -1.67088" scale="83.8373" rotate="-355.58" supersample="1" filter="1" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="10" temporal_samples="1" sub_batch_size="10240" fuse="15" background="0 0 0" brightness="60.6461" gamma="3.98015" highlight_power="1" vibrancy="1" estimator_radius="11" estimator_minimum="0" estimator_curve="0.6" gamma_threshold="0.01" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="linear spherical fan flatten sinusoidal polar disc waves" new_linear="1" curves="0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 ">
-   <xform weight="0.129462" color="0" var_color="1" color_speed="0.228655" name="" animate="0" linear="0.201175" spherical="0.0090689" fan="0.789756" flatten="1" coefs="0.25666 0.286347 0.313608 -0.287286 0.531401 -2.8693" opacity="1"/>
-   <xform weight="0.192665" color="1" var_color="1" color_speed="0.5" name="" animate="1" linear="0.197439" sinusoidal="0.00384168" polar="0.00947614" disc="0.789756" waves="0.00589057" flatten="1" coefs="-0.26269 2.85467 -0.329174 4.04048 1.75281 -1.55902" opacity="1"/>
-   <xform weight="0.372238" color="0" var_color="1" color_speed="0.105122" name="" animate="0" linear="1" flatten="1" coefs="-0.0432157 0.840808 -0.769177 0.171284 0.472874 -1.63959" opacity="1"/>
-   <xform weight="0.306425" color="1" var_color="1" color_speed="0.105122" name="" animate="0" linear="1" flatten="1" coefs="-1.014 -0.0381738 0.0396122 -0.936215 -0.800398 -3.12218" opacity="1"/>
+<flame version="EMBER-WIN-1.0.0.0" time="0" name="Flame_2016-06-20-203050_356" size="1361 918" center="0 0" scale="240" rotate="0" supersample="1" filter="1" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="60" temporal_samples="1" sub_batch_size="10240" fuse="15" background="0 0 0" brightness="4" gamma="4" highlight_power="1" vibrancy="1" estimator_radius="0" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0.1" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" palette_mode="linear" interpolation="smooth" interpolation_type="log" plugins="pre_xtrb post_blur_zoom linear" new_linear="1" curves="0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 ">
+   <xform weight="0.333333" color="0.846851" var_color="1" color_speed="0.5" name="" animate="1" pre_xtrb="-0.95609" pre_xtrb_power="-1" pre_xtrb_radius="0.385414" pre_xtrb_width="0.21628" pre_xtrb_dist="-0.540016" pre_xtrb_a="0.0552776" pre_xtrb_b="-0.92793" post_blur_zoom="0.758944" post_blur_zoom_length="0.957104" post_blur_zoom_x="-0.0681537" post_blur_zoom_y="-0.664941" coefs="-0.12235 -0.680982 -0.132469 0.524057 -0.650708 0.806487" opacity="1"/>
+   <xform weight="0.333333" color="0.772375" var_color="1" color_speed="0.5" name="" animate="1" pre_xtrb="0.374067" pre_xtrb_power="1" pre_xtrb_radius="-0.447098" pre_xtrb_width="0.642237" pre_xtrb_dist="-0.0871972" pre_xtrb_a="0.356369" pre_xtrb_b="-0.860871" post_blur_zoom="0.225799" post_blur_zoom_length="0.889912" post_blur_zoom_x="-0.834993" post_blur_zoom_y="-0.23763" coefs="0.310874 0.410673 0.301772 -0.0352131 -0.318383 0.377294" opacity="1"/>
+   <xform weight="0.333333" color="0.355776" var_color="1" color_speed="0.5" name="" animate="1" pre_xtrb="-0.876039" pre_xtrb_power="1" pre_xtrb_radius="0.558235" pre_xtrb_width="0.319508" pre_xtrb_dist="-0.0170398" pre_xtrb_a="0.203622" pre_xtrb_b="0.705102" post_blur_zoom="-0.32978" post_blur_zoom_length="0.0203654" post_blur_zoom_x="0.823045" post_blur_zoom_y="0.628458" coefs="0.011023 -0.586512 0.600358 -0.529951 0.562062 -0.0547542" opacity="1"/>
+   <xform weight="1" color="0" var_color="1" color_speed="0" name="" animate="1" linear="1" coefs="-1.38958 0.895833 -0.895833 -1.38958 0 0" opacity="1"/>
+   <xform weight="1" color="1" var_color="1" color_speed="0" name="" animate="0" linear="1" coefs="0.741667 -1.75209 -1.75209 -0.741667 0 0" opacity="1"/>
    <palette count="256" format="RGB">
-      5b779c5b7397597193576e8f576b8c536787536383515f7f
-      4f5e7b4f5b774b57734b536f494f6b474e6746496343475f
-      43435b413f573f3c533c384f3c374b3b3346382f41372c3c
-      342838342734cf6e03cf6b04ce6b04c76b04c76b05bf6705
-      bf6705bf6705bd6606b76306b66107b55f07b35b08af5309
-      af5308af4f07af4706af4306af3f06af3f05af3805ae3404
-      ad3004a72f041a5b4f195f4f196153186353176757166b57
-      156e591c6f5f2473632b736733776b3879713f7b77477e7b
-      9e028797048797058793067f8e08798d09738d0a6f8c0a6b
-      870a63870a5b86095b85085e7f085e7f08667f096f7b097b
-      6f087b69077b6306775f05775303714f026e490169410063
-      3c006338005f30005b2f005b280059240057230057150053
-      1600531000570f00590a005e08015f010063000163000563
-      000763000b63001066001263001566001763002067002467
-      00286b002c6b002f6e00306f003371003473003877003c77
-      00437b00437b00477f00497f004b7f004b86004b87004f87
-      0351870857870c598c105b8d175b8c205e8e245f8f2b638f
-      2f668f33678f376b953c73954e3f935b43935b47935f4797
-      5f4b97634f97634f9763519c5f53975f579c5f5b9d67639c
-      677f9f69879f6b8ca36f8fa6718fa77395ac7696ae7b97ae
-      7b97ae7f9faf7f9fb586a3b785a5b787a7b78ca7bf8faebf
-      8fafbf97afbf97b6c79fb7c79fb7c7a7bccca7beceafc3cf
-      afc5d3b7c7d6b7c7d7becfdcbfcfdec5d3dfc6d3dfdfcecd
-      ced7dfe7e5d3e7e7d6efedd7efefd7f7f7dff7f6def7f5de
-      f7f5d7f7efd7f7efd5f7efd5f7efcff7efcff7efc7f7ecc7
-      f7e7c3f7e7bff7e6b7f6e3b7f3dfafefdeacefd7a7efd79f
-      efd79eefd797efd58fefcf87edc785e7c67ee7c37be7bf76
-      e7bf73e7bf6ee7bf6ee7be6be5bc6edfbf73dfbf73dfbf6f
-      dfc76fe3bf6be6bf67e7bf67e7c663e7c663ecc65fedbf5b
-      eebc56efb74fefaf4befac4997ef4695ee478fed43eda73f
-      eca63b8fe7388fe7348fe73097e3339cdf309fdf2fdf9f2c
-      dfa527df9f20df9d12e39e0ce69d06e79e03e79701e79700
+      c07b53d19574b88166a06e5889625172564a6750435d4a3c
+      534f2c504b244e481c4b4620494524413d2a3a3530373633
+      353736354135454e37555c395e5d30685f28695e276a5d27
+      684a2768462d694234694637694b3b684e3b68523b5b4d35
+      464a2e2e4b32264c331f4e341d4f351b51371a5437195738
+      215d35296235326736446b33576f315f6932686433796134
+      8c6138a56430b27333bf8237cf9a46dfb255e3bb65e8c575
+      f8e271e8ca6ed9b36bb991559a6f408c593c7f4438662b2c
+      531e264c1423592026662c296c3328723a28814a2b9c652f
+      c79d2bd4a72fe1b133d1b236c2b339bdac34b8a530af982e
+      998826966d158b5d16814e177744176d3b18573417462e1b
+      2c1f17292519272c1c252c1d232c1e2b2f2435322e3b3538
+      492f3a5e2c3b622a3566293066282c6727296e2c25783723
+      9a451ea7551bb56618bd6d19c6741bd17823da7f27e6832e
+      ea7b31f77230f2702dee6f2ae97b20de7a17c77315b27220
+      7d5529604b30434237393c342f373227332f283629363d20
+      573c1d95421ca13e1ead3b20bc3823ba372ab6332fb33c36
+      ac5230b5652dbf782ac27a29c67d28c98825c5911eb68c21
+      a6811b70651b64591a594e194c3d13482c184e1e1d5f1b19
+      902e23a13324b23925cf5527db772fe98445f5945ff0a771
+      eca27de39777e2966fe29567d68e4bcb8738c68428be7e21
+      be691dc2631cc65e1bd64f2ada452ccb4531b53c4ba43759
+      7f415c54415d4c3c5a44415039414042393552392f5e3f31
+      793d3880403987433a8d4a458f4f4893544ca46355b17162
+      b16f6db47379ba7686bb6196a34e99995288a6538fa35586
+      aa6471b17671a482679e87578f884e718a4667893671862a
+      788528808b2c8d9233949b328b92387b833f6589384a7d38
+      37673529642c21642d1c6d2f237a38307c46398255468e62
+      56945d529151458b4d4082453a7737346b33336439455f40
+      6663457675458a7d47a4804daa7f50a97653ad7054b45f52
+      b35756b65f55c15748cc563ed95a37d95132ce502fc74c23
+      ae3e1f8f3b2881402c773c27783e288040309e5b51c18364
    </palette>
-   <edit date="Sun Nov 11 20:48:45 UTC 2007" id="133" action="clone brood">
-      <edit date="Sat Nov 10 04:10:21 UTC 2007" id="88" action="cross alternate 0: 1 0 1 0" filename="upload" index="0">
-         <edit date="Tue Nov  6 10:41:49 UTC 2007" id="6" action="clone brood" filename="spex" index="0">
-            <edit date="Tue Nov  6 10:31:26 UTC 2007" id="1" action="cross interpolate 0.987194 1 cmap_cross 0: 26 50 64 trunc 1 12 trunc 1 9" filename="upload" index="0">
-               <edit date="Sun Mar 26 15:47:47 PST 2006" action="genebank 198 10916" filename="genebank.flam3" index="421"/>
-               <edit date="Sun Mar 26 15:48:07 PST 2006" action="genebank 198 22864" filename="genebank.flam3" index="618"/>
-            </edit>
-         </edit>
-         <edit date="Tue Nov  6 10:41:49 UTC 2007" id="6" action="clone brood" filename="spex" index="0">
-            <edit date="Tue Nov  6 10:31:26 UTC 2007" id="1" action="cross interpolate 0.987194 1 cmap_cross 0: 26 50 64 trunc 1 12 trunc 1 9" filename="upload" index="0">
-               <edit date="Sun Mar 26 15:47:47 PST 2006" action="genebank 198 10916" filename="genebank.flam3" index="421"/>
-               <edit date="Sun Mar 26 15:48:07 PST 2006" action="genebank 198 22864" filename="genebank.flam3" index="618"/>
-            </edit>
-         </edit>
-      </edit>
-   </edit>
 </flame>
 </flames>

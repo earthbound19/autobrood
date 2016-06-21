@@ -1,0 +1,2 @@
+Jan Steunebrink, for his tool CHKCPU32.exe, which identifies from the command line how many CPU cores are availabe on a system.
+http://web.inter.nl.net/hcc/J.Steunebrink/chkcpu.htm

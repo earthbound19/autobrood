@@ -1,6 +1,0 @@
-electricsheep_242.0133.flam3
-electricsheep_242.0165.flam3
-electricsheep_242.3206.flam3
-Flame_2016-06-20-185110.flame
-last.flame
-test.flame
