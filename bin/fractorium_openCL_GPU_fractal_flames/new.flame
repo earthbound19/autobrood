@@ -1,0 +1,42 @@
+<pick version="EMBER-WIN-1.0.0.0">
+<flame version="EMBER-WIN-1.0.0.0" time="0" name="No name" size="1920 1080" center="0.321897 -9.12852e-005" scale="1428.01" rotate="0" supersample="1" filter="0.5" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1" temporal_samples="100" sub_batch_size="10240" fuse="15" background="0 0 0" brightness="4" gamma="4" highlight_power="1" vibrancy="1" estimator_radius="9" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0.01" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="pre_wedge_julia post_mirror_y post_lazysusan post_starblur post_GlynnSim1 mask cscq post_poincare" new_linear="1" curves="0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 ">
+   <xform weight="0.333333" color="0.484471" var_color="1" color_speed="0.5" name="" animate="1" pre_wedge_julia="1" pre_wedge_julia_angle="0.412086" pre_wedge_julia_count="3" pre_wedge_julia_power="2" pre_wedge_julia_dist="1" post_mirror_y="0.128755" coefs="0.866637 0.19284 0.339328 -0.279372 -0.676852 -0.0509877" opacity="1"/>
+   <xform weight="0.333333" color="0.765219" var_color="1" color_speed="0.5" name="" animate="1" post_lazysusan="0.0689856" post_lazysusan_spin="-1.51933" post_lazysusan_space="0.814671" post_lazysusan_twist="1.29253" post_lazysusan_x="-0.791204" post_lazysusan_y="-0.164553" post_starblur="-0.853143" post_starblur_power="1" post_starblur_range="-0.160604" post_GlynnSim1="0.728517" post_GlynnSim1_radius="0.922893" post_GlynnSim1_radius1="-0.466102" post_GlynnSim1_phi1="0.767313" post_GlynnSim1_thickness="0" post_GlynnSim1_contrast="0.459983" post_GlynnSim1_pow="0.116022" coefs="0.626749 0.840273 -0.418449 -0.635384 -0.680597 -0.06519" opacity="1"/>
+   <xform weight="0.333333" color="0.8042" var_color="1" color_speed="0.5" name="" animate="1" mask="0.145723" cscq="-0.213738" post_poincare="0.97256" post_poincare_c1r="0.0810759" post_poincare_c1a="-0.805164" post_poincare_c2r="-0.290645" post_poincare_c2a="0.182347" coefs="0.300468 0.720145 0.679624 -0.777163 -0.769125 -0.483888" opacity="1"/>
+   <palette count="256" format="RGB">
+      9ecd2c9e84149e7e129e78109e78109e78109e78109e7810
+      9e7e129e7c119e7b119e7b119e7b119e7c119e7e129e7e12
+      9e7e129e7e129e7e129e7e129e81139e84149e85149e8715
+      9e8c169e8c169e8c169e88159e84149e84149e84149e8113
+      9e7b119e750f9e6d0c9e660a9e5d079e54049e44049e3504
+      9e0f119e0a179e051dc21e23e7372ae94820eb5a17b97515
+      9e6f0d9e60089e63099e660a9e6a0b9e6f0d9e720e9e750f
+      9e78109e79109e7b119e7b119e7b119e79109e78109e7810
+      9e720e9e660a9e61089e5d079e5b069e5a069e5d079e5d07
+      9e660a9e6a0b9e6f0d9e720e9e750f9e760f9e78109e7b11
+      9e81139e8c169e9d1c9eae2280ad3c63ac564ca08b349258
+      9e8f219e7c169e690b9e60089e57059e3e029e27239e1d29
+      cc11279e0c019e10089e150f9e25099e35049e54049e5d07
+      9e6c0c9e6f0d9e720e9e700d9e6f0d9e690b9e5a069e4700
+      9e27236f1e7c543a6b3a575b9c8b3e9e8f209e8a169e8a16
+      9e8f179e8d169e8c169e8c169e8c169e8a169e84149e8a16
+      9e8a169e84149e84149e84149e87159e8a169e8f179e9419
+      9ec023b3b33ec8a659dcb563f0c56df3d9d6fddbe6f74186
+      9e722c9e7b289e7e1d9e81139e7e129e78109e750f9e750f
+      9e750f9e730e9e720e9e720e9e720e9e720e9e6f0d9e6c0c
+      9e690b9e690b9e6a0b9e6c0c9e720e9e750f9e7b119e7e12
+      9e78109e750f9e720e9e690b9e60089e5d079e5d079e6008
+      9e60089e63099e690b9e720e9e7b119e81139e87159e8c16
+      9e91216c93373a954d2e953f21873a253e23081d40210756
+      2d20388d371a9e42029e57059e57059e5a029e5a069e5d07
+      9e60089e660a9e690b9e6c0c9e6c0c9e6c0c9e6c0c9e6f0d
+      9e720e9e720e9e720e9e750f9e78109e7b119e7e129e8414
+      9e84149e84149e84149e87159e8c169e92189ea11d9eb420
+      9ec3219ebf229eae229e9c1b9e92189e8f179e8a169e8715
+      9e84149e84149e84149e87159e87159e87159e84149e8414
+      9e7e129e7e129e7e129e7e129e81139e84149e8a169e8f17
+      9e92189e94199e94199e94199ea71d9eb0229ec9229ec92a
+   </palette>
+   <edit date="Tue Jun 21 14:22:20 Mountain Daylight Time 2016" action="random recentered improved colors"/>
+</flame>
+</pick>

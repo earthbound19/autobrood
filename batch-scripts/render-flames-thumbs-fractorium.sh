@@ -2,6 +2,8 @@
 
 # ALSO NOTE: for now (or forever?) it outputs target renders in the same directory as the source flame file.
 
+# TO DO: change this to just a script that sets ss and qs values and passes them via ENDLOCAL & whatever to render-flames-fractorium.bat.
+
 # whaaat? It seems the following if block doesn't work as expected:
 if [ ! -d render_output ]; then mkdir render_output; fi
 
@@ -15,7 +17,7 @@ rm fractal_flames_list.txt
 
 		# BUG WORKAROUND:
 		# see createSheepAnim.sh for notes about this cludge:
-		cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
+		if [ ! -e flam3-palettes.xml ]; then cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml; fi
 
 # Only render the frame if the target render file does not exist:
 for element in "${fractal_flames_list[@]}"
@@ -25,8 +27,8 @@ do
 		then
 		echo target file $element.png does not exist. will render.
 		# EmberRender doesn't seem to be able to render the file into another directory, so we're rendering the image into the same directory as the source .flam3 file, then moving it to a subdir.
-		EmberRender.exe --in=$element --out=$element.png --format=png --progress --opencl --ss=2 --qs=4
-		mv $element.png ./render_output/
+		EmberRender.exe --in=$element --out=$element.png --format=png --progress --opencl --ss=.12 --qs=1
+		mv $element.png ./render_output/$element.png
 	fi
 done
 
