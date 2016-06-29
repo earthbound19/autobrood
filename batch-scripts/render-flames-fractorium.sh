@@ -2,6 +2,9 @@
 
 # ALSO NOTE: for now (or forever?) it outputs target renders in the same directory as the source flame file.
 
+# TO DO: have this use optional ss and qs (and other?) parameters.
+	# - Name output files accordingly?
+
 # whaaat? It seems the following if block doesn't work as expected:
 if [ ! -d render_output ]; then mkdir render_output; fi
 
@@ -23,10 +26,16 @@ do
 	if [ ! -e ./render_output/$element.png ]
 	# NOTE for the following command: for 800 x 592 or whatever flame, ss=2.4 offers high def (1080p) image area. ss=1.6 offers HD 720p area.
 		then
-		echo target file $element.png does not exist. will render.
+		echo RENDER. Target file $element.png does not exist. Will render.
 		# EmberRender doesn't seem to be able to render the file into another directory, so we're rendering the image into the same directory as the source .flam3 file, then moving it to a subdir.
-		EmberRender.exe --in=$element --out=$element.png --format=png --progress --opencl --ss=.18 --qs=2
+		EmberRender.exe --in=$element --out=$element.png --format=png --progress --opencl --ss=.25 --qs=0.7
+				# some options:
+				# --ss=1.6 --qs=1		produces 1280x image from 900x genome
+				# --ss=.25 --qs=0.7
+				# --ss=.18 --qs=0.7
 		mv $element.png ./render_output/
+	else
+		echo SKIP. Target file $element.png already exists. Will not render.
 	fi
 done
 

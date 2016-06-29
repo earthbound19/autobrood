@@ -14,6 +14,12 @@
 # Bug fix: frame 0 is unsynced. Maybe it's actually the last frame?
 # Accept parameters for nframes, qs, and ss values.
 
+# TO DO:
+# log either in the file names themselves or a text file how many frames are in a loop (re var_nframes).
+make the following conditional on an available passed parameter:
+var_nframes=140
+echo Number of frames per loop for anim: $var_nframes > ANIM_INFO.txt
+
 if [ ! -d anim_frames ]; then mkdir anim_frames; fi
 
 cat *.flam3 *.flame > ./anim_frames/_alles.flam3
@@ -47,7 +53,7 @@ mv temp.txt _alles.flam3
 # BEGIN OPTION: USE EMBERGENOME--comment out the code under USE FLAM3-GENOME (above) if you use (uncomment) this section:
 			# BUG WORKAROUND; weirder yet is that if I copy the following with a cp command, it copies it in some way that breaks the ability to properly read it in any xml viewer?! So use the cat command instead:
 					cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
-	EmberGenome.exe --noedits --nframes=180 --progress --sequence=_alles.flam3 > _alles_anim.flam3
+	EmberGenome.exe --noedits --nframes=$var_nframes --progress --sequence=_alles.flam3 > _alles_anim.flam3
 	# unused: --earlyclip --sp 
 # END OPTION: USE EMBERGENOME
 # !~-~-~-~-~-~-~-~-~-~-
