@@ -28,14 +28,20 @@ do
 		then
 		echo RENDER. Target file $element.png does not exist. Will render.
 		# EmberRender doesn't seem to be able to render the file into another directory, so we're rendering the image into the same directory as the source .flam3 file, then moving it to a subdir.
-		EmberRender.exe --in=$element --out=$element.png --format=png --progress --opencl --ss=.25 --qs=0.7
+		# RECENTLY USED for quick and dirty abstract resource anims: --ss=.25 --qs=0.7
+		EmberRender.exe --in=$element --out=$element.png --format=png --progress --opencl --ss=0.815 --qs=5
 				# some options:
-				# --ss=1.6 --qs=1		produces 1280x image from 900x genome
-				# --ss=.25 --qs=0.7
 				# --ss=.18 --qs=0.7
+				# --ss=.25 --qs=0.7
+				# --ss=0.815	produces ~640x image from 800x genome
+				# --ss=1.6		produces 1280x image from 900x (?) genome
+				# --ss=2.4		produces 1920x image from 800x genome
+				# --ss=3		. . ?
 		mv $element.png ./render_output/
+		echo in cool-down sleep period for a bit . . .
+		sleep 5
 	else
-		echo SKIP. Target file $element.png already exists. Will not render.
+		echo SKIP. Target file $element.png already exists. Will not re-render.
 	fi
 done
 
