@@ -16,8 +16,10 @@
 
 # TO DO:
 # log either in the file names themselves or a text file how many frames are in a loop (re var_nframes).
-make the following conditional on an available passed parameter:
-var_nframes=140
+
+# If there is no value set for var_nframes, set a default value:
+if ! (( $var_nframes )); then var_nframes=12; fi
+
 echo Number of frames per loop for anim: $var_nframes > ANIM_INFO.txt
 
 if [ ! -d anim_frames ]; then mkdir anim_frames; fi
