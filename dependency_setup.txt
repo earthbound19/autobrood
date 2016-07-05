@@ -1,0 +1,14 @@
+I think to get xml_split working under cygwin (which is what is needed) perhaps I compiled/installed XML-Twig via certain commands? From extracted XML-Twig-3.49.tar.gz?
+
+--
+FAILED attempts:
+
+installing xml_tools for cygwin:
+
+[fails to give details] install the perl interpreter package for cygwin, and also cygport, via the cygwin installer. Install all dependencies as prompted.
+
+re: https://sourceforge.net/p/cygwin-ports/perl-XML-Twig/ci/720eefdee03f6d3bd65869d51350ec6e9bb910b0/tree/ :
+and http://www.xmltwig.org/xmltwig/XML-Twig-FAQ.html :
+
+download xml::twig, which is part of a cygwin ports package here: https://sourceforge.net/projects/cygwin-ports/
+

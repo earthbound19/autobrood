@@ -25,7 +25,7 @@ do
 		then
 		echo target file $element.png does not exist. will render.
 		# EmberRender doesn't seem to be able to render the file into another directory, so we're rendering the image into the same directory as the source .flam3 file, then moving it to a subdir.
-		EmberRender.exe --in=$element --out=$element.png --format=png --progress --nstrips=5 --opencl --ss=2 --qs=2
+		EmberRender.exe --in=$element --out=$element.png --format=png --progress --opencl --ss=.18 --qs=.6
 		mv $element.png ./render_output/
 	fi
 done
