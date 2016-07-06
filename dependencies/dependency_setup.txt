@@ -1,0 +1,18 @@
+Until I narrow down exactly the needed dependencies, this shotgut approach works:
+
+1) From the cygwin installer, install everything that comes up when you search for XML. You can probably omit the QT stuff :) Also install perl. Probably perl libxml2 and libxslt / summat are the needed dependencies.
+2) Wait five years for cygwin to install so much.
+3) re: http://www.xmltwig.org/xmltwig/XML-Twig-FAQ.html and http://www.cpan.org/modules/by-authors/id/M/MI/MIROD/ :
+download XML-Twig-3.50.tar.gz from wherever you can find it, or ~3.49 from that second link. Extract the .gz file and the .tar file and folder within it. Open a cygwin prompt and enter the commands:
+
+cd "<C:\Windows_Path_to_that_untarred_dir>"
+perl Makefile.PL
+make
+make test
+make install
+
+4) The make test command should, if everything works, give a message about tests passing. After make install succeeds, type the command:
+
+which xml_split
+
+If that command prints a path to xml_split, it has successfully installed and should work.
