@@ -1,0 +1,43 @@
+<pick version="EMBER-WIN-1.0.0.0">
+<flame version="EMBER-WIN-1.0.0.0" time="0" name="No name" size="1920 1080" center="-0.282883 0.0218798" scale="3877.02" rotate="0" supersample="1" filter="0.5" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1" temporal_samples="100" sub_batch_size="10240" fuse="15" background="0 0 0" brightness="4" gamma="4" highlight_power="1" vibrancy="1" estimator_radius="9" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0.01" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="pre_dc_perlin crackle bTransform mobiq hypertile2 pre_shredrad MobiusN post_linearT3D z post_hypertile1" new_linear="1" curves="0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 ">
+   <xform weight="0.25" color="0.488169" var_color="1" color_speed="0.5" name="" animate="1" pre_dc_perlin="0.808139" pre_dc_perlin_shape="1" pre_dc_perlin_map="0" pre_dc_perlin_select_centre="-0.189218" pre_dc_perlin_select_range="0.1" pre_dc_perlin_centre="0.825707" pre_dc_perlin_range="-0.852157" pre_dc_perlin_edge="0.79711" pre_dc_perlin_scale="-0.606829" pre_dc_perlin_octaves="1" pre_dc_perlin_amps="-0.603469" pre_dc_perlin_freqs="-0.634344" pre_dc_perlin_z="0.880164" pre_dc_perlin_select_bailout="2" crackle="0.351776" crackle_cellsize="0.346194" crackle_power="0.315198" crackle_distort="0.538052" crackle_scale="0.373474" crackle_z="0.0911344" bTransform="-0.724598" bTransform_rotate="-0.154595" bTransform_power="1" bTransform_move="0.738901" bTransform_split="0.983064" coefs="0.404484 -0.889189 -0.936135 -0.282799 -0.020736 -0.525928" post="-0.446918 -0.898404 -0.807279 0.380935 -0.113527 -0.0970985" opacity="1"/>
+   <xform weight="0.25" color="0.969697" var_color="1" color_speed="0.5" name="" animate="1" mobiq="-0.871187" mobiq_at="0.543854" mobiq_ax="-0.345431" mobiq_ay="0.936374" mobiq_az="0.191243" mobiq_bt="-0.221233" mobiq_bx="-0.774882" mobiq_by="-0.485995" mobiq_bz="0.103055" mobiq_ct="0.443466" mobiq_cx="0.669121" mobiq_cy="0.839771" mobiq_cz="0.933047" mobiq_dt="0.687388" mobiq_dx="-0.648081" mobiq_dy="0.245649" mobiq_dz="0.19261" hypertile2="0.512021" hypertile2_p="3" hypertile2_q="3" coefs="0.844181 0.368085 0.911164 0.700362 -0.300174 0.4339" post="-0.446918 -0.898404 -0.807279 0.380935 -0.113527 -0.0970985" opacity="1"/>
+   <xform weight="0.25" color="0.940411" var_color="1" color_speed="0.5" name="" animate="1" pre_shredrad="0.986685" pre_shredrad_n="0.57868" pre_shredrad_width="-0.581165" MobiusN="0.159" MobiusNRe_A="-0.598051" MobiusNIm_A="-0.14873" MobiusNRe_B="0.352256" MobiusNIm_B="0.14295" MobiusNRe_C="0.301921" MobiusNIm_C="-0.240712" MobiusNRe_D="0.173871" MobiusNIm_D="0.587434" MobiusN_Power="1" MobiusN_Dist="-0.62653" post_linearT3D="-0.0566857" post_linearT3D_powX="-0.578512" post_linearT3D_powY="-0.543756" post_linearT3D_powZ="-0.44567" coefs="0.128314 -0.771064 -0.0948121 0.35441 0.325506 -0.792043" post="-0.446918 -0.898404 -0.807279 0.380935 -0.113527 -0.0970985" opacity="1"/>
+   <xform weight="0.25" color="0.623582" var_color="1" color_speed="0.5" name="" animate="1" z="0.0941877" z_hypergon="-0.447054" z_hypergon_n="3" z_hypergon_r="0.668572" z_star="0.0612731" z_star_n="3" z_star_slope="2.22045e-016" z_lituus="0.106183" z_lituus_a="0.218861" z_super="-0.632254" z_super_m="0.622463" z_super_n1="0.0833442" z_super_n2="0.90728" z_super_n3="-0.645182" post_hypertile1="0.0401824" post_hypertile1_p="3" post_hypertile1_q="3" coefs="0.672457 -0.717997 0.133143 -0.604559 0.877769 -0.956086" post="-0.446918 -0.898404 -0.807279 0.380935 -0.113527 -0.0970985" opacity="1"/>
+   <palette count="256" format="RGB">
+      f5aca3f9b4abf8b9b1f8bfb7f8c8bff9d1c7f9d6c9f9dccc
+      fcedd5fcf1d9fcf6defbf7e0fbf8e3fbf8e4fcf9e5fcf9e6
+      fdfae7fdf9f0fcf5effcf1eefceae7fce4e0fbdfddfbdbda
+      fad3d5fad1d4facfd4facfd3fad0d2fad0d1fad1d1f8d4d5
+      f6d7d9f6dbddf1d8d4edd6cbe8cabee3beb2e1b6abdfaea5
+      e0978fdf8d82df8376dc7868da6e5bd96856d86352d85c4e
+      d55b4fd95d58d95e58d95f59d35b56cd5754c85553c35452
+      af4e55a34b549848538540497338406c323a652d34512529
+      441e203b15173a11123a0d0e380b0c360a0a2c07052a0504
+      2c04032d05032e06042305041905041404030f0303070102
+      010001000000000000000001000001000101000001000101
+      0a0b0b1d1415301d1f3c2526482d2d5d3b3c745152826565
+      90696ab97e7fcd8c8de19b9ce8aaaaf0b9b8f1c3c1f0c9c6
+      f0cac8f4d3d1f8dddaf9e3e1fbeae8fdf3f0fef9f5fefbf8
+      fefcf9fdfbf5fdf9f2fdf7f0fdf1e6fde6d9fcd9cafccbbd
+      f6b8abf5b4a4f5b19df5af99f6ae96f6aa91f6a38ef5a08e
+      f19e8ee59787e09382db907ecd8273bc7367a6665b91534d
+      67332f572321481313430e0f3e0a0b3b07093e0b0e491418
+      541f237f373e883c4492414aa64a54b9545ec45b65cd626c
+      d36873d26771d16670cc616bc55b63bc5057b2474ca73e41
+      9d353792292a912728912627922628942b2b9730329e393d
+      af5a5db26265b66a6dc27c79cd8d87d79d96e3aca5ecbab7
+      efc5c6f2cecef2d4d1efd7d0ecd2c9eac6bde4b6b0dfa5a1
+      cf8d8bcc8c87ca8b84c98b7cca8b78cf8a75d18c72d49079
+      d69684dba291e2ab9debb3a7f1b5aaf5b4acf6b0adf5adad
+      f6a8aef5a5adf6a1acf59ea9f59fa7f6a4a7f5acaff5b5b6
+      f7bcbdf7bec1f6bec0f5bbb9f4b7b1f2b2a9f1aca3f1a59f
+      f19f9df29797f29192f28e8cf18e8af4978cf6a395f8ae9f
+      f8baaaf5c1b1efc1b2e9c0afe2b8a6dcae99d3a28bcb947e
+      c08471b37566a56158984e4a8239377226266118184f1210
+      430c0b3b0a0b2f090c29080d2b0d11321618402825563a34
+      6c48417d564e915f55a66359bb7168d08178e38f86ef9f97
+   </palette>
+   <edit date="Thu Jun 23 01:55:01 ric 2016" nick="earthbound" action="random recentered improved colors"/>
+</flame>
+</pick>
