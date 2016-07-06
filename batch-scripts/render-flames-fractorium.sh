@@ -2,6 +2,17 @@
 
 # ALSO NOTE: for now (or forever?) it outputs target renders in the same directory as the source flame file.
 
+# Set ss and qs defaults if there are no such variables;
+# some options:
+				# --ss=.18 --qs=0.7
+				# --ss=.25 --qs=0.7
+				# --ss=0.815	produces ~640x image from 800x genome
+				# --ss=1.6		produces 1280x image from 900x (?) genome
+				# --ss=2.4		produces 1920x image from 800x genome
+				# --ss=3		. . ?
+if [ -z ${ss+x} ]; then echo no value for ss\; setting default value of .18; ss=.18; else echo using environment value of ss=$ss; fi
+if [ -z ${qs+x} ]; then echo no value for qs\; setting default value of 1; qs=1; else echo using environment value of qs=$qs; fi
+
 # whaaat? It seems the following if block doesn't work as expected:
 if [ ! -d render_output ]; then mkdir render_output; fi
 
@@ -25,8 +36,11 @@ do
 		then
 		echo target file $element.png does not exist. will render.
 		# EmberRender doesn't seem to be able to render the file into another directory, so we're rendering the image into the same directory as the source .flam3 file, then moving it to a subdir.
-		EmberRender.exe --in=$element --out=$element.png --format=png --progress --opencl --ss=2 --qs=4
+		echo running command: EmberRender.exe --in=$element --out=$element.png --format=png --progress --opencl --ss=$ss --qs=$qs
+		EmberRender.exe --in=$element --out=$element.png --format=png --progress --opencl --ss=$ss --qs=$qs
 		mv $element.png ./render_output/
+		echo Sleeping to allow computer to cool for 7 seconds . . .
+		sleep 7
 	fi
 done
 
