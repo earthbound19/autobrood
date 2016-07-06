@@ -12,3 +12,6 @@ done
 
 		# CLEANUP BUG WORKAROUND:
 				rm flam3-palettes.xml
+
+# Optional:
+createSheepAnim.sh

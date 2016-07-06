@@ -14,8 +14,8 @@
 # Bug fix: frame 0 is unsynced. Maybe it's actually the last frame?
 # Accept parameters for nframes, qs, and ss values.
 
-# TO DO:
-# log either in the file names themselves or a text file how many frames are in a loop (re var_nframes).
+# TO DO; DONE:
+# * log either in the file names themselves or a text file how many frames are in a loop (re var_nframes).
 
 # If there is no value set for var_nframes, set a default value:
 if ! (( $var_nframes )); then var_nframes=12; fi
@@ -24,6 +24,7 @@ echo Number of frames per loop for anim: $var_nframes > ANIM_INFO.txt
 
 if [ ! -d anim_frames ]; then mkdir anim_frames; fi
 
+# ? TO DO, POSSIBLY: use the counterpart to xml_split, xml_join, instead, for the following:
 cat *.flam3 *.flame > ./anim_frames/_alles.flam3
 # !~~~~
 cd ./anim_frames
@@ -76,17 +77,22 @@ mv ./_alles_anim.flam3 ./anim_xml
 # Because the resulting 00 frame .flam3 is always bogus:
 rm _alles_anim-0000000.flam3
 
-mv ./anim_xml ..
+mv ./anim_xml ./..
 
 # cludge for file name problem with 0th frame:
 # mv _alles_anim_fr0000000.flam3 _alles_anim_fr-000000.flam3
 # -- nah, just delete that first frame until I get this fixed:
 rm _alles_anim_fr0000000.flam3
 
+echo in dir\:
+echo $PWD
+cd ..
+echo now in dir\:
+echo $PWD
+
 # Optional:
 render-flames-anim-fractorium.sh
 
-cd ..
 
 
 # DEVELOPMENT HISTORY

@@ -1,2 +1,4 @@
+make sure --opencl flag is set in render scripts (which I disable when rendering on compys without gpu hardware that can do so).
+
 process substitution where otherwise I've been using so many temp files. re:
 https://en.wikipedia.org/wiki/Process_substitution
