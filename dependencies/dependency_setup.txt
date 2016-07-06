@@ -1,8 +1,5 @@
-Until I narrow down exactly the needed dependencies, this shotgut approach works:
-
-1) From the cygwin installer, install everything that comes up when you search for XML. You can probably omit the QT stuff :) Also install perl. Probably perl libxml2 and libxslt / summat are the needed dependencies.
-2) Wait five years for cygwin to install so much.
-3) re: http://www.xmltwig.org/xmltwig/XML-Twig-FAQ.html and http://www.cpan.org/modules/by-authors/id/M/MI/MIROD/ :
+1) From the cygwin installer, install make, perl, all packages that say libxmlperl (or is it xml-perl or xmlperl?), and possibly also libxml2 and libxslt are required.
+2) re: http://www.xmltwig.org/xmltwig/XML-Twig-FAQ.html and http://www.cpan.org/modules/by-authors/id/M/MI/MIROD/ :
 download XML-Twig-3.50.tar.gz from wherever you can find it, or ~3.49 from that second link. Extract the .gz file and the .tar file and folder within it. Open a cygwin prompt and enter the commands:
 
 cd "<C:\Windows_Path_to_that_untarred_dir>"
