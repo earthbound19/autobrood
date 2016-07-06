@@ -84,16 +84,10 @@ mv ./anim_xml ./..
 # -- nah, just delete that first frame until I get this fixed:
 rm _alles_anim_fr0000000.flam3
 
-echo in dir\:
-echo $PWD
-cd ..
-echo now in dir\:
-echo $PWD
-
 # Optional:
 render-flames-anim-fractorium.sh
 
-
+cd ..
 
 # DEVELOPMENT HISTORY
 # 06/19/2016 12:33:41 -RAH
