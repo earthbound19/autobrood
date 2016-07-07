@@ -10,8 +10,47 @@
 				# --ss=1.6		produces 1280x image from 900x (?) genome
 				# --ss=2.4		produces 1920x image from 800x genome
 				# --ss=3		. . ?
-if [ -z ${ss+x} ]; then echo no value for ss\; setting default value of .18; ss=.18; else echo using environment value of ss=$ss; fi
-if [ -z ${qs+x} ]; then echo no value for qs\; setting default value of 1; qs=1; else echo using environment value of qs=$qs; fi
+def_ss=.2
+def_qs=1
+
+# Establish ridiculous bool that tells us whether to copy / later delete a file (see comment near end of script) ; this is ONLY for the case where this script is foolishly executed ;) in the only directory where this master test fractal flame file is kept:
+if ! [ -e ./_test_wexEheVtcfysXww27E4g8JmeeCHBFVXH.flame ]
+	then
+				# Why cat instead of cp? Stupid permissions things that sometimes arise from Windows. Why cat avoids the permissions garbage is a mystery:
+		cat /cygdrive/c/autobrood/batch-scripts/_test_wexEheVtcfysXww27E4g8JmeeCHBFVXH.flame > _test_wexEheVtcfysXww27E4g8JmeeCHBFVXH.flame
+		LATER_DELETE__test_wexEheVtcfysXww27E4g8JmeeCHBFVXH_flame_whatAnAwesomeVariableName=1
+fi
+
+cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
+
+	# ===== SET GLOBAL BOOLEAN based on pass/fail of --opencl render test, which we will use to decide whether to pass the --opencl parameter;
+	# EXCEPT DON'T EVEN run this test if the script is run with any parameter; the bollean will be set to an empty value or an actual command flag (string) value depending; if it's empty it simply won't have any effect when insterted into the command:
+	if [ -z ${1+x} ]
+		then
+			echo No parameter passed to script\; will test \-\-opencl render flag with EmberRender.exe. To avoid this test\, invoke the script with any parameter\, e.g.\:
+			echo \<thisScriptName.sh floofyFloo\>\<enter\>.
+				echo RUNNING OPENCL RENDER TEST to determine settings for batch render of fractal flames . . .
+
+			EmberRender.exe --in=test.flame --out=test.png --format=png --progress --opencl --ss=.2 --qs=1
+			errorLevel=$?
+
+			echo ~-~-
+			if ! [ "$errorLevel" == 0 ]
+				then
+					echo error level encountered executing render command with --opencl flag\: $errorLevel. will not use --opencl flag when invoking EmberRender.exe.
+					openclFlag=""
+				else
+					echo No error level encountered executing render command with --opencl flag\: \(result $errorLevel\). Will use --opencl flag when invoking EmberRender.exe.
+					openclFlag="--opencl "
+			fi
+			echo ~-~-
+		else
+			echo Parameter was passed to script\; will NOT test --opencl render flag with EmberRender.exe.
+	fi
+	# ===== END SET GLOBAL FLAG
+
+if [ -z ${ss+x} ]; then echo no value for ss\; setting default value of $def_ss; ss=$def_ss; else echo using environment value of ss=$ss; fi
+if [ -z ${qs+x} ]; then echo no value for qs\; setting default value of $def_qs; qs=$def_qs; else echo using environment value of qs=$qs; fi
 
 if [ ! -d render_output ]; then mkdir render_output; fi
 
@@ -24,8 +63,8 @@ mapfile -t fractal_flames_list < fractal_flames_list.txt
 rm fractal_flames_list.txt
 
 		# BUG WORKAROUND:
-		# see createSheepAnim.sh for notes about this cludge:
-		cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
+		# see createSheepAnim.sh for notes about this cludge; yes this is duplicate code only for context (this was copied at the start of this script also); except the following line was copied to the top of this script for other purposes:
+		# cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
 
 # Only render the frame if the target render file does not exist:
 for element in "${fractal_flames_list[@]}"
@@ -35,8 +74,8 @@ do
 		then
 		echo target file $element.png does not exist. will render.
 		# EmberRender doesn't seem to be able to render the file into another directory, so we're rendering the image into the same directory as the source .flam3 file, then moving it to a subdir.
-		echo running command: EmberRender.exe --in=$element --out=$element.png --format=png --progress --ss=$ss --qs=$qs
-		EmberRender.exe --in=$element --out=$element.png --format=png --progress --ss=$ss --qs=$qs
+		echo running command: EmberRender.exe --in=$element --out=$element.png --format=png --progress $openclFlag --ss=$ss --qs=$qs
+		EmberRender.exe --in=$element --out=$element.png --format=png --progress $openclFlag --ss=$ss --qs=$qs
 		mv $element.png ./render_output/
 		# echo Sleeping to allow computer to cool for 7 seconds . . .
 		# sleep 7
@@ -45,3 +84,8 @@ done
 
 		# CLEANUP BUG WORKAROUND:
 		rm flam3-palettes.xml
+# Only delete the given ~.flame file if it was not here (according to this AWESOME bool) before we ran this script. Otherwise, leave it there (do not delete it):
+if [ "$LATER_DELETE__test_wexEheVtcfysXww27E4g8JmeeCHBFVXH_flame_whatAnAwesomeVariableName" == 1 ]
+	then
+		rm _test_wexEheVtcfysXww27E4g8JmeeCHBFVXH.flame
+fi

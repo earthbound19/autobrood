@@ -1,0 +1,44 @@
+<pick version="EMBER-WIN-1.0.0.0">
+<flame version="EMBER-WIN-1.0.0.0" time="0" name="No name" size="1920 1080" center="-0.216218 2.11499" scale="1492.55" rotate="0" supersample="1" filter="0.5" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1" temporal_samples="100" sub_batch_size="10240" fuse="15" background="0 0 0" brightness="4" gamma="4" highlight_power="1" vibrancy="1" estimator_radius="9" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0.01" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="pre_poincare3D pre_diamond fdisc sech post_waves2b pre_popcorn disc" new_linear="1" curves="0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 ">
+   <xform weight="0.2" color="0.391916" var_color="1" color_speed="0.5" name="" animate="1" pre_poincare3D="0.610126" pre_poincare3D_r="-0.212955" pre_poincare3D_a="0.280025" pre_poincare3D_b="-0.923311" pre_diamond="-0.364462" fdisc="-0.4723" sech="-0.297648" post_waves2b="-0.343474" post_waves2b_freqx="0.992876" post_waves2b_freqy="0.253814" post_waves2b_pwx="0.941494" post_waves2b_pwy="-0.508727" post_waves2b_scalex="-0.708919" post_waves2b_scaleinfx="0.0396466" post_waves2b_scaley="-0.727614" post_waves2b_scaleinfy="0.696531" post_waves2b_unity="-0.0988491" post_waves2b_jacok="-0.753518" coefs="0.621347 0.780521 0.124437 -0.385958 -0.0762181 -0.0751042" opacity="1"/>
+   <xform weight="0.2" color="0.512565" var_color="1" color_speed="0.5" name="" animate="1" pre_popcorn="0.551387" fdisc="0.989606" disc="0.488918" sech="0.956669" post_waves2b="-0.918931" post_waves2b_freqx="0.701534" post_waves2b_freqy="0.57359" post_waves2b_pwx="-0.817967" post_waves2b_pwy="0.399777" post_waves2b_scalex="0.625589" post_waves2b_scaleinfx="0.968478" post_waves2b_scaley="0.643923" post_waves2b_scaleinfy="-0.940051" post_waves2b_unity="-0.254454" post_waves2b_jacok="-0.342214" coefs="-0.701636 0.488912 -0.780157 0.788385 0.264595 0.854407" opacity="1"/>
+   <xform weight="0.2" color="0.0607641" var_color="1" color_speed="0.5" name="" animate="1" pre_poincare3D="0.420211" pre_poincare3D_r="-0.308926" pre_poincare3D_a="-0.355458" pre_poincare3D_b="0.674676" pre_diamond="-0.773567" pre_popcorn="0.944346" fdisc="-0.317971" sech="-0.674159" coefs="0.269748 -0.888559 0.0988817 0.7675 -0.500249 0.344328" opacity="1"/>
+   <xform weight="0.2" color="0.338148" var_color="1" color_speed="0.5" name="" animate="1" pre_popcorn="-0.219715" fdisc="0.355746" disc="-0.839074" sech="0.903115" post_waves2b="0.628115" post_waves2b_freqx="-0.659342" post_waves2b_freqy="0.621755" post_waves2b_pwx="-0.462799" post_waves2b_pwy="-0.684601" post_waves2b_scalex="0.0723974" post_waves2b_scaleinfx="0.643678" post_waves2b_scaley="0.281858" post_waves2b_scaleinfy="-0.700925" post_waves2b_unity="0.388039" post_waves2b_jacok="-0.32861" coefs="-0.036595 -0.992216 0.0493863 -0.568115 -0.646362 -0.976801" opacity="1"/>
+   <xform weight="0.2" color="0.63945" var_color="1" color_speed="0.5" name="" animate="1" pre_poincare3D="0.946674" pre_poincare3D_r="-0.272509" pre_poincare3D_a="0.01152" pre_poincare3D_b="-0.0215369" pre_diamond="0.778765" pre_popcorn="-0.763843" fdisc="-0.768084" disc="-0.824909" coefs="0.447176 0.259111 -0.169685 -0.521139 -0.876332 0.340996" opacity="1"/>
+   <palette count="256" format="RGB">
+      73e5b4629acb6688db6b76ec7770e9836be78069ea7d67ed
+      7172f18389f096a1f096a2b597a37b8ea07d869d807a9496
+      6e8bad8696e37d99e7749dec8f93c1aa8a97af7e85b57374
+      d09f67c49976b99386b19492a9959e9c7ec59068ed8062e6
+      707bf16ab0f569bfe469cfd377d3c185d7af8ed4ad98d2ac
+      9ecda38fc79480c2857dcc917bd69d7cdba07ee0a37cd7ac
+      79d6b979deb67bd8b47ed3b282d1b686cfbb83ccc081c9c6
+      97c8c4a3c9b2b0cba0b4c69db9c19aafb994a6b28e98b28d
+      93b87380ce828bcb8997c890a3c492b0c194cfa283d79a7d
+      e8a85edca15dd09a5cbe976aad9579af9d7eb2a5839fc095
+      88e6a87ff0b875f3b66cf7b46af3c268efd173e4c87ce6cf
+      a6ead19fe0bf99d7ae95d5ab91d4a88fd2a68ada9f99d29d
+      abca84989f6c9a9f6b9c9f6a97a16e93a37286a586629cca
+      49caa45ad3a56bdca65dd7b44fd2c25ccecf60c8d156d3cb
+      54e5c471e7ab77e7b27de7b97ee4bd78e9b175dca565eeaa
+      5ef59861f0a264ecac6de4b876dcc47fdcd17fd7e36fd3e3
+      56d1f235b9e93cb2f044abf84bbce654c6e076cfdd71d4cf
+      83cba380bf8e7db47a7cb3737bb36c80b7748abc8192b08a
+      99ba9d78c3bc71b7c66babd177bbc49ab2a593a374918964
+      ad7850af7c52b18055c47557c87e59c48053d18353e39f54
+      ebad5ac1be61b7ca6baed67697f2a276e8a36bdfb252cfc7
+      48b9e14eade755a1ed5f90ef5793dc5b9ee4619de378b3db
+      84bfc788cca582bca389bf8e93bc8495b47899a67baca078
+      c2b06ec1bb6ec0c66ea6d57994dd8b7ce89281e59d7ce4a7
+      6bd9be61d6d05fded558e4d958dde655dee646ccf138c3ee
+      3eaaea49a8fc57a5f85399f83d97f73b8af1488cf14f8ef7
+      5995f55e94f46a94ea7682f26591ea6793d479a9d17bc0ad
+      7aba9590ba7b8fc16c86b57185b8698eaa6098af67b8b159
+      c29341be7b51ba8058af9584a8a99b6bafc655add547b1eb
+      419cf73397e53e95e553a8df53bfd954d9d461e9e568f6de
+      78eae280dfe382ece886e9e492ece082f6d388dcbb98d1b0
+      9dc1a7a1a6889d9370a591569e8b5385a86e75e79f72cb7b
+   </palette>
+   <edit date="Wed Jul 06 06:04:32 ric 2016" nick="earthbound" action="random reframed2 trunc 0 2 trunc 0 3 trunc 1 0 trunc 1 0 trunc 2 6 trunc 2 4 trunc 3 0 trunc 3 0 trunc 4 5 trunc 4 5 improved colors"/>
+</flame>
+</pick>

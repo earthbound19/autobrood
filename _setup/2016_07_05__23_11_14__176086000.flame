@@ -1,0 +1,42 @@
+<pick version="EMBER-WIN-1.0.0.0">
+<flame version="EMBER-WIN-1.0.0.0" time="0" name="No name" size="1920 1080" center="0.546896 0.230125" scale="1031.27" rotate="0" supersample="1" filter="0.5" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1" temporal_samples="100" sub_batch_size="10240" fuse="15" background="0 0 0" brightness="4" gamma="4" highlight_power="1" vibrancy="1" estimator_radius="9" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0.01" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="pre_wedge_sph hypertile3D1 post_crackle pre_rectangles pre_polar pre_foci_3D pre_julia3Dz waves2" new_linear="1" curves="0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 ">
+   <xform weight="0.333333" color="0.029707" var_color="1" color_speed="0.5" name="" animate="1" pre_wedge_sph="1" pre_wedge_sph_angle="1.56731" pre_wedge_sph_count="2" pre_wedge_sph_hole="0.432569" pre_wedge_sph_swirl="0.109488" hypertile3D1="-0.23515" hypertile3D1_p="3" hypertile3D1_q="3" post_crackle="-0.55499" post_crackle_cellsize="0.552613" post_crackle_power="0.751155" post_crackle_distort="-0.348216" post_crackle_scale="0.974855" post_crackle_z="0.214603" coefs="0.228765 0.160332 -0.445671 0.443847 0.874378 -0.689501" opacity="1"/>
+   <xform weight="0.333333" color="0.602035" var_color="1" color_speed="0.5" name="" animate="1" pre_rectangles="0.482926" pre_rectangles_x="0.0854256" pre_rectangles_y="0.276569" pre_polar="0.468683" coefs="0.00693754 0.109586 -0.871463 0.936074 0.447565 -0.158826" opacity="1"/>
+   <xform weight="0.333333" color="0.383565" var_color="1" color_speed="0.5" name="" animate="1" pre_foci_3D="-0.223184" pre_julia3Dz="0.684608" pre_julia3Dz_power="5" waves2="1" waves2_freqx="3.7184" waves2_scalex="1.32305" waves2_freqy="2.72749" waves2_scaley="0.685781" waves2_freqz="0" waves2_scalez="0" coefs="0.168849 0.351915 -0.674643 -0.650377 0.453016 -0.815059" opacity="1"/>
+   <palette count="256" format="RGB">
+      3f4b8a44449143408e433c8b42368542307f412d7c412b7a
+      432b7b433182443789433c8c42418f40428b3e44883c4284
+      3a4180353c6d343c6b343d6a353d6d373d71393e753b3f79
+      433a8a48358f4e3195522c9956279d59259d5c249e5f219c
+      61229c622da35f35a75d3dac5945b1554db65550b75554b9
+      545ab0555aaa575ba5585ea55a61a55b63a65c66a75b6cab
+      5c6fb36075c26470c6696cca6e68d17464d87763db7a62de
+      7f67e37c6de57973e87374e36d75de6972d8656fd35d69c8
+      5661bf4c56a648529d444f95434e92434d90424e90404d90
+      40499544469848439b503f9c593b9d5d399e6238a06a3da8
+      7243b38654cc8c5dd89266e49469e8966dec9972ec9871e6
+      916dd38c6ac78768bc8466b68164b07561a46b5e9b645a90
+      5b52834b3c6a45325d3f29503c254b3a214635193c311334
+      2d0b2a2e082b30062d31053033053339063e40084c460b5b
+      4c0d6954128155128456138858138b58128c58128c58128c
+      57128b53148b4f178b4c188a4a1a89451b83401c7b3a1c71
+      341c67291c51261e4e24214b2026481c2c481a30471a3347
+      1b394c1d394f1f3a52213a53243b552a3d592e4061354368
+      3d46714f4f8151538554588a545e91556396566a9b596ba1
+      5f6fb3626db8656bbe6b68c67067ce7266d57167d66c6cd4
+      6b6cd1696bcd6969cc6a67cc6d62ca715dcb7656cc7850c9
+      6e49b86b48b26947ad6345a15d4193584085513f7b4c3d74
+      483d6f433b6b3d3766383361332e5d3028572b2351261d4c
+      1a163f18153c161539131333111230100f2d110d2c130d2c
+      160a2e1a0a301d0932200a36230b38260e3a29103b2a133d
+      2b193e2b1e402d20432e22432d24442e25472e294b322e52
+      33355b364268355174375e82376b8c35799431829b2c899e
+      2a8ea0288fa12992a42898a72a9eae2ca4b52eabbc31aec0
+      33b0c437adc43ca9c341a1c54498c54991c34d8ac04f86bb
+      5180b65180b55080b45183b35184b35083b75082b85181ba
+      5180b9527db5507bb24c79ad487da84283a33d87a1378aa1
+      328ca12e899e2c83972c79902f6c893261843558833a5085
+   </palette>
+   <edit date="Wed Jul 06 06:11:16 ric 2016" nick="earthbound" action="random recentered"/>
+</flame>
+</pick>

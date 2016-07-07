@@ -18,7 +18,7 @@
 # * log either in the file names themselves or a text file how many frames are in a loop (re var_nframes).
 
 # OPTIONAL: start this by generating so many fractal flames:
-generateNrandomGenomesFractorium.sh 500
+# generateNrandomGenomesFractorium.sh 500
 
 # If there is no value set for var_nframes, set a default value:
 # TO DO: update the following to use better error checking re render-flames-fractorium.sh:

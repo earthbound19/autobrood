@@ -1,0 +1,45 @@
+<pick version="EMBER-WIN-1.0.0.0">
+<flame version="EMBER-WIN-1.0.0.0" time="0" name="No name" size="1920 1080" center="-2.5144 -3.40244" scale="61.1281" rotate="0" supersample="1" filter="0.5" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1" temporal_samples="100" sub_batch_size="10240" fuse="15" background="0 0 0" brightness="4" gamma="4" highlight_power="1" vibrancy="1" estimator_radius="9" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0.01" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="pre_spiralwing pre_ovoid cschq interference2 jac_sn eJulia csc pre_perspective pre_depth juliaq linear" new_linear="1" curves="0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 ">
+   <xform weight="0.333333" color="0.665957" var_color="1" color_speed="0.5" name="" animate="1" pre_spiralwing="-0.860312" pre_ovoid="0.383399" pre_ovoid_x="-0.830385" pre_ovoid_y="-0.458124" cschq="-0.408541" interference2="0.439047" interference2_a1="-0.478916" interference2_b1="0.311572" interference2_c1="0.650165" interference2_p1="0.685817" interference2_t1="1" interference2_a2="-0.0432567" interference2_b2="0.0460925" interference2_c2="-0.0627503" interference2_p2="-0.150645" interference2_t2="0" jac_sn="0.453624" jac_sn_k="-0.912757" coefs="-0.0935241 -0.975585 0.235922 -0.712498 -0.94827 -0.044869" post="-0.478627 -0.179049 0.0543828 0.401579 -0.788593 0.415502" opacity="1"/>
+   <xform weight="0.333333" color="0.160933" var_color="1" color_speed="0.5" name="" animate="1" eJulia="-0.081895" eJulia_power="1" csc="-0.732248" coefs="-0.578055 -0.986267 -0.679217 0.185234 -0.173811 0.349351" post="-0.478627 -0.179049 0.0543828 0.401579 -0.788593 0.415502" opacity="1"/>
+   <xform weight="0.333333" color="0.813971" var_color="1" color_speed="0.5" name="" animate="1" pre_perspective="0.1709" pre_perspective_angle="0.864951" pre_perspective_dist="1.63332" pre_depth="-0.104424" pre_depth_power="-0.710361" juliaq="-0.52324" juliaq_power="1" juliaq_divisor="-1" coefs="-0.602041 0.801319 0.892378 -0.891551 0.135953 0.834313" post="-0.478627 -0.179049 0.0543828 0.401579 -0.788593 0.415502" opacity="1"/>
+   <xform weight="1" color="0" var_color="1" color_speed="0" name="" animate="0" linear="1" coefs="0 1 -1 0 0 0" opacity="1"/>
+   <xform weight="1" color="0.5" var_color="1" color_speed="0" name="" animate="0" linear="1" coefs="-1 0 0 -1 0 0" opacity="1"/>
+   <xform weight="1" color="1" var_color="1" color_speed="0" name="" animate="0" linear="1" coefs="0 -1 1 0 0 0" opacity="1"/>
+   <palette count="256" format="RGB">
+      a6c9e3a9c7e1a9c6e0aac5dfa7c5e0a5c5e1a4c5e1a4c5e2
+      94bbde94b9dc94b7da93b5d993b3d98fb0d58baed286aacd
+      82a7c96b8ead64849e5d7a90566f825065754c5f6f495a6a
+      384b5c3145572b3f532d3f512f40503242523644543d4c5c
+      465766566f835c7a936285a46d94b278a3c180abc888b3d0
+      a7cde4b1d5e8bcddedbee0f1c1e3f5c1e3f4c1e4f3c1e2f0
+      bfddebb5d0ddadc3cea6b6c099a7b08d98a18690997f8991
+      606a71505b65404c5932405124354a1f31471a2d45142944
+      122845152e4e16325518375d1939621b3c671b3d691b3d69
+      1c3d671a3a6219375e1b3a601d3d631f3f6521416827466b
+      2e4b6f465d7852647b5e6c7e6473846b7a8a78889b8194a8
+      8ba5c28fabc993b1d193b1d293b1d392b0d38faed28aa9cd
+      80a0c3617fa3506e91405d7f395576334e6e284160213856
+      1832521832521932521b33531d3554213b5a2642602d4b65
+      345871407292427799457da14b87af5090bd5394c95698ce
+      589ccd559acc5399cb5298ca5197c94f95ca4b91cc4689ca
+      4483c7427cc1427bbf427abe477cbe4d80c05789c66090cc
+      6f9dd5729ed576a0d676a0d476a0d3769ed1779fd178a1d4
+      7ba4d87caadc7baadb7aaadb78aada76a9d975aad875add9
+      80b6e182b8e284bae485bae482b8e17fb2dc7aacd574a6cd
+      73a2c8749cc1739abe7398bc6d91b66587af5879a3476691
+      2a477125426a213d631c3557192e4c182b47162840132236
+      0f1b2c0c18290b172a0a162a0a162a091629091629091629
+      0811200a13230c1627121e331c2e46253d59314c6b3f5e7c
+      4e6c86597487677d8c75869285959e94a5ada3b4bfb2c6d1
+      c0d7e2c7e2eccde8f4d0ecf8d2edf9cee9f8c7e3f7bfddf7
+      b6d8f4aad0f09dc6ee90beeb85b7e779aee36ea5de649cda
+      5c95d5568fcf4f87c94880c5447dc2417ac23f7bc33e7bc5
+      3f7cc7437fc84681c74a82c34e82bd507fb85181b65281b7
+      5181b85282b95384bb5687bd5a89bc5d87b76086b16387ae
+      6486ad6686ad6688b1688db66b94bd7099c3759dc579a1c8
+      7ea4c98aacce93b3d29dbbd7a1c2dda5c8e2aacce4accee6
+   </palette>
+   <edit date="Wed Jul 06 06:04:35 ric 2016" nick="earthbound" action="random reframed0"/>
+</flame>
+</pick>
