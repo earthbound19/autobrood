@@ -10,8 +10,8 @@
 				# --ss=1.6		produces 1280x image from 900x (?) genome
 				# --ss=2.4		produces 1920x image from 800x genome
 				# --ss=3		. . ?
-def_ss=.2
-def_qs=1
+def_ss=2.4
+def_qs=2.1
 
 # Establish ridiculous bool that tells us whether to copy / later delete a file (see comment near end of script) ; this is ONLY for the case where this script is foolishly executed ;) in the only directory where this master test fractal flame file is kept:
 if ! [ -e ./_test_wexEheVtcfysXww27E4g8JmeeCHBFVXH.flame ]
@@ -45,7 +45,8 @@ cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palette
 			fi
 			echo ~-~-
 		else
-			echo Parameter was passed to script\; will NOT test --opencl render flag with EmberRender.exe.
+			openclFlag="--opencl "
+			echo Parameter was passed to script\; will NOT test --opencl render flag with EmberRender.exe\, and WILL go ahead and use \-\-opencl flag.
 	fi
 	# ===== END SET GLOBAL FLAG
 
@@ -69,16 +70,19 @@ rm fractal_flames_list.txt
 # Only render the frame if the target render file does not exist:
 for element in "${fractal_flames_list[@]}"
 do
-	if [ ! -e ./render_output/$element.png ]
+	if [ ! -e ./render_output/$element.png ] && [ ! -e ./render_output/$element.txt ]
 	# NOTE for the following command: for 800 x 592 or whatever flame, ss=2.4 offers high def (1080p) image area. ss=1.6 offers HD 720p area.
 		then
 		echo target file $element.png does not exist. will render.
 		# EmberRender doesn't seem to be able to render the file into another directory, so we're rendering the image into the same directory as the source .flam3 file, then moving it to a subdir.
 		echo running command: EmberRender.exe --in=$element --out=$element.png --format=png --progress $openclFlag --ss=$ss --qs=$qs
+	# temporary text file to let any other render client know we're doing this:
+	printf "rendering an image for this file name . . ." > ./render_output/$element.txt
 		EmberRender.exe --in=$element --out=$element.png --format=png --progress $openclFlag --ss=$ss --qs=$qs
+	rm ./render_output/$element.txt
 		mv $element.png ./render_output/
-		# echo Sleeping to allow computer to cool for 7 seconds . . .
-		# sleep 7
+		echo Sleeping to allow computer to cool for \$n seconds . . .
+		sleep 6
 	fi
 done
 
