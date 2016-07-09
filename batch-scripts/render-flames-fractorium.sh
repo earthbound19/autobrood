@@ -10,16 +10,10 @@
 				# --ss=1.6		produces 1280x image from 900x (?) genome
 				# --ss=2.4		produces 1920x image from 800x genome
 				# --ss=3		. . ?
-def_ss=2.4
-def_qs=2.1
+				# --ss=.667		produces 1280x image (if cropped) from 2160x1080 genome
+def_ss=.667
+def_qs=8.5
 
-# Establish ridiculous bool that tells us whether to copy / later delete a file (see comment near end of script) ; this is ONLY for the case where this script is foolishly executed ;) in the only directory where this master test fractal flame file is kept:
-if ! [ -e ./_test_wexEheVtcfysXww27E4g8JmeeCHBFVXH.flame ]
-	then
-				# Why cat instead of cp? Stupid permissions things that sometimes arise from Windows. Why cat avoids the permissions garbage is a mystery:
-		cat /cygdrive/c/autobrood/batch-scripts/_test_wexEheVtcfysXww27E4g8JmeeCHBFVXH.flame > _test_wexEheVtcfysXww27E4g8JmeeCHBFVXH.flame
-		LATER_DELETE__test_wexEheVtcfysXww27E4g8JmeeCHBFVXH_flame_whatAnAwesomeVariableName=1
-fi
 
 cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
 
@@ -27,13 +21,14 @@ cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palette
 	# EXCEPT DON'T EVEN run this test if the script is run with any parameter; the bollean will be set to an empty value or an actual command flag (string) value depending; if it's empty it simply won't have any effect when insterted into the command:
 	if [ -z ${1+x} ]
 		then
+			# Why cat instead of cp? Stupid permissions things that sometimes arise from Windows. Why cat avoids the permissions garbage is a mystery:
+			cat /cygdrive/c/autobrood/batch-scripts/_test_wexEheVtcfysXww27E4g8JmeeCHBFVXH.flame > _test_wexEheVtcfysXww27E4g8JmeeCHBFVXH.flame
 			echo No parameter passed to script\; will test \-\-opencl render flag with EmberRender.exe. To avoid this test\, invoke the script with any parameter\, e.g.\:
 			echo \<thisScriptName.sh floofyFloo\>\<enter\>.
 				echo RUNNING OPENCL RENDER TEST to determine settings for batch render of fractal flames . . .
-
 			EmberRender.exe --in=test.flame --out=test.png --format=png --progress --opencl --ss=.2 --qs=1
 			errorLevel=$?
-
+			rm _test_wexEheVtcfysXww27E4g8JmeeCHBFVXH.flame
 			echo ~-~-
 			if ! [ "$errorLevel" == 0 ]
 				then
@@ -82,14 +77,19 @@ do
 	rm ./render_output/$element.txt
 		mv $element.png ./render_output/
 		echo Sleeping to allow computer to cool for \$n seconds . . .
-		sleep 6
+		sleep 6.2
 	fi
 done
 
 		# CLEANUP BUG WORKAROUND:
 		rm flam3-palettes.xml
-# Only delete the given ~.flame file if it was not here (according to this AWESOME bool) before we ran this script. Otherwise, leave it there (do not delete it):
-if [ "$LATER_DELETE__test_wexEheVtcfysXww27E4g8JmeeCHBFVXH_flame_whatAnAwesomeVariableName" == 1 ]
-	then
-		rm _test_wexEheVtcfysXww27E4g8JmeeCHBFVXH.flame
-fi
+
+# TEMP, OPTIONAL:
+cd render_output
+render-flames-anim-fractorium.sh
+
+# DEVELOPMENT HISTORY
+# Before now:
+# Yesh. First feature complete.
+# 07/08/2016 07:35:21 PM
+# Eliminate ridiculous bool LATER_DELETE__test_wexEheVtcfysXww27E4g8JmeeCHBFVXH_flame_whatAnAwesomeVariableName and instead just copy corresponding test render fractal flame genome to current dir and then delete (*gasps for air*) conditionally--only do all that on condition of even doing a test render.
