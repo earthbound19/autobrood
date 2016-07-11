@@ -10,7 +10,8 @@
 # make this work in harmony with render-flames-anim-fractorium.sh ?
 
 # GLOBAL VAR:
-n_frames_per_seq=46
+# n_frames_per_seq=46
+n_frames_per_seq=110
 
 if [ ! -d vid ]; then mkdir vid; fi
 if [ ! -d vid/src ]; then mkdir vid/src; fi

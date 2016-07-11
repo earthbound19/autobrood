@@ -62,6 +62,8 @@ rm fractal_flames_list.txt
 		# see createSheepAnim.sh for notes about this cludge; yes this is duplicate code only for context (this was copied at the start of this script also); except the following line was copied to the top of this script for other purposes:
 		# cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
 
+# To allow rest periods every nth frame:
+imgs_iter=0
 # Only render the frame if the target render file does not exist:
 for element in "${fractal_flames_list[@]}"
 do
@@ -73,11 +75,15 @@ do
 		echo running command: EmberRender.exe --in=$element --out=$element.png --format=png --progress $openclFlag --ss=$ss --qs=$qs
 	# temporary text file to let any other render client know we're doing this:
 	printf "rendering an image for this file name . . ." > ./render_output/$element.txt
-		EmberRender.exe --in=$element --out=$element.png --format=png --progress $openclFlag --ss=$ss --qs=$qs
+		# EmberRender.exe --in=$element --out=$element.png --format=png --progress $openclFlag --ss=$ss --qs=$qs
 	rm ./render_output/$element.txt
 		mv $element.png ./render_output/
+		imgs_iter=$((imgs_iter + 1))
+		# if [ $imgs_iter % 2 == 0 ]; then echo divis by two; else echo not diis bunniesy two; fi
+		# echo __________________________ imgs_iter val is $imgs_iter __________________________
 		echo Sleeping to allow computer to cool for \$n seconds . . .
 		sleep 6.2
+		# sleep 2.5
 	fi
 done
 
