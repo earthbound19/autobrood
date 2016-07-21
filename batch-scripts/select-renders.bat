@@ -10,12 +10,10 @@ REM NOTE that if you run render-sheep.bat in your subdirectory of selected image
 FOR %%F IN (*.jpg, *.png) DO	(
 SET flamImageFile=%%F
 SET flamImageFileName=%%~nF
-ECHO Image file is %%F, so genome file name is hopefully either !flamImageFileName!.flam3 or !flamImageFileName!.flame . . .
-ECHO Retrieving genome . . .
-IF NOT EXIST !flamImageFileName!.flam3 COPY ..\!flamImageFileName!.flam3
-IF NOT EXIST !flamImageFileName!.flame COPY ..\!flamImageFileName!.flame
+REM ECHO Attempting copy of !flamImageFileName!.flam3 or !flamImageFileName!.flame . . .
+REM ECHO Retrieving genome . . .
+IF EXIST "..\!flamImageFileName!" COPY "..\!flamImageFileName!" && ECHO attempted copy of "..\!flamImageFileName!.flam3" . . .
+IF EXIST "..\!flamImageFileName!" COPY "..\!flamImageFileName!" && ECHO attempted copy of "..\!flamImageFileName!.flame" . . .
 					)
 
-ECHO Don't be alarmed if this script threw a lot of errors about not finding files; it probably attempted to copy many files which do not exist.
-					
 ENDLOCAL
