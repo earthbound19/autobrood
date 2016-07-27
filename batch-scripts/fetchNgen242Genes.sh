@@ -1,8 +1,8 @@
 # GLOBALS:
-sheepDir=`cygpath -u "C:\autobrood\_resources\gen242"`
+sheepDir=`cygpath -u "C:\_resources\gen242"`
 sheepToFetch=13
 
-ls "C:\autobrood\_resources\gen242" > sheep.txt
+ls $sheepDir > sheep.txt
 mapfile -t sheep < sheep.txt
 rm sheep.txt
 numSheep=${#sheep[@]}
