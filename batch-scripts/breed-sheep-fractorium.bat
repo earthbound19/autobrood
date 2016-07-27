@@ -8,6 +8,8 @@ IF NOT EXIST children mkdir children
 SET nick=earthbound
 SET url=http://earthbound.io
 
+COPY C:\autobrood\bin\flam3-palettes.xml
+
 FOR %%S IN (*.flame, *.flam3) DO	(
 SET cross0=%%S
 REN !cross0! %%~nS.breeding
@@ -68,3 +70,5 @@ ECHO ================
 REN *.breeding *.flam3
 
 ENDLOCAL
+
+DEL flam3-palettes.xml
