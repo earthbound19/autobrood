@@ -14,6 +14,8 @@ REM ECHO Attempting copy of !flamImageFileName!.flam3 or !flamImageFileName!.fla
 REM ECHO Retrieving genome . . .
 IF EXIST "..\!flamImageFileName!" COPY "..\!flamImageFileName!" && ECHO attempted copy of "..\!flamImageFileName!.flam3" . . .
 IF EXIST "..\!flamImageFileName!" COPY "..\!flamImageFileName!" && ECHO attempted copy of "..\!flamImageFileName!.flame" . . .
+IF EXIST "..\..\!flamImageFileName!" COPY "..\!flamImageFileName!" && ECHO attempted copy of "..\!flamImageFileName!.flam3" . . .
+IF EXIST "..\..\!flamImageFileName!" COPY "..\!flamImageFileName!" && ECHO attempted copy of "..\!flamImageFileName!.flame" . . .
 					)
 
 ENDLOCAL
