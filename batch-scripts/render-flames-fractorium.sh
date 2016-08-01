@@ -2,20 +2,28 @@
 
 # ALSO NOTE: for now (or forever?) it outputs target renders in the same directory as the source flame file.
 
+# GLOBAL VALUES:
+
 # Set ss and qs defaults if there are no such variables;
 # some options:
 				# --ss=.18 --qs=0.7
 				# --ss=.25 --qs=0.7
 				# --ss=0.815	produces ~640x image from 800x genome
-				# --ss=1.6		produces 1280x image from 900x (?) genome
+				# --ss=1.6		produces 1280x image from 800x genome
 				# --ss=2.4		produces 1920x image from 800x genome
 				# --ss=3		. . ?
 				# --ss=.667		produces 1280x image (if cropped) from 2160x1080 genome
-def_ss=.667
-def_qs=8.5
+# def_ss=.667
+# def_ss=.815
+def_ss=1.6
+def_qs=2.4
 
+# The number of seconds between individual and batch renders to rest:
+shortRestPeriod=5.8
+mediumRestPeriod=118
 
-cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
+			# BUG WORKAROUND, because fractorium doesn't scan $path for the flam3-palettes.xml file:
+			cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
 
 	# ===== SET GLOBAL BOOLEAN based on pass/fail of --opencl render test, which we will use to decide whether to pass the --opencl parameter;
 	# EXCEPT DON'T EVEN run this test if the script is run with any parameter; the bollean will be set to an empty value or an actual command flag (string) value depending; if it's empty it simply won't have any effect when insterted into the command:
@@ -75,15 +83,17 @@ do
 		echo running command: EmberRender.exe --in=$element --out=$element.png --format=png --progress $openclFlag --ss=$ss --qs=$qs
 	# temporary text file to let any other render client know we're doing this:
 	printf "rendering an image for this file name . . ." > ./render_output/$element.txt
-		# EmberRender.exe --in=$element --out=$element.png --format=png --progress $openclFlag --ss=$ss --qs=$qs
+				# Optional flag in the following command:
+				# --progress
+		EmberRender.exe --in=$element --out=$element.png --format=png $openclFlag --ss=$ss --qs=$qs
 	rm ./render_output/$element.txt
 		mv $element.png ./render_output/
-		imgs_iter=$((imgs_iter + 1))
-		# if [ $imgs_iter % 2 == 0 ]; then echo divis by two; else echo not diis bunniesy two; fi
-		# echo __________________________ imgs_iter val is $imgs_iter __________________________
-		echo Sleeping to allow computer to cool for \$n seconds . . .
-		sleep 6.2
-		# sleep 2.5
+				imgs_iter=$((imgs_iter + 1))
+				if (( $imgs_iter % 125 == 0 )); then echo I have rendered 125 images\, and I am resting for $mediumRestPeriod seconds to cool down.; sleep $mediumRestPeriod; fi
+				# echo ~ mgs_iter val is $imgs_iter ~
+		echo Render complete\; sleeping to allow computer to cool for $shortRestPeriod seconds . . .
+		echo ~-~-~-~-~-~-~-~-~-~-
+		sleep $shortRestPeriod
 	fi
 done
 
