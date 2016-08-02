@@ -15,7 +15,7 @@
 	# -filter:v "crop=1920:1080:x:y"
 # ffmpeg -y -i _alles_anim.avi -filter:v "crop=1920:1080:x:y" -crf 10 _alles_anim.mp4
 # ffmpeg -y -i _alles_anim.avi -filter:v "crop=1280:720:x:y" -crf 10 _alles_anim.mp4
-ffmpeg -y -f image2 -i _alles_anim-%07d.flam3.png -vf resize:1280:-1:x:y -filter:v "crop=1280:720:x:y" -crf 16 _alles_anim.mp4
+ffmpeg -y -f image2 -i _alles_anim-%07d.flam3.png -vf resize:1280:-1:x:y -filter:v "crop=1280:720:x:y" -crf 16 -r 29.97 _alles_anim.mp4
 # ffmpeg -y -i _alles_anim.avi -filter:v "crop=640:350:x:y" -crf 14 _alles_anim.mp4
 # ffmpeg -y -i _alles_anim.avi -crf 13 _alles_anim.mp4
 # to rescale: -vf resize:<xpixels>:-1:x:y
