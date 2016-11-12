@@ -24,7 +24,7 @@
 # TO DO: update the following to use better error checking re render-flames-fractorium.sh:
 # TO DO: figure out why even updating it thus does nothing! Meanwhile, just setting a default, whatever variables you've assigned in the shell.
 # if ! (( $var_nframes )); then echo var_nframes not set\; setting to default value 110; $var_nframes=110; else echo var_nframes value of $var_nframes detected\; will use that.; fi
-var_nframes=110
+var_nframes=310
 
 echo Number of frames per loop for anim: $var_nframes > ANIM_INFO.txt
 

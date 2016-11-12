@@ -26,7 +26,7 @@ mediumRestPeriod=118
 			cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
 
 	# ===== SET GLOBAL BOOLEAN based on pass/fail of --opencl render test, which we will use to decide whether to pass the --opencl parameter;
-	# EXCEPT DON'T EVEN run this test if the script is run with any parameter; the bollean will be set to an empty value or an actual command flag (string) value depending; if it's empty it simply won't have any effect when insterted into the command:
+	# EXCEPT DON'T EVEN run this test if the script is run with any parameter; the boolean will be set to an empty value or an actual command flag (string) value depending; if it's empty it simply won't have any effect when inserted into the command:
 	if [ -z ${1+x} ]
 		then
 			# Why cat instead of cp? Stupid permissions things that sometimes arise from Windows. Why cat avoids the permissions garbage is a mystery:
