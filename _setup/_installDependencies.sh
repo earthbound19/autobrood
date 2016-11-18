@@ -14,7 +14,7 @@ if [ "$CONDITION" == "y" ]; then
 				echo Trying some stuff to install dependencies for autobrood using cygwin . . .
 				# cat ./my.minttyrc.settings.txt > /home/$username/.minttyrc
 		# Re goodies divulged here: http://stackoverflow.com/q/9260014/1397555
-		wget raw.github.com/transcode-open/apt-cyg/master/apt-cyg
+		wget --no-check-certificate raw.github.com/transcode-open/apt-cyg/master/apt-cyg
 		chmod +x apt-cyg
 		mv apt-cyg /usr/local/bin
 		cd /usr/local/bin
@@ -24,7 +24,7 @@ if [ "$CONDITION" == "y" ]; then
 		apt-cyg install make
 		apt-cyg install perl
 		apt-cyg install perl-libxml-perl
-		wget http://www.xmltwig.org/xmltwig/XML-Twig-3.50.tar.gz
+		wget --no-check-certificate http://www.xmltwig.org/xmltwig/XML-Twig-3.50.tar.gz
 		tar xz < XML-Twig-3.50.tar.gz
 		cd XML-Twig-3.50
 		perl Makefile.PL -y

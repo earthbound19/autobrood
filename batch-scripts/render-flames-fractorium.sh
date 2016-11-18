@@ -2,6 +2,11 @@
 
 # ALSO NOTE: for now (or forever?) it outputs target renders in the same directory as the source flame file.
 
+# TO DO
+# Document possible parameters for this script.
+# With this and other scritps, make a more easily changeable *and* findable global flam3-palettes.xml file
+
+
 # GLOBAL VALUES:
 
 # Set ss and qs defaults if there are no such variables;
@@ -15,15 +20,17 @@
 				# --ss=.667		produces 1280x image (if cropped) from 2160x1080 genome
 # def_ss=.667
 # def_ss=.815
-def_ss=1.6
-def_qs=2.4
+# def_ss=1.6
+# def_qs=2.4
+def_ss=2.64
+def_qs=130
 
 # The number of seconds between individual and batch renders to rest:
-shortRestPeriod=5.8
-mediumRestPeriod=118
+shortRestPeriod=12
+mediumRestPeriod=400
 
 			# BUG WORKAROUND, because fractorium doesn't scan $path for the flam3-palettes.xml file:
-			cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
+			# cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
 
 	# ===== SET GLOBAL BOOLEAN based on pass/fail of --opencl render test, which we will use to decide whether to pass the --opencl parameter;
 	# EXCEPT DON'T EVEN run this test if the script is run with any parameter; the boolean will be set to an empty value or an actual command flag (string) value depending; if it's empty it simply won't have any effect when inserted into the command:
@@ -71,16 +78,18 @@ rm fractal_flames_list.txt
 		# cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
 
 # To allow rest periods every nth frame:
-imgs_iter=0
+imgs_iter=1
 # Only render the frame if the target render file does not exist:
 for element in "${fractal_flames_list[@]}"
 do
-	if [ ! -e ./render_output/$element.png ] && [ ! -e ./render_output/$element.txt ]
+			# formerly checked for ./render_output/$element.png; using wildcards instead now because I don't want it to render if an existing rendered file of the same target name exists in *any* subdirectory. This allows e.g. sorting favorite renders into subfolders without re-rendering them if I run a render batch again (e.g. against new fractal flame genome files).
+	if [ ! -e ./*/$element.png ] && [ ! -e ./*/$element.txt ]
 	# NOTE for the following command: for 800 x 592 or whatever flame, ss=2.4 offers high def (1080p) image area. ss=1.6 offers HD 720p area.
 		then
-		echo target file $element.png does not exist. will render.
+		echo target file $element.png does not exist in this or any subfolder. will render.
 		# EmberRender doesn't seem to be able to render the file into another directory, so we're rendering the image into the same directory as the source .flam3 file, then moving it to a subdir.
 		echo running command: EmberRender.exe --in=$element --out=$element.png --format=png --progress $openclFlag --ss=$ss --qs=$qs
+		echo image $imgs_iter of ${#fractal_flames_list[@]}
 	# temporary text file to let any other render client know we're doing this:
 	printf "rendering an image for this file name . . ." > ./render_output/$element.txt
 				# Optional flag in the following command:
@@ -98,7 +107,7 @@ do
 done
 
 		# CLEANUP BUG WORKAROUND:
-		rm flam3-palettes.xml
+		# rm flam3-palettes.xml
 
 # TEMP, OPTIONAL:
 cd render_output

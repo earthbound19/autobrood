@@ -1,3 +1,5 @@
+REM NOTE: this batch may be outdated via outdated URLs.
+
 ECHO OFF
 SETLOCAL ENABLEDELAYEDEXPANSION
 
