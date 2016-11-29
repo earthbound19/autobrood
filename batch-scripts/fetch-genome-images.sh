@@ -17,30 +17,34 @@ mapfile -t seekIMGfiles < allFiles.txt
 
 for element in ${seekIMGfiles[@]}
 do
+	# search down directories and moving file here if it exists; re a genius breath yon: http://stackoverflow.com/a/37012114
+	find ./ -name "$element" -exec mv '{}' './' ';'
+
+	# search up directories and move the applicable file here if it exists:
 			# echo searching for ../$element.$imgFormat
-		if [ -e ../$element.$imgFormat ]
-			then
-				echo running mv -f ../$element.$imgFormat ./
-				mv -f ../$element.$imgFormat ./
-		fi
-			# echo searching for ../../$element.$imgFormat
-		if [ -e ../../$element.$imgFormat ]
-			then
-				echo running mv -f ../../$element.$imgFormat ./
-				mv -f ../../$element.$imgFormat ./
-		fi
-			# echo searching for ../../../$element.$imgFormat
-		if [ -e ../../../$element.$imgFormat ]
-			then
-				echo running mv -f ../../../$element.$imgFormat ./
-				mv -f ../../../$element.$imgFormat ./
-		fi
-			# echo searching for ../../../../$element.$imgFormat
-		if [ -e ../../../../$element.$imgFormat ]
-			then
-				echo running mv -f ../../../../$element.$imgFormat ./
-				mv -f ../../../../$element.$imgFormat ./
-		fi		
+	if [ -e ../$element.$imgFormat ]
+		then
+			echo running mv -f ../$element.$imgFormat ./
+			mv -f ../$element.$imgFormat ./
+	fi
+		# echo searching for ../../$element.$imgFormat
+	if [ -e ../../$element.$imgFormat ]
+		then
+			echo running mv -f ../../$element.$imgFormat ./
+			mv -f ../../$element.$imgFormat ./
+	fi
+		# echo searching for ../../../$element.$imgFormat
+	if [ -e ../../../$element.$imgFormat ]
+		then
+			echo running mv -f ../../../$element.$imgFormat ./
+			mv -f ../../../$element.$imgFormat ./
+	fi
+		# echo searching for ../../../../$element.$imgFormat
+	if [ -e ../../../../$element.$imgFormat ]
+		then
+			echo running mv -f ../../../../$element.$imgFormat ./
+			mv -f ../../../../$element.$imgFormat ./
+	fi
 done
 
 

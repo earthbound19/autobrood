@@ -8,7 +8,7 @@ for a in $( seq $1 )
 do
 	timestamp=`date +"%Y_%m_%d__%H_%M_%S__%N"`
 		# I can't see that this switch actually uses the GPU to create genomes: --opencl 
-	EmberGenome --nick=earthbound --tries=2000 > $timestamp.flame
+	EmberGenome --nick=earthbound --tries=20000 > $timestamp.flame
 done
 
 		# CLEANUP BUG WORKAROUND:

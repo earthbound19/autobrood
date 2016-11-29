@@ -1,4 +1,4 @@
-# NOTE that ss and qs must be set as explicit parameters for EmberRender.exe --it doesn't import any environment variables by those names. ALSO, if it throws an error about not loading a pallete xml file, temporarily copy the file of that name into the directory for which you run this render script.
+# NOTE that ss and qs must be set as explicit parameters for EmberRender.exe on the command line--it doesn't import any environment variables by those names. ALSO, if it throws an error about not loading a pallete xml file, temporarily copy the file of that name into the directory for which you run this render script.
 
 # ALSO NOTE: for now (or forever?) it outputs target renders in the same directory as the source flame file.
 
@@ -23,7 +23,8 @@
 # def_ss=1.6
 # def_qs=2.4
 def_ss=2.64
-def_qs=130
+# def_qs=20
+def_qs=180
 
 # The number of seconds between individual and batch renders to rest:
 shortRestPeriod=12
@@ -82,8 +83,11 @@ imgs_iter=1
 # Only render the frame if the target render file does not exist:
 for element in "${fractal_flames_list[@]}"
 do
+	# strip everything up to any leading forward slashes \(from paths\) from the $element\:
+	elementNoPath=`echo $element | sed 's/\(.*\/\)\(.*\)/\2/g'`
+			# echo element is\: $element
 			# formerly checked for ./render_output/$element.png; using wildcards instead now because I don't want it to render if an existing rendered file of the same target name exists in *any* subdirectory. This allows e.g. sorting favorite renders into subfolders without re-rendering them if I run a render batch again (e.g. against new fractal flame genome files).
-	if [ ! -e ./*/$element.png ] && [ ! -e ./*/$element.txt ]
+	if [ ! -e ./*/$elementNoPath.png ] && [ ! -e ./*/$elementNoPath.txt ]
 	# NOTE for the following command: for 800 x 592 or whatever flame, ss=2.4 offers high def (1080p) image area. ss=1.6 offers HD 720p area.
 		then
 		echo target file $element.png does not exist in this or any subfolder. will render.
