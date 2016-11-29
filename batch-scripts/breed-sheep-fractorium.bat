@@ -51,6 +51,7 @@ ECHO already exists, SKIPPING..
 ECHO ================
 
 SET method=interpolate
+SET tries=100001
 IF NOT EXIST children\!outname1!_and_!outname2!_!method!.flam3 (
 ECHO children\!outname1!_and_!outname2!_!method!.flam3
 ECHO does not exist, BREEDING SHEEP..
