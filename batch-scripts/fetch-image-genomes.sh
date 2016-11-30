@@ -1,5 +1,5 @@
 # DESCRIPTION
-# Moves any image-matched .flame or .flam3 genomes (from one to four directories up) into the folder from which this script is run.
+# Moves any image-matched .flame or .flam3 genomes (from one to four directories up or down) into the folder from which this script is run.
 
 # USAGE
 # Optional parameter: $1 an image format (e.g. jpg) to scan for. Defaults to png if not present.

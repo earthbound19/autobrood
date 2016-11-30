@@ -17,7 +17,7 @@ rm fractal_flames_list.txt
 
 		# BUG WORKAROUND:
 		# see createSheepAnim.sh for notes about this cludge:
-		if [ ! -e flam3-palettes.xml ]; then cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml; fi
+		# if [ ! -e flam3-palettes.xml ]; then cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml; fi
 
 # Only render the frame if the target render file does not exist:
 for element in "${fractal_flames_list[@]}"
@@ -33,4 +33,4 @@ do
 done
 
 		# CLEANUP BUG WORKAROUND:
-		rm flam3-palettes.xml
+		# rm flam3-palettes.xml

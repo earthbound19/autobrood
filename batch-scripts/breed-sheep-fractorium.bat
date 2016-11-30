@@ -12,7 +12,8 @@ COPY C:\autobrood\bin\flam3-palettes.xml
 
 FOR %%S IN (*.flame, *.flam3) DO	(
 SET cross0=%%S
-REN !cross0! %%~nS.breeding
+REM TO DO: NO, no no! Renaming that file is a bad idea! I accidentally deleted some genomes which are unrecoverable because I thought the .breeding temp file was a temp, empty text file! It was a genome! REWRITE this to echo to an empty .breeding temp file and to scan for that before rendering. No, forget it. I'll just change that to a copy command, and the user must know to delete these mysterious .breeding extra files after.
+CP !cross0! %%~nS.breeding
 SET cross0=%%~nS.breeding
 SET outname1=%%~nS
 SET outname1=!outname1:electricsheep.=!
@@ -68,7 +69,7 @@ ECHO ================
 							)
 						)
 
-REN *.breeding *.flam3
+REM REN *.breeding *.flam3
 
 ENDLOCAL
 
