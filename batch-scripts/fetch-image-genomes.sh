@@ -26,7 +26,8 @@ mapfile -t imgFiles < allFilesNoExt.txt
 for element in ${imgFiles[@]}
 do
 	# search down directories and moving file here if it exists; re a genius breath yon: http://stackoverflow.com/a/37012114
-	find ./ -name "$element" -exec mv '{}' './' ';'
+# find ./ -name "$element" -exec mv '{}' './' ';'
+# TO DO: fix probs. with that; see comments in fetch-genome-images.sh
 
 	# search up directories and move the applicable file here if it exists:
 	if [ -e ../$element ]

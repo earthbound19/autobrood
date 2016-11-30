@@ -1,7 +1,6 @@
 nick=earthbound
 url=http://earthbound.io
-# tries=10001
-tries=100
+tries=100001
 
 		# BUG WORKAROUND:
 		# see createSheepAnim.sh for notes about this cludge:

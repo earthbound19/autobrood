@@ -18,7 +18,10 @@ mapfile -t seekIMGfiles < allFiles.txt
 for element in ${seekIMGfiles[@]}
 do
 	# search down directories and moving file here if it exists; re a genius breath yon: http://stackoverflow.com/a/37012114
-	find ./ -name "$element" -exec mv '{}' './' ';'
+	# echo ELEMETN VAL IS $element
+	# CygwinFind ./ -name "$element" -exec mv '{}' './' ';'
+# TO DO: fix possible problem of it finding and attempting to move file onto itself in the path from which this is run (*and/or* in subdirectories)?
+# TO DO: fix that that is searching for a .flame file, not an image file.
 
 	# search up directories and move the applicable file here if it exists:
 			# echo searching for ../$element.$imgFormat
