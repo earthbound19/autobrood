@@ -22,16 +22,12 @@ fi
 
 if [ -z ${2+x} ]
 	then
-	palettePathAndFile="flam3-palettes.xml"
+	paletteFile="flam3-palettes.xml"
 	else
-	# thisDir=`pwd`
-	# thisDir=`cygpath --type windows $thisDir`
-# echo thisDir val is $thisDir
-	# palettePathAndFile="$thisDir"\\"$2"
-	palettePathAndFile=$2
+	paletteFile=$2
 fi
-		echo palette path and file is $palettePathAndFile
-paletteParam="--flam3_palettes=$palettePathAndFile"
+		echo palette file is $paletteFile
+paletteParam="--flam3_palettes=$paletteFile"
 		echo paletteParam value is $paletteParam
 
 # WORK BEGIN
@@ -45,8 +41,11 @@ for a in $( seq $howMany )
 do
 	timestamp=`date +"%Y%m%d_%H%M%S_%N"`
 	echo rendering $timestamp.flame . . .
+	idParam="--id=RND"_"$timestamp"_from_""$paletteFile""
+			# echo idParam val is $idParam
+# exit
 		# I can't see that this switch actually uses the GPU to create genomes: --opencl 
-	EmberGenome --nick=earthbound --url=http://earthbound.io $paletteParam --tries=$tries > $timestamp.flame
+	EmberGenome --nick=earthbound --url=http://earthbound.io $idParam $paletteParam --tries=$tries > $timestamp.flame
 done
 
 		# CLEANUP BUG WORKAROUND:
