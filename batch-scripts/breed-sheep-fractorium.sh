@@ -5,7 +5,7 @@ shortRestSeconds=20
 nick=earthbound
 url=http://earthbound.io
 # tries=100001
-tries=40001
+tries=2000
 
 		# BUG WORKAROUND:
 		# see createSheepAnim.sh for notes about this cludge:
