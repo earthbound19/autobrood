@@ -2,13 +2,19 @@
 # concatenates all .mp4 files in a directory into one output file. Source files must all be encoded with the same codec and settings.
 
 # USAGE:
-# Ensure this script is in your $PATH, and invoke it from a directory with .mp4 files that are encoded the same way. The result will appear in _mp4sConcatenated.mp4.
+# Ensure this script is in your $PATH, and invoke it from a directory with video e.g. mp4 files that are encoded the same way. The result will appear in _mp4sConcatenated.mp4.
+# Optional paramater $1 <videoExtension> e.g.:
+# thisScript.sh avi
+# If no parameter passed, defaults to mp4.
 
 # DEPENDENCIES: ffmpeg and a 'nix system (can be cygwin for Windows).
 
-# TO DO: provide for paramaterized vid file extension. For now default .mp4.
-
-vidExt=mp4
+if [ ! -z ${1+x} ]
+	then
+	vidExt=$1
+	else
+	vidExt=mp4
+fi
 
 ls *.$vidExt > all$vidExt.txt
 sed -i "s/^\(.*\)/file '\1'/g" all$vidExt.txt

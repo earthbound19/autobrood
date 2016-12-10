@@ -66,7 +66,7 @@ if [ -z ${qs+x} ]; then echo no value for qs\; setting default value of $def_qs;
 
 if [ ! -d render_output ]; then mkdir render_output; fi
 
-find . -iname \*.flam3 -o -iname \*.flame > fractal_flames_list.txt
+cygwinFind . -iname \*.flam3 -o -iname \*.flame > fractal_flames_list.txt
 # filter the ./ off the start of that list (it messes up later file checks if read from a list) :
 sed 's/^\.\/\(.*\)/\1/g' fractal_flames_list.txt > temp.txt
 rm fractal_flames_list.txt
@@ -114,8 +114,8 @@ done
 		# rm flam3-palettes.xml
 
 # TEMP, OPTIONAL:
-cd render_output
-render-flames-anim-fractorium.sh
+# cd render_output
+# render-flames-anim-fractorium.sh
 
 # DEVELOPMENT HISTORY
 # Before now:
