@@ -24,7 +24,7 @@
 # TO DO: update the following to use better error checking re render-flames-fractorium.sh:
 # TO DO: figure out why even updating it thus does nothing! Meanwhile, just setting a default, whatever variables you've assigned in the shell.
 # if ! (( $var_nframes )); then echo var_nframes not set\; setting to default value 110; $var_nframes=110; else echo var_nframes value of $var_nframes detected\; will use that.; fi
-var_nframes=310
+var_nframes=126
 
 echo Number of frames per loop for anim: $var_nframes > ANIM_INFO.txt
 
@@ -33,6 +33,7 @@ if [ ! -d anim_frames ]; then mkdir anim_frames; fi
 # ? TO DO, POSSIBLY: use the counterpart to xml_split, xml_join, instead, for the following:
 cat *.flam3 *.flame > ./anim_frames/_alles.flam3
 # !~~~~
+cp ./flam3-palettes.xml ./anim_frames
 cd ./anim_frames
 # !~~~~
 printf "<flames name=\"alles\">" > head.txt
@@ -61,14 +62,18 @@ mv temp.txt _alles.flam3
 # !~-~-~-~-~-~-~-~-~-~-
 # BEGIN OPTION: USE EMBERGENOME--comment out the code under USE FLAM3-GENOME (above) if you use (uncomment) this section:
 			# BUG WORKAROUND; weirder yet is that if I copy the following with a cp command, it copies it in some way that breaks the ability to properly read it in any xml viewer?! So use the cat command instead:
-					cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
+					# cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
+					echo running command\:
+					echo EmberGenome.exe \-\-noedits \-\-nframes\=$var_nframes \-\-progress \-\-sequence\=_alles.flam3 \> _alles_anim.flam3
+					echo . . .
 	EmberGenome.exe --noedits --nframes=$var_nframes --progress --sequence=_alles.flam3 > _alles_anim.flam3
 	# unused: --earlyclip --sp 
 # END OPTION: USE EMBERGENOME
 # !~-~-~-~-~-~-~-~-~-~-
 
 		# CLEANUP BUG WORKAROUND:
-		rm flam3-palettes.xml
+		# rm flam3-palettes.xml
+rm flam3-palettes.xml
 
 if [ ! -d anim_xml ]; then mkdir anim_xml; fi
 mv _alles.flam3 ./anim_xml/_alles.flam3
@@ -91,7 +96,7 @@ mv ./anim_xml ./..
 rm _alles_anim_fr0000000.flam3
 
 # Optional:
-render-flames-anim-fractorium.sh
+# render-flames-anim-fractorium.sh
 
 cd ..
 

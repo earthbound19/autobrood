@@ -4,6 +4,7 @@
 # e.g.:
 # apt-cyg mirror "ftp://mirrors.syringanetworks.net/cygwin/"
 # re: http://superuser.com/a/941135
+# ALSO, mysteriously, installing perl xml_twig via cygwin may solve any errors after this script successfully runs all commands. 
 
 echo This script will attempt to install dependencies needed for the .sh scripts in autobrood to work under Cygwin.
 echo "!============================================================"
@@ -14,7 +15,8 @@ if [ "$CONDITION" == "y" ]; then
 				echo Trying some stuff to install dependencies for autobrood using cygwin . . .
 				# cat ./my.minttyrc.settings.txt > /home/$username/.minttyrc
 		# Re goodies divulged here: http://stackoverflow.com/q/9260014/1397555
-		wget --no-check-certificate raw.github.com/transcode-open/apt-cyg/master/apt-cyg
+		# wget --no-check-certificate raw.github.com/transcode-open/apt-cyg/master/apt-cyg
+		wget raw.github.com/transcode-open/apt-cyg/master/apt-cyg
 		chmod +x apt-cyg
 		mv apt-cyg /usr/local/bin
 		cd /usr/local/bin
@@ -24,14 +26,16 @@ if [ "$CONDITION" == "y" ]; then
 		apt-cyg install make
 		apt-cyg install perl
 		apt-cyg install perl-libxml-perl
-		wget --no-check-certificate http://www.xmltwig.org/xmltwig/XML-Twig-3.50.tar.gz
+		# wget --no-check-certificate http://www.xmltwig.org/xmltwig/XML-Twig-3.50.tar.gz
+		wget http://www.xmltwig.org/xmltwig/XML-Twig-3.50.tar.gz
 		tar xz < XML-Twig-3.50.tar.gz
 		cd XML-Twig-3.50
 		perl Makefile.PL -y
 		make
 		make test
 		make install
-		rm -r XML-Twig-3.50 XML-Twig-3.50.tar.gz
+		cd ..
+		rm -r -f XML-Twig-3.50 XML-Twig-3.50.tar.gz
 		cd $currDir
 		xml_grep --pretty_print indented --wrap flames --descr 'name="Flock Hoibimonko"' --cond "flame" *.flame > flames.flame
 			# nah: --pretty_print indented -- WAIT actually yes.
