@@ -3,9 +3,10 @@
 
 # USAGE:
 # Call this script from a directory full of so rendered and so named animation files. This only renders target avi and mp4 files if they do not already exist, and will re-render target files wherever there is a gap in the target .mp4 files sequence. NOTE: If this script is interrupted and resumed, it attempts to move the image files back up from the ./frames_sort directory into which they were moved--it attempts to move those image files back up to the root of the path from which this script was run (and is run again). ALSO NOTE: it expects frame numbering to start with 1.
+# ALSO NOTE: this script assumes it is running in a render output folder two directories down from one ANIM_INFO.txt file, which file gives the number of frames per fractal flame loop animation in a sequence. It assigns a global script variable from that information.
 
 # TO DO:
-# make n_frames_per_seq optionally parameterized, with a default.
+# make n_frames_per_loop optionally parameterized, with a default.
 # explain wt this script does, etc.
 # make this work in harmony with render-flames-anim-fractorium.sh ?
 # make video render settings paramaterized and/or invoke another batch with a parameter.
@@ -13,8 +14,10 @@
 # this might not wipe files from the sort dir if the target archive image dir exists; or things might not continue on resuming batch as expected--make it work thus.
 
 # GLOBAL VAR:
-# n_frames_per_seq=46
-n_frames_per_seq=310
+n_frames_per_seq=$(< ../../ANIM_INFO.txt)
+n_frames_per_seq=`echo $n_frames_per_seq | sed 's/.*\: \([0-9]\{1,\}\).*/\1/g'`
+		echo Frames per sequence taken from ../../ANIM_INFO.txt is\:
+		echo $n_frames_per_seq
 
 if [ ! -d vid ]; then mkdir vid; fi
 if [ ! -d vid/src ]; then mkdir vid/src; fi
@@ -39,6 +42,7 @@ while [ $imgs_iter -lt $arrSize ]
 do
 	imgs_iter=$[imgs_iter + 1]
 	# if we just rendered a target animation sequence (and set the following bool to 1), iterate to the next end target frame number and set the bool to 0:
+# TO DO: fix that this is actually never resetting that bool. And yet this script works? Is this even necessary?
 	if (( frame_seq_rendered == 1 )); then target_end_frame=$[target_end_frame + n_frames_per_seq]; frame_seq_rendered=0; echo new target_end_frame value is $target_end_frame; fi
 
 			if [ -e ./"${frames_list[$(($imgs_iter -1))]}" ]
@@ -56,7 +60,7 @@ do
 					echo Target render file ./vid/src/_anim_toEndFR_$targ_end_numPadded.avi already exists. Will not clobber, will not render.
 		else
 					echo Target render file ./vid/src/_anim_toEndFR_$targ_end_numPadded.avi does not exist. Will attempt to render.
-			cat ./frames_sort/*.png | ffmpeg -y -f image2 -f image2pipe -i - -vcodec utvideo -r 29.97 ./vid/src/_anim_toEndFR_$targ_end_numPadded.avi
+			# cat ./frames_sort/*.png | ffmpeg -y -f image2 -f image2pipe -i - -vcodec utvideo -r 29.97 ./vid/src/_anim_toEndFR_$targ_end_numPadded.avi
 		fi
 		# IF TARGET mp4 file does not exist, render. Otherwise skip (do not clobber).
 		if [ -e ./vid/dist/_anim_toEndFR_$targ_end_numPadded.mp4 ]
@@ -64,7 +68,9 @@ do
 					echo Target render file ./vid/dist/_anim_toEndFR_$targ_end_numPadded.mp4 already exists. Will not clobber, will not render.
 		else
 					echo Target render file ./vid/dist/_anim_toEndFR_$targ_end_numPadded.mp4 does not exist. Will attempt to render.
-			ffmpeg -y -i ./vid/src/_anim_toEndFR_$targ_end_numPadded.avi -crf 17 -filter:v "crop=1280:720:x:y" ./vid/dist/_anim_toEndFR_$targ_end_numPadded.mp4
+							# MOMENTARILY DEPRECATED:
+							# ffmpeg -y -i ./vid/src/_anim_toEndFR_$targ_end_numPadded.avi -crf 17 -filter:v "crop=1280:720:x:y" ./vid/dist/_anim_toEndFR_$targ_end_numPadded.mp4
+			# ffmpeg -y -i ./vid/src/_anim_toEndFR_$targ_end_numPadded.avi -crf 17 -filter:v "scale=1280:-1" ./vid/dist/_anim_toEndFR_$targ_end_numPadded.mp4
 						echo Attempted render of target file ./vid/dist/_anim_toEndFR_$targ_end_numPadded.mp4 complete. Check the above output and/or the target file itself to see if the render was successful.
 		fi
 
