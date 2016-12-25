@@ -1,7 +1,7 @@
 # IN DEVELOPMENT
 
 # DESCRIPTION
-# Splits all files of type T (via parameter $1) by count N (via parameter $2) into subfolders named by division and frame. Intended e.g. for splitting rendered fractal flame loop animations from one more lengthy sequence (e.g. from an _alles_anim.flam3 file generated via createSheepAnim.sh) into individual loop anims which can be concatenated.
+# Splits all files of type T (via parameter $1) by count N (via parameter $2) into subfolders named by division and frame. Intended e.g. for splitting rendered fractal flame loop animations from one more lengthy sequence (e.g. from an _alles_anim.flam3 file generated via createSheepAnim.sh) into individual loop anims which can be concatenated via concatVidFiles.sh.
 
 # USAGE
 # e.g.:
@@ -38,7 +38,7 @@ if ! [[ ${n_frames_per_seq:+1} ]]
 		echo using frames per anim loop variable of\: $n_frames_per_seq as passed by parameter \$2 . . .
 fi
 
-echo n_frames_per_seq val is\: $n_frames_per_seq
+		# echo n_frames_per_seq val is\: $n_frames_per_seq
 
 echo Listing image files in current directory . . .
 ls *.png > frames_list.txt
@@ -66,15 +66,16 @@ do
 		multipleCount=$[multipleCount + 1]
 				echo multipleCount is $multipleCount
 		multiple=`expr $multipleCount * $n_frames_per_seq`
-		echo multiple val is\: $multiple
+				echo multiple val is\: $multiple
 		folderNameDigits=`printf "%0""$numDigitsOf_arraySize""d\n" $multiple`
 				echo val of folderNameDigits is\: $folderNameDigits
 		if [ ! -d ./_toEndFR_$folderNameDigits ]
 		then
-				echo ______________ lets make a dir . . .
+				echo Creating dir ./_toEndFR_$folderNameDigits . . .
 			mkdir ./_toEndFR_$folderNameDigits
 		fi
 	fi
-	echo mv $element ./_toEndFR_$folderNameDigits/
+	echo Running command\: mv $element ./_toEndFR_$folderNameDigits/
+	# mv $element ./_toEndFR_$folderNameDigits/
 	toEndFrameCount=$[toEndFrameCount + 1]
 done
