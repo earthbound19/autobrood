@@ -1,3 +1,51 @@
+1.0.0.0 06/17/2016
+--User changes
+ -Officially transition out of beta into a full 1.0 release.
+ -Add new options to EmberGenome to better help assess which variations have certain characteristics. The options are:
+  --sumvars: Display the names of all regular variations which have the default behavior of summing their outputs and exit.
+  --assignvars: Display the names of all regular variations which have the non-standard behavior of assigning their outputs and exit.
+  --ppsumvars: Display the names of all pre/post variations which have the non-standard behavior of summing their outputs and exit.
+  --ppassignvars: Display the names of all pre/post variations which have the default behavior of assigning their outputs and exit.
+  --dcvars: Display the names of all variations which use direct coloring and exit.
+  --statevars: Display the names of all variations which alter their state on each iteration and exit.
+  --parvars: Display the names of all variations which have parameters and exit.
+  --nonparvars: Display the names of all variations which do not have parameters (weight only) and exit.
+ -Add two new options to EmberGenome which are used when generating an animation sequence:
+  --startcount: Add this number to the filename of each flame.
+  --padding: Override the automatically calculated amount of padding zeroes added to each filename.
+ -Allow for filtering in the Variations Dialog based on the same types listed in the EmberGenome options.
+ -Add a button to randomize both pre and post affine transforms to values between -1 to 1.
+ -Add animation sequence creation to Fractorium.
+ -Add fractorium.com link to the about box.
+
+--Bug fixes
+ -Fix final render dialog failure when minimizing and restoring during a render on Linux. Note this bug was not present on Windows.
+ -Switching between SP and DP before previews had finished would set the current flame back to the first one in the file.
+ -Prevent filenames in command line programs from using scientific notation when rendering a large number of frames.
+ -Fix tab orders to match newer GUI items which were overlooked in previous releases.
+ -Re-render previews if transparency value in the options dialog was changed. Re-rendering was previously only done if early clip or y axis up was changed.
+ -Use transparency when rendering thumbnail previews.
+  
+--Code changes
+ -Make VariationList vectors have const elements since no callers should ever change them.
+ -Add new function to VariationList to retrieve a const ref to the parametric variations.
+ -Move some search functions out of EmberTester and into EmberCommon.h.
+ -More correctly populate VariationList::m_ParametricVariations and VariationList::m_NonParametricVariations to account for variations which have params only used for precalc.
+ -Consolidate some of the code in VariationList which searches by name.
+ -Use references rather than pointers when grabbing pre/post affines.
+ -Wrap EmberCommon.h in a namespace called EmberCommon.
+ -Move FormatName() from EmberGenome to EmberCommon.h/cpp
+ -Add a prefix parameter to EmberFile::DefaultFilename() to allow for creating a default filename for sequences.
+ -When showing the final render dialog, allow specifying where it came from: the toolbar or the render sequence button.
+ -Refactor all preview rendering code out into its own class hierarchy with overrides for the main window and the final render dialog.
+ -Remove all preview render cancelling functions, they are now built into the new class hierarchy and a new render will not start until the previous one is stopped.
+ -Add two new function ConstrainLow() and ConstrainHigh() which wrap constraining two min/max spinboxes to each others' values.
+ -Add a bool to FractoriumEmberControllerBase::CopyEmberFile() to specify whether to copy the main file or the sequence file. This is somewhat of a hack and was done in a rush.
+ -Add a bool to FractoriumEmberControllerBase::SetEmberFile() to specify whether to move the file rather than copy. This is used in FinalRenderEmberController and improves efficiency.
+ -Add wrapper functions for variations filter dialog settings.
+ -Tooltip cleanups.
+ -General code cleanup.
+ 
 0.9.9.6 Beta 05/05/2016
 --User changes
 	-The concept of "saving back to file in memory" has been removed. The current ember is saved back to memory whenever the render completes and the thumbnail will be updated each time.
