@@ -1,0 +1,3 @@
+http://mirrors.xmission.com
+http://mirror.calvin.edu
+http://cygwin.mirrors.pair.com
