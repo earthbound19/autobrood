@@ -3,32 +3,33 @@
 # ALSO NOTE: for now (or forever?) it outputs target renders in the same directory as the source flame file.
 
 # TO DO
+# Make sheep not breed with themselves. Dirty, naughty sheep . . .
 # Document possible parameters for this script.
-# With this and other scritps, make a more easily changeable *and* findable global flam3-palettes.xml file
+# With this and other scripts, make a more easily changeable *and* findable global flam3-palettes.xml file
 
 
 # GLOBAL VALUES:
 
 # Set ss and qs defaults if there are no such variables;
 # some options:
-				# --ss=.18 --qs=0.7
-				# --ss=.25 --qs=0.7
-				# --ss=0.815	produces ~640x image from 800x genome
-				# --ss=1.6		produces 1280x image from 800x genome
-				# --ss=2.4		produces 1920x image from 800x genome
-				# --ss=3		. . ?
-				# --ss=.667		produces 1280x image (if cropped) from 2160x1080 genome
-# def_ss=.667
+		# --ss=.18 --qs=0.7
+		# --ss=.25 --qs=0.7
+		# --ss=0.815	produces ~640x image from 800x genome
+		# --ss=1.6		produces 1280x image from 800x genome
+		# --ss=2.4		produces 1920x image from 800x genome
+		# --ss=3		. . ?
+		# --ss=.667		produces 1280x image (if cropped) from 2160x1080 genome
+--ss=.667
 # def_ss=.815
 # def_ss=1.6
+# def_ss=2.64
 # def_qs=2.4
-def_ss=2.64
-# def_qs=20
-def_qs=180
+def_qs=20
+# def_qs=180
 
 # The number of seconds between individual and batch renders to rest:
-shortRestPeriod=12
-mediumRestPeriod=400
+shortRestPeriod=1
+mediumRestPeriod=260
 
 			# BUG WORKAROUND, because fractorium doesn't scan $path for the flam3-palettes.xml file:
 			# cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
@@ -87,26 +88,33 @@ do
 	elementNoPath=`echo $element | sed 's/\(.*\/\)\(.*\)/\2/g'`
 			# echo element is\: $element
 			# formerly checked for ./render_output/$element.png; using wildcards instead now because I don't want it to render if an existing rendered file of the same target name exists in *any* subdirectory. This allows e.g. sorting favorite renders into subfolders without re-rendering them if I run a render batch again (e.g. against new fractal flame genome files).
-	if [ ! -e ./*/$elementNoPath.png ] && [ ! -e ./*/$elementNoPath.txt ]
-	# NOTE for the following command: for 800 x 592 or whatever flame, ss=2.4 offers high def (1080p) image area. ss=1.6 offers HD 720p area.
+			# echo val of elementNoPath is\:\n $elementNoPath
+# exit
+		# DEPRECATED, because it failed:
+		# if [ ! -e ./*/$elementNoPath.png ] && [ ! -e ./*/$elementNoPath.txt ]
+	foundCount=`CygwinFind ./ -name $elementNoPath.png | wc -l`
+			echo foundCount is $foundCount
+		if [ $foundCount == "0" ]		
 		then
-		echo target file $element.png does not exist in this or any subfolder. will render.
-		# EmberRender doesn't seem to be able to render the file into another directory, so we're rendering the image into the same directory as the source .flam3 file, then moving it to a subdir.
-		echo running command: EmberRender.exe --in=$element --out=$element.png --format=png --progress $openclFlag --ss=$ss --qs=$qs
-		echo image $imgs_iter of ${#fractal_flames_list[@]}
-	# temporary text file to let any other render client know we're doing this:
-	printf "rendering an image for this file name . . ." > ./render_output/$element.txt
-				# Optional flag in the following command:
-				# --progress
-		EmberRender.exe --in=$element --out=$element.png --format=png $openclFlag --ss=$ss --qs=$qs
-	rm ./render_output/$element.txt
-		mv $element.png ./render_output/
-				imgs_iter=$((imgs_iter + 1))
-				if (( $imgs_iter % 125 == 0 )); then echo I have rendered 125 images\, and I am resting for $mediumRestPeriod seconds to cool down.; sleep $mediumRestPeriod; fi
-				# echo ~ mgs_iter val is $imgs_iter ~
-		echo Render complete\; sleeping to allow computer to cool for $shortRestPeriod seconds . . .
-		echo ~-~-~-~-~-~-~-~-~-~-
-		sleep $shortRestPeriod
+					echo target file $element.png does not exist in this or any subfolder. will render.
+			# EmberRender doesn't seem to be able to render the file into another directory, so we're rendering the image into the same directory as the source .flam3 file, then moving it to a subdir.
+					echo running command: EmberRender.exe --in=$element --out=$element.png --format=png --progress $openclFlag --ss=$ss --qs=$qs
+					echo image $imgs_iter of ${#fractal_flames_list[@]}
+					# temporary text file to let any other render client know we're doing this:
+					printf "rendering an image for this file name . . ." > ./render_output/$element.txt
+					# Optional flag in the following command:
+					# --progress
+			EmberRender.exe --in=$element --out=$element.png --format=png $openclFlag --ss=$ss --qs=$qs
+				rm ./render_output/$element.txt
+			# mv $element.png ./render_output/
+					imgs_iter=$((imgs_iter + 1))
+			if (( $imgs_iter % 125 == 0 )); then echo I have rendered 125 images\, and I am resting for $mediumRestPeriod seconds to cool down.; sleep $mediumRestPeriod; fi
+					# echo ~ mgs_iter val is $imgs_iter ~
+			echo Render complete\; sleeping to allow computer to cool for $shortRestPeriod seconds . . .
+			echo ~-~-~-~-~-~-~-~-~-~-
+			sleep $shortRestPeriod
+		else
+			echo target file $element.png already exists in this or a subfolder. will not render. 
 	fi
 done
 
@@ -122,3 +130,4 @@ done
 # Yesh. First feature complete.
 # 07/08/2016 07:35:21 PM
 # Eliminate ridiculous bool LATER_DELETE__test_wexEheVtcfysXww27E4g8JmeeCHBFVXH_flame_whatAnAwesomeVariableName and instead just copy corresponding test render fractal flame genome to current dir and then delete (*gasps for air*) conditionally--only do all that on condition of even doing a test render.
+# 01/10/2017 3:24 PM BUG FIX: existing file check before render was failing. Switched to use cygwinFind command to determine existence (instead of -e).
