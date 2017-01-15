@@ -1,6 +1,6 @@
 methods=(union alternate interpolate)
-shortRestsInterval=50
-shortRestSeconds=20
+shortRestsInterval=15
+shortRestSeconds=40
 
 nick=earthbound
 url=http://earthbound.io
@@ -57,8 +57,8 @@ do
 					EmberGenome --cross0=$cross0 --cross1=$cross1 --method=$method --nick=$nick --url=$url --tries=$tries > ./children/$targetGenomeFileName
 								rm $renderingNoticeStubFile
 				fi
-			# else
-				# echo ------ SKIP target $targetGenomeFileName exists or is rendering ------
+			else
+				echo ------ SKIP target $targetGenomeFileName because it exists or is rendering ------
 			fi
 		done
 	done

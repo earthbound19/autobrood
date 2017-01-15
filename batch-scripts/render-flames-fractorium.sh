@@ -26,6 +26,7 @@
 # def_qs=2.4
 def_qs=20
 # def_qs=180
+# def_qs=180
 
 # The number of seconds between individual and batch renders to rest:
 shortRestPeriod=1
@@ -92,11 +93,11 @@ do
 # exit
 		# DEPRECATED, because it failed:
 		# if [ ! -e ./*/$elementNoPath.png ] && [ ! -e ./*/$elementNoPath.txt ]
-	foundCount=`CygwinFind ./ -name $elementNoPath.png | wc -l`
-			echo foundCount is $foundCount
+	renderTarget="$element".png
+	foundCount=`CygwinFind ./ -name $renderTarget | wc -l`
 		if [ $foundCount == "0" ]		
 		then
-					echo target file $element.png does not exist in this or any subfolder. will render.
+			echo target file $renderTarget does not exist in this or any subfolder. will render.
 			# EmberRender doesn't seem to be able to render the file into another directory, so we're rendering the image into the same directory as the source .flam3 file, then moving it to a subdir.
 					echo running command: EmberRender.exe --in=$element --out=$element.png --format=png --progress $openclFlag --ss=$ss --qs=$qs
 					echo image $imgs_iter of ${#fractal_flames_list[@]}
@@ -105,8 +106,8 @@ do
 					# Optional flag in the following command:
 					# --progress
 			EmberRender.exe --in=$element --out=$element.png --format=png $openclFlag --ss=$ss --qs=$qs
-				rm ./render_output/$element.txt
-			# mv $element.png ./render_output/
+			rm ./render_output/$element.txt
+			mv $element.png ./render_output/
 					imgs_iter=$((imgs_iter + 1))
 			if (( $imgs_iter % 125 == 0 )); then echo I have rendered 125 images\, and I am resting for $mediumRestPeriod seconds to cool down.; sleep $mediumRestPeriod; fi
 					# echo ~ mgs_iter val is $imgs_iter ~
@@ -114,7 +115,7 @@ do
 			echo ~-~-~-~-~-~-~-~-~-~-
 			sleep $shortRestPeriod
 		else
-			echo target file $element.png already exists in this or a subfolder. will not render. 
+			echo target file $renderTarget already exists in this or a subfolder. will not render. 
 	fi
 done
 

@@ -45,7 +45,7 @@ do
 			# echo idParam val is $idParam
 # exit
 		# I can't see that this switch actually uses the GPU to create genomes: --opencl 
-	EmberGenome --nick=earthbound --url=http://earthbound.io $idParam $paletteParam --tries=$tries > $timestamp.flame
+	embergenome --nick=earthbound --url=http://earthbound.io $idParam $paletteParam --tries=$tries > $timestamp.flame
 done
 
 		# CLEANUP BUG WORKAROUND:

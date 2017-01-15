@@ -22,7 +22,9 @@ rm fractal_flames_list.txt
 # Only render the frame if the target render file does not exist:
 for element in "${fractal_flames_list[@]}"
 do
-	if [ ! -e ./render_output/$element.png ]
+# TO DO: change this to CygwinFind method in other scripts:
+	foundCount=`CygwinFind ./ -name $element.png | wc -l`
+	if [ $foundCount == "0" ]		
 	# NOTE for the following command: for 800 x 592 or whatever flame, ss=2.4 offers high def (1080p) image area. ss=1.6 offers HD 720p area.
 		then
 		echo target file $element.png does not exist. will render.
