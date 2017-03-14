@@ -4,6 +4,9 @@
 # USAGE
 # Invoke the script to create a fractal flame hex color palette of 256 random colors. To generate more than one, pass it one parameter, being the number desired.
 
+# TO DO
+# Make this generate palettes in a subdir, and work in that subdir.
+
 # PREP BEGIN
 # PARAMATER CHECKS and resulting variable initialization.
 if [ -z ${1+x} ]
@@ -14,12 +17,16 @@ if [ -z ${1+x} ]
 fi
 		echo how many is $howMany
 
+# To force tr to operate on non-text (urandom) output:
+export LC_CTYPE=C
+
+count=0
 for a in $( seq $howMany )
 do
 	# print beginning xml to randomly named new palette file.
 	paletteName=`cat /dev/urandom | tr -dc 'a-hj-km-np-zA-HJ-KM-NP-Z2-9' | head -c 34`
-	printf "<palettes>
-	<palette number=\"0\" name=\"$paletteName\" data=\"" > RND_palette_"$paletteName".xml
+	printf "<palette>
+	<palette number=\"$count\" name=\"$paletteName\" data=\"" > RND_palette_"$paletteName".xml
 
 	# generate palette hex. 256 colors per palette; broken down into 32 lines of 48 hex characters (before 00 padding between hex colors, which brings it to 64).
 	supaHexBlock=`cat /dev/urandom | tr -dc 'a-f0-9' | head -c $((32 * 48))`
@@ -33,12 +40,23 @@ do
 	echo $supaHexBlock | sed -e 's/.\{64\}/&\n/g' >> RND_palette_"$paletteName".xml
 
 	# trim resultant redundant blank lines at end of file; re genius breath at: http://stackoverflow.com/q/16414410
-	sed -i '/^$/d' RND_palette_"$paletteName".xml
+	# sed -i '/^$/d' RND_palette_"$paletteName".xml
+	# MAC ALTERNATE re: http://www.markhneedham.com/blog/2011/01/14/sed-sed-1-invalid-command-code-r-on-mac-os-x/
+	sed -i "" '/^$/d' RND_palette_"$paletteName".xml
 
 	# append closing xml to file.
 	printf "\"/>
-	</palettes>" >> RND_palette_"$paletteName".xml
+	</palette>" >> RND_palette_"$paletteName".xml
 
-	# Convert to windows line endings which emberrender expects (else fails!) :
-	unix2dos RND_palette_"$paletteName".xml
+	# Convert to windows line endings which emberrender expects (else fails!) ; n/a for mac or other natively 'nix environments:
+	# unix2dos RND_palette_"$paletteName".xml
+	count=$(( $count + 1 ))
 done
+
+printf "<palettes>" > RNDxmlPaletteGenTempHead.txt
+printf "\n</palettes>" > RNDxmlPaletteGenTempTail.txt
+cat RNDxmlPaletteGenTempHead.txt *.xml RNDxmlPaletteGenTempTail.txt > RNDxmlPaletteGenTempCombined.txt
+rm RNDxmlPaletteGenTempHead.txt RNDxmlPaletteGenTempTail.txt
+mkdir grp0000x
+mv *.xml ./grp0000x
+mv RNDxmlPaletteGenTempCombined.txt _grp0000x_palettes.xml

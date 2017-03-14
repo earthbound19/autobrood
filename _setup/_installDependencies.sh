@@ -6,6 +6,8 @@
 # re: http://superuser.com/a/941135
 # ALSO, mysteriously, installing perl xml_twig via cygwin may solve any errors after this script successfully runs all commands. 
 
+# TO DO: apt-cyg check (which apt-cyg) and auto-install of perl and ~libxml, wget.
+
 echo This script will attempt to install dependencies needed for the \.sh scripts in autobrood to work under Cygwin. Before running this script\, you must install wget, perl and perl-libxml-perl in Cygwin. Also\, if you see \"connection refused\" errors\, try running the Cygwin installer again\, selecting a different mirror\, and reinstalling wget to make that mirror \"stick\" \(I don\'t even know if reinstalling anything is necessary\, though\)\.
 echo "!============================================================"
 read -p "DO YOU WISH TO CONTINUE running this script? : y/n" CONDITION;
