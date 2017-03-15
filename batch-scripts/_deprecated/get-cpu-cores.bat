@@ -1,1 +1,0 @@
-CHKCPU32.exe /x > CPUcoresInfo.xml
