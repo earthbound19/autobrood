@@ -25,13 +25,14 @@ for a in $( seq $howMany )
 do
 	# print beginning xml to randomly named new palette file.
 	paletteName=`cat /dev/urandom | tr -dc 'a-hj-km-np-zA-HJ-KM-NP-Z2-9' | head -c 34`
-	printf "<palette>
-	<palette number=\"$count\" name=\"$paletteName\" data=\"" > RND_palette_"$paletteName".xml
+	printf "<palette number=\"$count\" name=\"$paletteName\" data=\"" > RND_palette_"$paletteName".xml
 
 	# generate palette hex. 256 colors per palette; broken down into 32 lines of 48 hex characters (before 00 padding between hex colors, which brings it to 64).
-	supaHexBlock=`cat /dev/urandom | tr -dc 'a-f0-9' | head -c $((32 * 48))`
+	# supaHexBlock=`cat /dev/urandom | tr -dc 'a-f0-9' | head -c $((32 * 48))`
+		# DEV ONLY: limit to near-white colors:
+		supaHexBlock=`cat /dev/urandom | tr -dc '5-9a-f' | head -c $((32 * 48))`
 			# echo ---
-			# echo supaHexBlock val before is\: $supaHexBlock
+			echo supaHexBlock val before is\: $supaHexBlock
 	supaHexBlock=`echo $supaHexBlock | sed 's/\([a-z0-9]\{6\}\)/00\1/g'`
 			# echo ---
 			# echo supaHexBlock val after is\: $supaHexBlock
@@ -40,21 +41,20 @@ do
 	echo $supaHexBlock | sed -e 's/.\{64\}/&\n/g' >> RND_palette_"$paletteName".xml
 
 	# trim resultant redundant blank lines at end of file; re genius breath at: http://stackoverflow.com/q/16414410
-	# sed -i '/^$/d' RND_palette_"$paletteName".xml
+	sed -i '/^$/d' RND_palette_"$paletteName".xml
 	# MAC ALTERNATE re: http://www.markhneedham.com/blog/2011/01/14/sed-sed-1-invalid-command-code-r-on-mac-os-x/
-	sed -i "" '/^$/d' RND_palette_"$paletteName".xml
+	# sed -i "" '/^$/d' RND_palette_"$paletteName".xml
 
 	# append closing xml to file.
-	printf "\"/>
-	</palette>" >> RND_palette_"$paletteName".xml
+	printf "\"/>\n" >> RND_palette_"$paletteName".xml
 
 	# Convert to windows line endings which emberrender expects (else fails!) ; n/a for mac or other natively 'nix environments:
 	# unix2dos RND_palette_"$paletteName".xml
 	count=$(( $count + 1 ))
 done
 
-printf "<palettes>" > RNDxmlPaletteGenTempHead.txt
-printf "\n</palettes>" > RNDxmlPaletteGenTempTail.txt
+printf "<palettes>\n" > RNDxmlPaletteGenTempHead.txt
+printf "</palettes>" > RNDxmlPaletteGenTempTail.txt
 cat RNDxmlPaletteGenTempHead.txt *.xml RNDxmlPaletteGenTempTail.txt > RNDxmlPaletteGenTempCombined.txt
 rm RNDxmlPaletteGenTempHead.txt RNDxmlPaletteGenTempTail.txt
 mkdir grp0000x
