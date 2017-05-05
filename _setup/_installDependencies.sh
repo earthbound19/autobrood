@@ -1,4 +1,6 @@
-# NOTES: if install fails (canna download from mirror), try:
+# NOTES
+# For at least the chere -i -t mintty command to work, you may need to run this from a cygwin prompt started as a Windows Administrator.
+# If install fails (canna download from mirror), try:
 # apt-cyg mirror "mirror site"
 # --using a mirror URL from this page's list:
 # e.g.:
@@ -27,9 +29,9 @@ if [ "$CONDITION" == "y" ]; then
 			chere -i -t mintty
 		apt-cyg install make
 # IF YOU comment out the next two lines, make sure to install these modules via the Cygwin installer! :
-		# apt-cyg install perl
-		# apt-cyg install perl-libxml-perl
-		# wget --no-check-certificate http://www.xmltwig.org/xmltwig/XML-Twig-3.50.tar.gz
+		apt-cyg install perl
+		apt-cyg install perl-libxml-perl
+		wget --no-check-certificate http://www.xmltwig.org/xmltwig/XML-Twig-3.50.tar.gz
 		wget http://www.xmltwig.org/xmltwig/XML-Twig-3.50.tar.gz
 		tar xz < XML-Twig-3.50.tar.gz
 		cd XML-Twig-3.50
