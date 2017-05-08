@@ -95,7 +95,7 @@ do
 		# if [ ! -e ./*/$elementNoPath.png ] && [ ! -e ./*/$elementNoPath.txt ]
 	renderTarget="$element".png
 	foundCount=`CygwinFind ./ -name $renderTarget | wc -l`
-		if [ $foundCount == "0" ]		
+		if [ $foundCount == "0" ]
 		then
 			echo target file $renderTarget does not exist in this or any subfolder. will render.
 			# EmberRender doesn't seem to be able to render the file into another directory, so we're rendering the image into the same directory as the source .flam3 file, then moving it to a subdir.

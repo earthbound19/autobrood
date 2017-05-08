@@ -29,7 +29,7 @@ do
 
 	# generate palette hex. 256 colors per palette; broken down into 32 lines of 48 hex characters (before 00 padding between hex colors, which brings it to 64).
 	# supaHexBlock=`cat /dev/urandom | tr -dc 'a-f0-9' | head -c $((32 * 48))`
-		# DEV ONLY: limit to near-white colors:
+		# limit to not-so-dark colors:
 		supaHexBlock=`cat /dev/urandom | tr -dc '5-9a-f' | head -c $((32 * 48))`
 			# echo ---
 			echo supaHexBlock val before is\: $supaHexBlock
