@@ -10,7 +10,7 @@
 
 # TO DO: apt-cyg check (which apt-cyg) and auto-install of perl and ~libxml, wget.
 
-echo This script will attempt to install dependencies needed for the \.sh scripts in autobrood to work under Cygwin. Before running this script\, you must install wget, perl and perl-libxml-perl in Cygwin. Also\, if you see \"connection refused\" errors\, try running the Cygwin installer again\, selecting a different mirror\, and reinstalling wget to make that mirror \"stick\" \(I don\'t even know if reinstalling anything is necessary\, though\)\.
+echo This script will attempt to install dependencies needed for the \.sh scripts in autobrood to work under Cygwin. You may need to install wget via the cygwin installer for this to work. If you see \"connection refused\" errors\, try running the Cygwin installer again\, selecting a different mirror\, and reinstalling wget to make that mirror \"stick\" \(I don\'t even know if reinstalling anything is necessary\, though\)\.
 echo "!============================================================"
 read -p "DO YOU WISH TO CONTINUE running this script? : y/n" CONDITION;
 if [ "$CONDITION" == "y" ]; then
@@ -20,7 +20,7 @@ if [ "$CONDITION" == "y" ]; then
 				# cat ./my.minttyrc.settings.txt > /home/$username/.minttyrc
 		# Re goodies divulged here: http://stackoverflow.com/q/9260014/1397555
 		# wget --no-check-certificate raw.github.com/transcode-open/apt-cyg/master/apt-cyg
-		wget raw.github.com/transcode-open/apt-cyg/master/apt-cyg
+		curl https://raw.githubusercontent.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
 		chmod +x apt-cyg
 		mv apt-cyg /usr/local/bin
 		cd /usr/local/bin
@@ -31,7 +31,6 @@ if [ "$CONDITION" == "y" ]; then
 # IF YOU comment out the next two lines, make sure to install these modules via the Cygwin installer! :
 		apt-cyg install perl
 		apt-cyg install perl-libxml-perl
-		wget --no-check-certificate http://www.xmltwig.org/xmltwig/XML-Twig-3.50.tar.gz
 		wget http://www.xmltwig.org/xmltwig/XML-Twig-3.50.tar.gz
 		tar xz < XML-Twig-3.50.tar.gz
 		cd XML-Twig-3.50
@@ -40,7 +39,7 @@ if [ "$CONDITION" == "y" ]; then
 		make test
 		make install
 		cd ..
-		rm -r -f XML-Twig-3.50 XML-Twig-3.50.tar.gz
+		rm -rf XML-Twig-3.50 XML-Twig-3.50.tar.gz XML-Twig-3.50
 		cd $currDir
 		xml_grep --pretty_print indented --wrap flames --descr 'name="Flock Hoibimonko"' --cond "flame" *.flame > flames.flame
 			# nah: --pretty_print indented -- WAIT actually yes.
