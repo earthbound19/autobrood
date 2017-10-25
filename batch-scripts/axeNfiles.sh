@@ -1,7 +1,7 @@
 # IN DEVELOPMENT
 
 # DESCRIPTION
-# Splits all files of type T (via parameter $1) by count N (via parameter $2) into subfolders named by division and frame. Intended e.g. for splitting rendered fractal flame loop animations from one more lengthy sequence (e.g. from an _alles_anim.flam3 file generated via createSheepAnim.sh) into individual loop anims which can be concatenated via concatVidFiles.sh.
+# Splits all files of type T (via parameter $1) by count N (via parameter $2) into subfolders named by division and frame. Intended e.g. for splitting rendered fractal flame loop animations from a more lengthy sequence (e.g. from an _alles_anim.flam3 file generated via createSheepAnim.sh) into individual loop anims which can be concatenated via concatVidFiles.sh.
 
 # USAGE
 # e.g.:
