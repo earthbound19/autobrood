@@ -1,5 +1,5 @@
 # DESCRIPTION:
-# concatenates all .mp4 files in a directory into one output file. Source files must all be encoded with the same codec and settings.
+# concatenates all video files (default extension .mp4) in a directory into one output file. Source files must all be encoded with the same codec and settings.
 
 # USAGE:
 # Ensure this script is in your $PATH, and invoke it from a directory with video e.g. mp4 files that are encoded the same way. The result will appear in _mp4sConcatenated.mp4.
@@ -21,4 +21,4 @@ sed -i "s/^\(.*\)/file '\1'/g" all$vidExt.txt
 ffmpeg -f concat -i all$vidExt.txt -c copy _"$vidExt"sConcatenated.$vidExt
 rm all$vidExt.txt
 
-echo DONE. See result file _"$vidExt"sConcatenated.mp4 and rename/move it as you may.
+echo DONE. See result file _"$vidExt"sConcatenated.$vidExt and move or copy it where you will.
