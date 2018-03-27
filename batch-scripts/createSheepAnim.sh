@@ -5,7 +5,7 @@
 # NOTE: embergenome.exe must be able to read a copy of flam3-palettes.xml for this script to work, and for what reason I don't know it doesn't work even if said file is in the system %PATH% (or cygwin $PATH). It may be a bug in embergenome.exe where it isn't importing the windows environment variables. And why should it? The only folks who use this extensively probably use 'nix systems :) Double-indented code lines in this script offer a workaround for that problem. Be sure for your uses that the cat command in the given workaround uses the proper path to the pallete file, which you may discover by typing the command:
 # cygpath "<C:\TheFullPathTo_flam3-palettes.xml"
 
-# ALSO NOTE: this is hard-coded for 8 digits. If you change that you must change the final (cludge) line of the script to match the number of digits.
+# ALSO NOTE: this is hard-coded for 8 digits. If you change that you must change the final (kludge) line of the script to match the number of digits.
 
 # KNOWN ISSUES and
 # TO DO: fix whatever is consistently wrecking or dropping frames 8 and 9 of the generated sequence as "invalid" (or something like that). If you prune the animation .flam3 file to the 8th and 9th flames, manually export them with xml_split and render them, they are valid. Goofy. ?
