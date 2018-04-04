@@ -7,7 +7,7 @@ Some necessary dependencies are included. The dependencies for xml_split you mus
 
 Double-click examples\example-brood-1\double-click-me.bat to get an idea how it works. Also explore the batch-scripts directory and the _resources.7z archive (7zip required).
 
-At this writing, many of the scripts are defunct for various reasons and need reworking, but many of them work, also.
+At this writing, many of the scripts are defunct for various reasons and need reworking, but many of them work, also. Additionally, you may wish to (and I certainly do) use other scripts in conjunction with this toolset, being my _ebDev scripts, available at: https://github.com/earthbound19/_ebDev
 
 DEVELOPMENT HISTORY:
 Before now: correct.
