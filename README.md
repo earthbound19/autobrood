@@ -14,6 +14,10 @@ At this writing I'm toying with getting the mac CLI emberrender etc tool to work
 All of my original contributions here (e.g. the batch scripts) I dedicate to the Public Domain.
 
 # TO DO
+- Integrate this command where needed to replace more cumbersome file listings in scripts that use sed to remove .. and ./ strings from listings where file list commands result in that: `find *.png -maxdepth 0 -type f`
+- Make sure --opencl flag is set in render scripts (which I disable when rendering on compys without gpu hardware that can do so)?
+- Process substitution where otherwise I've been using so many temp files? Re:
+https://en.wikipedia.org/wiki/Process_substitution
 - Expand documentation
 - Correct / update this TO DO list
 - Rework any defunct scripts
@@ -41,3 +45,23 @@ All of my original contributions here (e.g. the batch scripts) I dedicate to the
  - Made select-renders.bat which eases selection from large pool of interbred genomes for full-scale renders (see notes in batch).
  - Found that running multiple VERY large-scale renders (on multiple cores) will choke a typical machine and flam3-render will repeatedly skip renders in all but one process for inability to allocate needed memory resources to render...depending, I suppose, on what size renders you're trying to make :) But a 4-core 2.9 GHZ machine can run four renders of about 1080x1024 at the same time!
 - 2016-06-05 revived and figured out how I had this working. Will probably want to port all scripts to 'nix on account maybe newest flam3 renderer / cross-breeder may only be on 'nix (flam3 windows development apparently forsaken). Posting to public repository . . .
+
+### Dev notes
+What done the split of all 242.xml.txt into individual .xml (later .flam3) files for every sheep in the flock was this command:
+
+cygwin command:
+xml_split all_242.xml
+
+. . . and somehow I installed something on cygwin to get that command. xml twig?
+
+previous, working, far less efficient method, from bash:
+
+# RE: http://www.labnol.org/software/wget-command-examples/28750/
+wget --execute robots=off --recursive --no-parent --accept flam3,html --no-clobber http://electricsheep.com/archives/generation-242/
+
+----
+There are 2,013,183 possible children among all the sheep in generation 242, if you mutate each pair three different ways.
+
+http://www.wolframalpha.com/input/?i=combinations+of+1159+select+2
+
+It is feasible to thus cross-breed them all and render thumbnails for all of them. But it may be an enormous undertaking.

@@ -1,0 +1,632 @@
+/*---Base Style---
+		This is needed to deal with the large tabs in the fusion theme which is the default on Linux, and optional on Windows.
+		It's not needed for other themes.
+		You should keep this at the top of whatever custom style you make to ensure the tabs aren't unusually large.*/
+QTabBar::tab { height: 3ex; }
+
+/*This is needed to give the labels on the status bar some padding.*/
+QStatusBar QLabel { padding-left: 2px; padding-right: 2px; }
+
+/*Specific styles below this line*/
+
+QObject
+{
+	background-color : rgb(53, 53, 53);
+	color:  darkgray;
+	alternate-background-color:  rgb(53, 53, 53);
+	selection-color: black;
+	selection-background-color: rgb(42, 130, 218);
+}
+
+QObject:disabled
+{
+	color: rgb(35, 35, 35);
+	background-color: rgb(53, 53, 53);
+	border-color: rgb(35, 35, 35);
+}
+
+QDockWidget::float-button
+{
+	background-color: gray;
+}
+
+QDockWidget::title
+{
+	margin: 1px;
+	padding: 2px;
+	background-color: gray;
+}
+
+QTabWidget::pane
+{
+	border: 1px solid gray;
+}
+
+QPushButton
+{
+	margin: 1px;
+	padding: 4px;
+	border: 1px solid gray;
+}
+
+QPushButton:pressed
+{
+	background-color: gray;
+}
+
+QPushButton:focus
+{
+	outline: none;
+}
+
+QTableView QPushButton
+{
+	border: 1px solid gray;
+	margin: 1px;
+	padding: 0px;
+}
+
+QLineEdit, QTextEdit
+{
+	border: 1px solid gray;
+	color: darkgray;
+	background-color: rgb(40, 40, 50);
+	selection-background-color: darkgray;
+}
+
+QToolTip
+{
+	background-color: darkgray;
+	border: 1px solid darkgray;
+}
+
+QSpinBox,
+QDoubleSpinBox
+{
+	padding-right: 0px;
+	color: darkgray;
+	selection-background-color: darkgray;
+	font: 9pt "MS Shell Dlg 2";/*For some reason the font changes if you set any style. Set this to whatever font is the default on your system*/
+}
+
+QCheckBox
+{
+	spacing: 5px;
+	outline: 0px;
+}
+
+QCheckBox::indicator,
+QTableView::indicator
+{
+	border: none;
+	border-radius: 2px;
+	background-color: lightgray;
+}
+
+QCheckBox::indicator:enabled:unchecked,
+QTableView::indicator:enabled:unchecked
+{
+	background-color: lightgray;
+	image: url(:/Fractorium/Icons/checkbox_unchecked.png);
+}
+
+QCheckBox::indicator:enabled:checked,
+QTableView::indicator:enabled:checked
+{
+	background-color: lightgray;
+    image: url(:/Fractorium/Icons/checkbox_checked.png);
+}
+
+QCheckBox::indicator:disabled:unchecked,
+QTableView::indicator:disabled:unchecked
+{
+	background-color: gray;
+	image: none;
+}
+
+QCheckBox::indicator:disabled:checked,
+QTableView::indicator:disabled:checked
+{
+	background-color: gray;
+    image: none;
+}
+
+QRadioButton::indicator:checked
+{
+	background-color: black;
+	border: 2px solid gray;
+	border-radius: 7px;
+	width: 8px;
+	height: 8px;
+	margin: 3px;
+	padding: 1px;
+}
+
+QRadioButton::indicator:checked:disabled
+{
+	background-color: rgb(35, 35, 35);
+}
+
+QRadioButton::indicator:unchecked
+{
+	border: 2px solid gray;
+	border-radius: 7px;
+	width: 8px;
+	height: 8px;
+	margin: 3px;
+	padding: 1px;
+}
+
+QComboBox
+{
+	margin: 0px;
+	padding-left: 4px;
+	border: 1px solid gray;
+}
+
+QComboBox::down-arrow:enabled
+{
+	border: 1px solid gray;
+	margin-right: 2px;
+	margin-top: 0px;
+	margin-bottom: 1px;
+}
+
+
+QComboBox::down-arrow:disabled
+{
+	border: 1px solid  rgb(35, 35, 35);
+	margin-right: 2px;
+	margin-top: 0px;
+	margin-bottom: 1px;
+}
+
+QComboBox::drop-down
+{
+	border: none;
+}
+
+/*For some reason this is needed with Fusion, but not with Windows*/
+QComboBox::item:selected
+{
+	selection-background-color: darkgray;
+}
+
+QComboBox QAbstractItemView
+{
+    border: 1px solid gray;
+	outline: none;
+    selection-background-color: darkgray;
+}
+
+QTableView QComboBox
+{
+	margin: 1px;
+	padding: 0px;
+	padding-left: 3px;
+}
+
+QGroupBox QComboBox
+{
+	margin: 1px;
+	margin-bottom: 0px;
+}
+
+QTableView QComboBox::down-arrow
+{
+	margin-top: 0px;
+	margin-right: 1px;
+	margin-bottom: 0px;
+}
+
+QProgressBar
+{
+	color: black;
+	background-color: gray;
+    border: 0px none gray;
+	border-radius: 3px;
+	text-align: center;
+}
+
+QProgressBar::chunk
+{
+	border-radius: 3px;
+    background-color: lightgray;
+}
+
+QStatusBar QProgressBar
+{
+	min-width: 300px;
+	max-width: 300px;
+	margin-right: 4px;
+}
+
+QMenuBar
+{
+	border-bottom: 1px solid gray;
+}
+
+QMenuBar::item
+{
+	background-color: rgb(53, 53, 53);
+}
+
+QMenu::item:disabled
+{
+	color: rgb(35, 35, 35);
+
+}
+
+QMenu::item:enabled:selected
+{
+	background-color: gray;
+}
+
+QMenu::item:disabled:selected
+{
+	background-color: rgb(53, 53, 53);
+}
+
+QToolBar
+{
+	border: 0px none gray;
+}
+
+QGroupBox
+{
+	padding-top: 3px;
+	border: 2px solid gray;
+    border-radius: 4px;
+    margin-top: 3ex;
+}
+
+QGroupBox::title
+{
+	subcontrol-origin: border;
+	subcontrol-position: top left;
+	margin-top: -1ex;
+	margin-left: 0px;
+	padding-right: 1px;
+	padding-left: 2px;
+	top: -2ex;
+	left: 8px;
+}
+
+QListView
+{
+	selection-color: black;
+	selection-background-color: darkgray;
+}
+
+QListView::item:selected
+{
+	background-color: darkgray;
+}
+
+QTreeView
+{
+	border: 1px solid gray;
+	background-color: rgb(53, 53, 53);
+	font: 9pt "MS Shell Dlg";/*For some reason the font changes if you set any style. Set this to whatever font is the default on your system*/
+}
+
+/*Setting this gives a more consistent look, but removes the ability to gray variations that are included in the xform*/
+QTreeView::item
+{
+	background-color: rgb(53, 53, 53);
+	color: darkgray;
+	outline: none;
+	margin-right: 1px;
+}
+
+QTreeView::item:hover
+{
+	border: 0px none black;
+	background-color: gray;
+	outline: none;
+}
+
+QTreeView::item:selected
+{
+	border: 0px none black;
+	background-color: gray;
+	outline: none;
+}
+
+QTreeView::branch:!has-children
+{
+       background:  rgb(53, 53, 53);
+}
+
+QTreeView::branch:has-children:closed
+{
+	border: 1px solid darkgray;
+	background: gray;
+	margin: 2px;
+}
+
+QTreeView::branch:has-children:!closed
+{
+	border: 1px solid lightgray;
+	background: gray;
+	margin-left: 1px;
+	margin-right: 0px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+QTableView
+{
+	border-left: 0px none gray;
+	border-top: 0px none gray;
+	border-right: 0px none gray;
+	border-bottom: 0px none gray;
+	gridline-color: gray;
+	color: darkgray;
+	selection-color: darkgray;
+	selection-background-color: rgb(53, 53, 53);
+    font: 9pt "MS Shell Dlg";/*For some reason the font changes if you set any style. Set this to whatever font is the default on your system*/
+}
+
+QTableView QTableCornerButton::section:enabled
+{
+	background-color: darkgray;
+}
+
+QTableView QTableCornerButton::section:disabled
+{
+	background-color: rgb(53, 53, 53);
+}
+
+QTableView::indicator:disabled
+{
+	background-color: rgb(35, 35, 35);
+}
+
+QTableView:disabled
+{
+	color: rgb(35, 35, 35);
+	border: none;
+	gridline-color: rgb(35, 35, 35);
+}
+
+QHeaderView::section::vertical:enabled
+{
+	color: black;
+	background-color: gray;
+	border: none;
+	border-bottom: 1px solid gray;
+	padding: 4px;
+	font: 9pt "MS Shell Dlg 2";/*For some reason the font changes if you set any style. Set this to whatever font is the default on your system*/
+}
+
+QHeaderView::section::horizontal:enabled
+{
+	color: black;
+	background-color: darkgray;
+	border: 0px solid darkgray;
+	border-right: 1px solid gray;
+	padding: 4px;
+	font: 9pt "MS Shell Dlg 2";/*For some reason the font changes if you set any style. Set this to whatever font is the default on your system*/
+}
+
+QHeaderView::section::vertical:disabled
+{
+	color: rgb(35, 35, 35);
+	background-color: rgb(53, 53, 53);
+	border: 0px none darkgray;
+	border-bottom: 1px solid rgb(53, 53, 53);
+	padding: 4px;
+	font: 9pt "MS Shell Dlg 2";/*For some reason the font changes if you set any style. Set this to whatever font is the default on your system*/
+}
+
+QHeaderView::section::horizontal:disabled
+{
+	color:rgb(35, 35, 35);
+	background-color: rgb(53, 53, 53);
+	border: 0px none darkgray;
+	border-right: 1px solid rgb(53, 53, 53);
+	padding: 4px;
+	font: 9pt "MS Shell Dlg 2";/*For some reason the font changes if you set any style. Set this to whatever font is the default on your system*/
+}
+
+QScrollBar::vertical
+{
+	background-color: darkgray;
+	border: 0px solid darkgray;
+	width: 15px;
+	margin: 22px 0 22px 0;
+}
+
+QScrollBar::handle::vertical
+{
+    background-color: gray;
+	border-top: 1px solid darkgray;
+	border-bottom: 1px solid darkgray;
+	min-height: 20px;
+}
+
+QScrollBar::add-line::vertical
+{
+	border: 0px solid darkgray;
+	background-color: gray;
+	height: 22px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line::vertical
+{
+	border: 0px solid darkgray;
+	background-color: gray;
+	height: 22px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow::vertical, QScrollBar::down-arrow::vertical
+{
+     border: 2px solid darkgray;
+     width: 5px;
+     height: 12px;
+     background-color: gray;
+}
+
+QScrollBar::add-page::vertical, QScrollBar::sub-page::vertical, QScrollBar::add-page::horizontal, QScrollBar::sub-page::horizontal
+{
+     background-color: darkgray;
+}
+
+QScrollBar::horizontal
+{
+	background-color: darkgray;
+	border: 0px solid darkgray;
+	height: 15px;
+	margin: 0px 20px 0 20px;
+}
+
+QScrollBar::handle::horizontal
+{
+	background-color: gray;
+	border-left: 1px solid darkgray;
+	border-right: 1px solid darkgray;
+	min-width: 20px;
+}
+
+QScrollBar::add-line::horizontal
+{
+	border: 0px solid darkgray;
+	background-color: gray;
+	width: 20px;
+	subcontrol-position: right;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line::horizontal
+{
+	border: 0px solid darkgray;
+	background-color: gray;
+	width: 20px;
+	subcontrol-position: left;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::left-arrow::horizontal, QScrollBar::right-arrow::horizontal
+{
+    border: 2px solid darkgray;
+    width: 12px;
+    height: 5px;
+    background-color: gray;
+}
+
+QMenu::separator
+{
+	height: 1px;
+	background-color: gray;
+}
+
+QToolBar::separator
+{
+	width: 1px;
+	margin-top: 3px;
+	margin-bottom: 2px;
+	background-color: gray;
+}
+
+QStatusBar::item
+{
+	border: none;
+}
+
+/*Specific controls*/
+QTableWidget#ColorTableHeader QHeaderView::section::horizontal,
+QTableWidget#GeometryTableHeader QHeaderView::section::horizontal,
+QTableWidget#FilterTableHeader QHeaderView::section::horizontal,
+QTableWidget#IterationTableHeader QHeaderView::section::horizontal,
+QTableWidget#AnimationTableHeader QHeaderView::section::horizontal,
+QTreeWidget#LibraryTree QHeaderView::section::horizontal
+{
+	border-right: none;
+}
+
+QTableWidget#ColorTable,
+QTableWidget#GeometryTable,
+QTableWidget#FilterTable,
+QTableWidget#IterationTable,
+QTableWidget#AnimationTable,
+QTableWidget#XformWeightNameTable
+{
+	border-left: 1px solid gray;
+}
+
+QTableWidget#SummaryTable
+{
+	border-left: 1px solid gray;
+}
+
+/*Normally doesn't matter, but when a palette file doesn't have enough palettes in it to fill the whole table, it looks funny without a border*/
+QTableWidget#PaletteListTable
+{
+	border: 1px solid gray;
+}
+
+QTableWidget#SummaryTable QHeaderView::section::vertical
+{
+	background-color: darkgray;
+}
+
+QTableWidget#PaletteAdjustTable,
+QTableWidget#PalettePreviewTable,
+QTableWidget#XformColorIndexTable,
+QTableWidget#XformColorValuesTable,
+QTableWidget#InfoBoundsTable,
+QTableWidget#OptionsXmlSavingTable,
+QTableWidget#OptionsIdentityTable,
+QTableWidget#FinalRenderSizeTable,
+QTableWidget#FinalRenderParamsTable
+{
+	border-left: 1px solid gray;
+	border-top: 1px solid gray;
+}
+
+QLineEdit#PaletteFilterLineEdit,
+QLineEdit#VariationsFilterLineEdit
+{
+	height: 20px;
+	min-height: 20px;
+	max-height: 20px;
+}
+
+QSpinBox#ThreadCountSpin,
+QSpinBox#RandomCountSpin,
+QSpinBox#CpuSubBatchSpin,
+QSpinBox#OpenCLSubBatchSpin,
+QSpinBox#FinalRenderCurrentSpin,
+QSpinBox#FinalRenderThreadCountSpin
+{
+	padding: 2px;
+	border: 1px solid gray;
+}
+
+QSpinBox#ThreadCountSpin:disabled,
+QSpinBox#CpuSubBatchSpin:disabled,
+QSpinBox#OpenCLSubBatchSpin:disabled,
+QSpinBox#FinalRenderCurrentSpin:disabled,
+QSpinBox#FinalRenderThreadCountSpin:disabled
+{
+	padding: 2px;
+	border: 1px solid rgb(35, 35, 35);
+}
+
+QTableView#FinalRenderParamsTable QComboBox
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+QTableView#FinalRenderParamsTable QPushButton
+{
+	margin-top: 1px;
+	margin-bottom: 2px;
+	padding: 0px;
+}

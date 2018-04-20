@@ -1,4 +1,4 @@
-batch-scripts
-bin/flam3
-bin/fractorium
-bin/fractorium/mac
+scripts
+bin/flam3/win
+bin/fractorium-win
+bin/fractorium-mac

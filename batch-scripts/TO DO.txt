@@ -1,4 +1,0 @@
-integrate this command where needed to replace more cumbersome file listings in scripts that use sed to remove .. and ./ strings from listings where file list commands result in that:
-find *.png -maxdepth 0 -type f
-
-re: (eh. link not available at the moment)
