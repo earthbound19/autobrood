@@ -4,7 +4,7 @@ Scripts to mass crossbreed, select and render fractal flames (many of which are 
 # Dependencies
 A cygwin environment on windows; or the scripts may work in a 'nix environment with the necessary programs and dependencies installed.
 
-Some necessary dependencies are included. The dependencies for xml_split you must install manually; install them with /_setup/_installDependencies.sh
+Some necessary dependencies are included. The dependencies for xml_split you must install manually; install them with `/_setup/_installDependencies.sh`
 
 At this writing, many of the scripts are defunct for various reasons and need reworking, but many of them work, also.
 
@@ -21,13 +21,13 @@ https://en.wikipedia.org/wiki/Process_substitution
 - Expand documentation
 - Correct / update this TO DO list
 - Rework any defunct scripts
-- What to do with hard-coded local dependencies vs. using what's in my _devtools repository?
+- What to do with hard-coded local dependencies vs. using what's in my `_devtools` repository?
 - Port everything to 'nix /.sh scripts?
 - See if I can get flam3-render to compile and render on 'nix first--render the newest fractal flame types at this writing, 06/05/2016.
  - And in that port, use render flag temp files that are not the original file, as they can more easily and harmlessly be deleted than renaming so many incorrectly named files.
-- Resurrect example scripts in _archives_old.7z/examples/example-brood-1 or create something like them. Make the example scripts not hard-coded to their particular directory (use POPD / PUSHD or a 'nix equiv. instead) ; relative paths not absolute.
+- Resurrect example scripts in `_archives_old.7z/examples/example-brood-1` or create something like them. Make the example scripts not hard-coded to their particular directory (use POPD / PUSHD or a 'nix equiv. instead) ; relative paths not absolute.
 - Update or archive to ./archivesOld.7z all scripts which rely on outdated info (e.g. bad URLs.)
-- Correct extracted sheep file names in ./_resources.7z
+- Correct extracted sheep file names in `./_resources.7z`
 - Modify batches to pull from those resources (if the .7z archive is expanded).
 - Remove this list item which is nothing doing with here, but cool: http://betanews.com/2014/11/25/select-random-files-in-explorer-with-random-selection-tool/
 
