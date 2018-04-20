@@ -2,20 +2,20 @@
 Scripts to mass crossbreed, select and render fractal flames (many of which are also called "Electric Sheep").
 
 # Dependencies
-A cygwin environment on windows; or the scripts may work in a 'nix environment with the necessary programs and dependencies installed.
+A cygwin environment on windows; or the scripts may work in a 'nix environment (and some _do_ work in a Mac envrionment) with the necessary programs and dependencies installed.
 
 Some necessary dependencies are included. The dependencies for xml_split you must install manually; install them with `/_setup/_installDependencies.sh`
 
 At this writing, many of the scripts are defunct for various reasons and need reworking, but many of them work, also.
 
-At this writing I'm toying with getting the mac CLI emberrender etc tool to work by installing from the downloaded .dmg from [fractorium.com](http://fractorium.com/) -- here is the [package downlaod URL therefrom](https://drive.google.com/file/d/11mu6K7im7KweMmyg8aui-EoAut4kSX1X/view?usp=sharing) and then adding this to the system $PATH: /Applications/Fractorium.app/Contents/MacOS
+Get the binaries in the `/bin` subfolders appropriate for your platform in your $PATH, or for Mac, install fractorium from the distribution package and add to your path the console apps in that package: `/Applications/Fractorium.app/Contents/MacOS`
 
 # LICENSE
 All of my original contributions here (e.g. the batch scripts) I dedicate to the Public Domain.
 
 # TO DO
-- Integrate this command where needed to replace more cumbersome file listings in scripts that use sed to remove .. and ./ strings from listings where file list commands result in that: `find *.png -maxdepth 0 -type f`
-- Make sure --opencl flag is set in render scripts (which I disable when rendering on compys without gpu hardware that can do so)?
+- Clean up this README.md?
+- Manage --opencl flag in render parameters as appropriate
 - Process substitution where otherwise I've been using so many temp files? Re:
 https://en.wikipedia.org/wiki/Process_substitution
 - Expand documentation
@@ -29,10 +29,10 @@ https://en.wikipedia.org/wiki/Process_substitution
 - Update or archive to ./archivesOld.7z all scripts which rely on outdated info (e.g. bad URLs.)
 - Correct extracted sheep file names in `./_resources.7z`
 - Modify batches to pull from those resources (if the .7z archive is expanded).
-- Remove this list item which is nothing doing with here, but cool: http://betanews.com/2014/11/25/select-random-files-in-explorer-with-random-selection-tool/
 
 ## HISTORY (reverse-chronological)
 
+- 2018-04-19 Some scripts updates for portability, binaries reorganize, freshen Mac emberrender etc.
 - 2018-03-27 Some repo reorganizing, consolidate disparate notes in README.md
 - 2016-07-05 Added dependency source and instructions to install xml_split on cygwin.
 - pre 2012-03-09
