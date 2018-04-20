@@ -14,6 +14,7 @@ Get the binaries in the `/bin` subfolders appropriate for your platform in your 
 All of my original contributions here (e.g. the batch scripts) I dedicate to the Public Domain.
 
 # TO DO
+- Make the looping over file names consistent in all scripts, modeled after renderFlamesFractorium.sh
 - Clean up this README.md?
 - Manage --opencl flag in render parameters as appropriate
 - Process substitution where otherwise I've been using so many temp files? Re:
