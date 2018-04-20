@@ -56,7 +56,7 @@ xml_split all_242.xml
 
 previous, working, far less efficient method, from bash:
 
-# RE: http://www.labnol.org/software/wget-command-examples/28750/
+RE: http://www.labnol.org/software/wget-command-examples/28750/
 wget --execute robots=off --recursive --no-parent --accept flam3,html --no-clobber http://electricsheep.com/archives/generation-242/
 
 ----
