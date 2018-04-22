@@ -28,7 +28,7 @@ do
 	echo that is $element
 	# search down directories and moving file here if it exists; re a genius breath yon: http://stackoverflow.com/a/37012114
 # find ./ -name "$element" -exec mv '{}' './' ';'
-# TO DO: fix probs. with that; see comments in fetch-genome-images.sh
+# TO DO: fix probs. with that; see comments in fetchGenomesImages.sh
 
 	# search up directories and move the applicable file here if it exists:
 	if [ -e ../$element ]
