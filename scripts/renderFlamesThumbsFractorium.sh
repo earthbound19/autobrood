@@ -15,7 +15,7 @@ find . -maxdepth 1 -iname \*.flame -o -iname \*.flam3 > fractal_flames_list.txt
 
     
 # Optional specifier of device to use:
-deviceParam="--device 1"
+# deviceParam="--device 1"
 
 while read element
 do
