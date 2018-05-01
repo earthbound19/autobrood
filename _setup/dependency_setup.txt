@@ -1,5 +1,0 @@
-Open a cygwin shell (e.g. mintty.exe) and enter the following two commands:
-
-cd "C:\the_path_to_this_folder"
-
-./_installDependencies.sh
