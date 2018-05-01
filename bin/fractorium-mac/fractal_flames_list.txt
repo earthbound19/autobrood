@@ -1,3 +1,0 @@
-./tst.flame
-./tstAnim.flame
-./tst2.flame
