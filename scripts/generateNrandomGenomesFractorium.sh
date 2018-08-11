@@ -20,25 +20,20 @@ if [ -z ${1+x} ]
 fi
 		echo I\'ll generate $howMany genomes randomly.
 
-if [ -z ${2+x} ]
+# If a palette file is specified ($2), construct a `--flame3_palettes=` parameter using it. Otherwise do nothing.
+if ! [ -z ${2+x} ]
 	then
-  # UNCOMMENT the one your platform needs: mac needs ./ and windows doesn't:
-	paletteFile="flam3-palettes.xml"
-	# paletteFile="./flam3-palettes.xml"
-	else
-	paletteFile=$2
-fi
-		echo palette file is $paletteFile
-paletteParam="--flam3_palettes=$paletteFile"
+		paletteParam="--flam3_palettes=$2"
 		echo paletteParam value is $paletteParam
+fi
 
 # WORK BEGIN
 		# BUG WORKAROUND:
 				# cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
 
 # tries=200
-# tries=2000
-tries=20000
+tries=2000
+# tries=20000
 # tries=100001
 
 for a in $( seq $howMany )
@@ -47,9 +42,9 @@ do
 	echo rendering $timestamp.flame . . .
 	idParam="--id=RND"_"$timestamp"_from_""$paletteFile""
 			# echo idParam val is $idParam
-# exit
+
 		# I can't see that this switch actually uses the GPU to create genomes: --opencl
-	./embergenome --nick=earthbound --url=http://earthbound.io $idParam $paletteParam --tries=$tries $deviceParam > $timestamp.flame
+	embergenome --nick=earthbound --url=http://earthbound.io $idParam $paletteParam --tries=$tries $deviceParam > $timestamp.flame
 done
 
 		# CLEANUP BUG WORKAROUND:
