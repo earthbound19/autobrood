@@ -1,7 +1,9 @@
 # First time I've ever initalized an array on the bash command line, and not from a file read:
 methods=(union alternate interpolate)
-shortRestsInterval=15
-shortRestSeconds=40
+# shortRestsInterval=15
+# shortRestSeconds=40
+shortRestsInterval=2
+shortRestSeconds=4
 
 nick=earthbound
 url=http://earthbound.io
@@ -15,7 +17,10 @@ tries=2000
 if [ ! -d children ]; then mkdir children; fi
 
 # Can the following add \*.$flam3 to the end and work? :
-flamesList=`find . -maxdepth 1 -iname \*.flame`
+
+# This convoluted crap trims off leading ./ from file names, and deletes windows newlines in the stream which can muck with the array even being properly created at all:
+# SOLVES problem that was too difficult of finding .flame AND/OR .flam3 files:
+flamesList=(`gfind . -maxdepth 1 -type f -name "*.flame*" -o -name "*.flam3*" | tr -d '\15\32'`)
 
 renderCount=0
 for cross0 in ${flamesList[@]}
