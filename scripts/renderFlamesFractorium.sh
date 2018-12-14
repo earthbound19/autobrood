@@ -76,9 +76,7 @@ if [ -z ${qs+x} ]; then echo no value for qs\; setting default value of $def_qs;
 
 if [ ! -d render_output ]; then mkdir render_output; fi
 
-find . -maxdepth 1 -iname \*.flam3 -o -iname \*.flame > fractal_flames_list.txt
-# filter the ./ off the start of that list (it messes up later file checks if read from a list) :
-gsed -i 's/^\.\/\(.*\)/\1/g' fractal_flames_list.txt
+flamesList=(`gfind . -maxdepth 1 -type f -name "*.flame*" -o -name "*.flam3*" | tr -d '\15\32'`)
 
 		# BUG WORKAROUND:
 		# see createSheepAnim.sh for notes about this cludge; yes this is duplicate code only for context (this was copied at the start of this script also); except the following line was copied to the top of this script for other purposes:
@@ -87,7 +85,7 @@ gsed -i 's/^\.\/\(.*\)/\1/g' fractal_flames_list.txt
 # To allow rest periods every nth frame:
 imgs_iter=1
 # Only render the frame if the target render file does not exist:
-while read element
+for element in ${flamesList[@]}
 do
 	# strip everything up to any leading forward slashes \(from paths\) from the $element\:
 	elementNoPath=`echo $element | sed 's/\(.*\/\)\(.*\)/\2/g'`
@@ -122,9 +120,8 @@ do
 		else
 			echo target file $renderTarget already exists in this or a subfolder. will not render. 
 	fi
-done < fractal_flames_list.txt
+done
 
-rm fractal_flames_list.txt
 
 		# CLEANUP BUG WORKAROUND:
 		# rm flam3-palettes.xml
