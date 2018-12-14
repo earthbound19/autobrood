@@ -14,8 +14,14 @@ array=(`gfind . -maxdepth 1 -iname \*.png -printf '%f\n' | sort`)
 for element in ${array[@]}			# iterate over all items in array
 do
 	fileNameNoExt=${element%.*}
-	echo "Extracting (hopefully) genome from source file $element and saving to $fileNameNoExt.flame . . ."
-	exiftool -b -flam3_genome $element > $fileNameNoExt.flame
+	# If target genome does not already exist, create it. Otherwise don't overwrite it.
+	if [ ! -e $fileNameNoExt.flame ]
+	then
+		echo "Extracting (hopefully) genome from source file $element and saving to $fileNameNoExt.flame . . ."
+		exiftool -b -flam3_genome $element > $fileNameNoExt.flame
+	else
+		echo "Target genome file $fileNameNoExt.flame already exists; will not overwrite it; SKIPPING . . ."
+	fi
 done
 
 echo DONE.
