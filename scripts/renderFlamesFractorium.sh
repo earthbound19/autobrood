@@ -105,10 +105,9 @@ do
 					# echo image $imgs_iter of ${#fractal_flames_list[@]}
 					# temporary text file to let any other render client know we're doing this:
 					printf "rendering an image for this file name . . ." > ./render_output/$element.txt
-					# Optional flag in the following command:
+					# Optional flag in the following command; WARNING: it will reduce render speed by 10% :
 					# --progress
-# TO DO: debug why using $openclFlag parameter is wrecking render.
-			emberrender --in=$element --out=$element.png --format=png --progress --ss=$ss --qs=$qs $deviceParam
+			echo "emberrender --in=$element --out=$element.png --format=png --progress --ss=$ss --qs=$qs $deviceParam $openclFlag"
 			rm ./render_output/$element.txt
 			mv $element.png ./render_output/
 					imgs_iter=$((imgs_iter + 1))
