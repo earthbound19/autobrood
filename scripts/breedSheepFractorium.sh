@@ -48,21 +48,22 @@ do
 		  targetGenomeFileName=./children/"$outer_imageFileNameNoExt"_and_"$inner_imageFileNameNoExt"_"$method".flame
 			 echo target render file name is $targetGenomeFileName
 		  renderingNoticeStubFile=./children/"$outer_imageFileNameNoExt"_and_"$inner_imageFileNameNoExt"_"$method".breeding
-		  # If the check file does _not_ exist (!) then create it and render. Otherwise do nothing (skip render):
-		  if ! [ -f $renderingNoticeStubFile ]
+		  # If the render progress stub file does not exist AND the target render file does not already exist, continue and render the target. Otherwise skip render and notify user of skip:
+		  if [ ! -f $renderingNoticeStubFile ] && [ ! -f $targetGenomeFileName ]
 			then
-			   echo "This file denotes procedural breeding of the genomes in this file name. Processes that check for this file will therefore avoid duplicate work." > $renderingNoticeStubFile
-	#            echo crossbreed method is $method.
-	#            echo Rendering target genome $targetGenomeFileName . . .
+			   echo "This file was created when an interbreed render (of the genomes in this file name) was started. Processes that check for this file will therefore avoid duplicate work. If no renders are underway, this file was probably leftover from an interrupted render and you may delete it and start renders again so that the desired render target will be created." > $renderingNoticeStubFile
 			renderCount=$((renderCount + 1))
 			moduloCheck=`echo $(($renderCount % $shortRestsInterval))`
 				echo moduloCheck is $moduloCheck
 			  if [ $moduloCheck == "0" ]; then echo cooling down . . .; sleep $shortRestSeconds; fi
 				echo will render . . .
+	       echo crossbreed method is $method.
+	       echo "Rendering target genome $targetGenomeFileName (render no. $renderCount of this run) . . ."
+sleep 50
 	       embergenome --cross0=$cross0 --cross1=$cross1 --method=$method --nick=$nick --url=$url --tries=$tries $openclFlag > $targetGenomeFileName
 			rm $renderingNoticeStubFile
 		  else
-			  echo ------ SKIP target $targetGenomeFileName because it exists or is rendering ------
+			  echo ------ SKIPPED target $targetGenomeFileName because it exists or the render notification stub file $renderingNoticeStubFile is an indication that it is rendering ------
 		  fi
 	  fi
     done
