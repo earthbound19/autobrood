@@ -3,7 +3,7 @@
 flock_ID=242
 digits=4
 
-find . -iname \*.flam3 -o -iname \*.flame > all_flames.txt
+gfind . -iname \*.flam3 -o -iname \*.flame > all_flames.txt
 mapfile -t all_flames < all_flames.txt
 
 for element in "${all_flames[@]}"

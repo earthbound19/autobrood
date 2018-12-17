@@ -20,7 +20,7 @@ fi
 
 searchExt=flame
 
-find . -maxdepth 1 -iname \*.$imgFormat > imgFiles.txt
+gfind . -maxdepth 1 -iname \*.$imgFormat > imgFiles.txt
 echo Scanning parent directories \(up to three levels up\) for corresponding sheep genome files\; also any directory down . . .
 
 while read element
@@ -29,7 +29,7 @@ do
 	element=`echo $element | sed "s/\.\/\(.*\)\.$imgFormat/\1/g"`
 	# echo that is $element
 	# search down directories and moving file here if it exists; re a genius breath yon: http://stackoverflow.com/a/37012114
-# find ./ -name "$element" -exec mv '{}' './' ';'
+# gfind ./ -name "$element" -exec mv '{}' './' ';'
 # TO DO: fix probs. with that; see comments in fetchGenomesImages.sh
 
 	# search up directories and move the applicable file here if it exists:
