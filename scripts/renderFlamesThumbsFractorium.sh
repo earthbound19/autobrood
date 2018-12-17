@@ -2,7 +2,7 @@
 
 # ALSO NOTE: for now (or forever?) it outputs target renders in the same directory as the source flame file.
 
-# TO DO: change this to just a script that sets ss and qs values and passes them via ENDLOCAL & whatever to render-flames-fractorium.bat.
+# TO DO: change this to just a script that sets ss and qs values and passes them via ENDLOCAL & whatever to render-flames-fractorium.bat (or .sh)?
 
 # Fixed? The following if block didn't (doesn't?) work as expected:
 if ! [ -d render_output ]; then mkdir render_output; fi
@@ -20,10 +20,10 @@ find . -maxdepth 1 -iname \*.flame -o -iname \*.flam3 > fractal_flames_list.txt
 while read element
 do
   # filter the ./ off the start of that list (it messes up later file checks if read from a list) :
-  element=`echo $element | sed 's/^\.\/\(.*\)/\1/g'`
+  element=${element%.*}
 
   # Only render the frame if the target render file does not exist; NOTE that the find command searches subfolders too (to only search the current folder, pass `-maxdepth 1`) :
-	foundCount=`find . -name $element.png | wc -l`
+	foundCount=`gfind . -name $element.png | wc -l`
 	if [ $foundCount == "0" ]		
 	# NOTE for the following command: for 800 x 592 or whatever flame, ss=2.4 offers high def (1080p) image area. ss=1.6 offers HD 720p area.
 	then
