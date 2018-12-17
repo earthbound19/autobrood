@@ -4,6 +4,9 @@
 # USAGE
 # ./thisScript.sh
 
+# DEPENDENCIES
+# A 'nixy environment and exiftool.
+
 
 # CODE
 # NOTES: The flam3_genome tag name was found (in a .png image render saved from the running electric sheep screensaver) via:
