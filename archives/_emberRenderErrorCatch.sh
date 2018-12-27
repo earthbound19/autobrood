@@ -6,8 +6,6 @@ if ! [ -e ./_test_EheVtcfys.flame ]
 		LATER_DELETE__test_EheVtcfys=1
 fi
 
-cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
-
 EmberRender.exe --in=testfail.flame --out=test.png --format=png --progress --ss=.06 --qs=.4
 errorLevel=$?
 
@@ -32,7 +30,6 @@ if ! [ "$errorLevel" == 0 ]
 fi
 echo ~-~-
 
-rm flam3-palettes.xml
 # Only delete the given ~.flame file if it was not here (according to this AWESOME bool) before we ran this script. Otherwise, leave it there (do not delete it):
 if [ "$LATER_DELETE__test_EheVtcfys" == 1 ]
 	then

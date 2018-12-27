@@ -1,5 +1,4 @@
 # NOTE: the below comment. You must copy the mentioned .xml file to the dir from which you run this script; it won't even see the file if its in the embergenome directory (I think).
-# TO DO: make a path-independent workaround for the problem that (at this writing) EmberGenome doesn't scan paths fro flam3-palettes.xml.
 
 
 # USAGE
@@ -28,8 +27,6 @@ if ! [ -z ${2+x} ]
 fi
 
 # WORK BEGIN
-		# BUG WORKAROUND:
-				# cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
 
 # tries=200
 tries=2000
@@ -47,8 +44,6 @@ do
 	embergenome --nick=earthbound --url=http://earthbound.io $idParam $paletteParam --tries=$tries $deviceParam > $timestamp.flame
 done
 
-		# CLEANUP BUG WORKAROUND:
-				# rm flam3-palettes.xml
 
 # Optional:
 # createSheepAnim.sh

@@ -8,11 +8,6 @@
 if ! [ -d render_output ]; then mkdir render_output; fi
 
 find . -maxdepth 1 -iname \*.flame -o -iname \*.flam3 > fractal_flames_list.txt
-
-		# BUG WORKAROUND:
-		# see createSheepAnim.sh for notes about this cludge:
-		# if [ ! -e flam3-palettes.xml ]; then cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml; fi
-
     
 # Optional specifier of device to use:
 # deviceParam="--device 1"
@@ -29,12 +24,9 @@ do
 	then
 		echo Target file $element.png does not exist. Will render.
 		# EmberRender doesn't seem to be able to render the file into another directory, so we're rendering the image into the same directory as the source .flam3 file, then moving it to a subdir.
-		./emberrender --in=$element --out=$element.png --format=png --progress --ss=.64 --qs=8 $deviceParam
+		emberrender --in=$element --out=$element.png --format=png --progress --ss=.64 --qs=8 $deviceParam
 		mv $element.png ./render_output/$element.png
 	else
 		echo Target file $element.png already exists\; SKIPPING render.
 	fi
 done < fractal_flames_list.txt
-
-		# CLEANUP BUG WORKAROUND:
-		# rm flam3-palettes.xml

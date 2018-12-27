@@ -14,11 +14,7 @@ url=http://earthbound.io
 # tries=100001
 # tries=2000
 tries=200
-openclFlag="--opencl"
-
-    # BUG WORKAROUND:
-    # Kludge for dependency file:
-    # if [ ! -e flam3-palettes.xml ]; then cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml; fi
+# openclFlag="--opencl"
 
 if [ ! -d children ]; then mkdir children; fi
 
@@ -69,6 +65,3 @@ sleep 50
     done
   done
 done
-
-    # END BUG WORKAROUND:
-    # rm command here

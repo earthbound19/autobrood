@@ -2,9 +2,6 @@
 
 # DEPENDENCIES: xml_split, ffmpeg.
 
-# NOTE: embergenome.exe must be able to read a copy of flam3-palettes.xml for this script to work, and for what reason I don't know it doesn't work even if said file is in the system %PATH% (or cygwin $PATH). It may be a bug in embergenome.exe where it isn't importing the windows environment variables. And why should it? The only folks who use this extensively probably use 'nix systems :) Double-indented code lines in this script offer a workaround for that problem. Be sure for your uses that the cat command in the given workaround uses the proper path to the pallete file, which you may discover by typing the command:
-# cygpath "<C:\TheFullPathTo_flam3-palettes.xml"
-
 # ALSO NOTE: this is hard-coded for 8 digits. If you change that you must change the final (kludge) line of the script to match the number of digits.
 
 # KNOWN ISSUES and
@@ -34,7 +31,6 @@ if [ ! -d anim_frames ]; then mkdir anim_frames; fi
 # ? TO DO, POSSIBLY: use the counterpart to xml_split, xml_join, instead, for the following:
 cat *.flam3 *.flame > ./anim_frames/_alles.flam3
 # !~~~~
-cp ./flam3-palettes.xml ./anim_frames
 cd ./anim_frames
 # !~~~~
 printf "<flames name=\"alles\">" > head.txt
@@ -46,8 +42,6 @@ mv temp.txt _alles.flam3
 
 # !~-~-~-~-~-~-~-~-~-~-
 # BEGIN OPTION: USE FLAM3-GENOME--comment out the code under USE EMBER-GENOME (below) if you use (uncomment) this section:
-			# BUG WORKAROUND; see comments under USE EMBERGENOME -> BUG WORKAROUND:
-					# cat /cygdrive/c/autobrood/bin/flam3-palettes.xml > flam3-palettes.xml
 	# echo set noedits=1 > flam3GenomeTempBatch.bat
 	# echo set nframes=180 >> flam3GenomeTempBatch.bat
 	# echo set progress=1 >> flam3GenomeTempBatch.bat
@@ -62,8 +56,6 @@ mv temp.txt _alles.flam3
 
 # !~-~-~-~-~-~-~-~-~-~-
 # BEGIN OPTION: USE EMBERGENOME--comment out the code under USE FLAM3-GENOME (above) if you use (uncomment) this section:
-			# BUG WORKAROUND; weirder yet is that if I copy the following with a cp command, it copies it in some way that breaks the ability to properly read it in any xml viewer?! So use the cat command instead:
-					# cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
 					echo running command\:
 					echo EmberGenome.exe \-\-noedits \-\-nframes\=$var_nframes \-\-progress \-\-sequence\=_alles.flam3 \> _alles_anim.flam3
 					echo . . .
@@ -72,9 +64,6 @@ mv temp.txt _alles.flam3
 # END OPTION: USE EMBERGENOME
 # !~-~-~-~-~-~-~-~-~-~-
 
-		# CLEANUP BUG WORKAROUND:
-		# rm flam3-palettes.xml
-rm flam3-palettes.xml
 
 if [ ! -d anim_xml ]; then mkdir anim_xml; fi
 mv _alles.flam3 ./anim_xml/_alles.flam3

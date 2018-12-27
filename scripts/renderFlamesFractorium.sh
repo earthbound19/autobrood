@@ -7,7 +7,6 @@
 
 # TO DO
 # Document possible parameters for this script.
-# With this and other scripts, make a more easily changeable *and* findable global flam3-palettes.xml file
 
 
 # GLOBAL VALUES:
@@ -39,8 +38,6 @@ mediumRestPeriod=260
 # Optional opencl device to use parameter; comment out if you don't want it:
 # deviceParam="-device=2"
 
-			# BUG WORKAROUND, because fractorium doesn't scan $path for the flam3-palettes.xml file:
-			# cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
 
 # TO DO: make the following test portable (import the path from a file given in user root) and test if it works on Mac and Windows) :
 	# ===== SET GLOBAL BOOLEAN based on pass/fail of --opencl render test, which we will use to decide whether to pass the --opencl parameter;
@@ -78,9 +75,6 @@ if [ ! -d render_output ]; then mkdir render_output; fi
 
 flamesList=(`gfind . -maxdepth 1 -type f -name "*.flame*" -o -name "*.flam3*" | tr -d '\15\32'`)
 
-		# BUG WORKAROUND:
-		# see createSheepAnim.sh for notes about this cludge; yes this is duplicate code only for context (this was copied at the start of this script also); except the following line was copied to the top of this script for other purposes:
-		# cat /cygdrive/c/autobrood/bin/fractorium_openCL_GPU_fractal_flames/flam3-palettes.xml > flam3-palettes.xml
 
 # To allow rest periods every nth frame:
 imgs_iter=1
@@ -121,9 +115,6 @@ do
 	fi
 done
 
-
-		# CLEANUP BUG WORKAROUND:
-		# rm flam3-palettes.xml
 
 # TEMP, OPTIONAL:
 # cd render_output
