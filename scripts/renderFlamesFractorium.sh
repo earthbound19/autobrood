@@ -20,19 +20,21 @@
 		# --ss=2.4		produces 1920x image from 800x genome
 		# --ss=3		. . ?
 		# --ss=.667		produces 1280x image (if cropped) from 2160x1080 genome
-# --ss=.667
+def_ss=.41
+# def_ss=.667
 # def_ss=.815
 # def_ss=1.6
-def_ss=2.4
+# def_ss=2.4
 # def_ss=2.64
 # def_ss=10.66
+def_qs=14
 # def_qs=20
-def_qs=57
+# def_qs=57
 # def_qs=180
 # def_qs=512
 
 # The number of seconds between individual and batch renders to rest:
-shortRestPeriod=1
+shortRestPeriod=18
 mediumRestPeriod=260
 
 # Optional opencl device to use parameter; comment out if you don't want it:
@@ -101,7 +103,7 @@ do
 					printf "rendering an image for this file name . . ." > ./render_output/$element.txt
 					# Optional flag in the following command; WARNING: it will reduce render speed by 10% :
 					# --progress
-			echo "emberrender --in=$element --out=$element.png --format=png --progress --ss=$ss --qs=$qs $deviceParam $openclFlag"
+			emberrender --in=$element --out=$element.png --format=png --progress --ss=$ss --qs=$qs $deviceParam $openclFlag
 			rm ./render_output/$element.txt
 			mv $element.png ./render_output/
 					imgs_iter=$((imgs_iter + 1))
