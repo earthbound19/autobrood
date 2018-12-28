@@ -84,25 +84,24 @@ imgs_iter=1
 for element in ${flamesList[@]}
 do
 	# strip everything up to any leading forward slashes \(from paths\) from the $element\:
-	elementNoPath=`echo $element | sed 's/\(.*\/\)\(.*\)/\2/g'`
+	elementNoPath=`echo $element | gsed 's/\(.*\/\)\(.*\)/\2/g'`
 			# echo element is\: $element
 			# formerly checked for ./$element.png; using wildcards instead now because I don't want it to render if an existing rendered file of the same target name exists in *any* subdirectory. This allows e.g. sorting favorite renders into subfolders without re-rendering them if I run a render batch again (e.g. against new fractal flame genome files).
-			# echo val of elementNoPath is\:\n $elementNoPath
+			# echo val of elementNoPath is\: $elementNoPath
 
-	renderTarget=${element%.*}.png
+	renderTarget=${elementNoPath%.*}.png
 	renderNotifyStub="$renderTarget"_rendering.txt
-	foundCount=`gfind ./ -name $renderTarget | wc -l`
+	foundCount=`gfind . -name $renderTarget | wc -l`
 		if [ $foundCount == "0" ]
 		then
 			echo target file $renderTarget does not exist in this or any subfolder. will render.
-					echo rendering image $imgs_iter of ${#fractal_flames_list[@]}, target file $renderTarget
+					echo rendering image $imgs_iter of ${#flamesList[@]}, target file $renderTarget
 					# temporary text file to let any other render client know we're doing this:
 					printf "rendering an image for this file name . . ." > ./$renderNotifyStub
 					# Optional flag in the following command; WARNING: it will reduce render speed by 10% :
 					# --progress
 			emberrender --in=$element --out=$element.png --format=png --ss=$ss --qs=$qs $deviceParam $openclFlag
 			rm $renderNotifyStub
-			mv $element.png ./
 					imgs_iter=$((imgs_iter + 1))
 			if (( $imgs_iter % 125 == 0 )); then echo I have rendered 76 images\, and I am resting for $mediumRestPeriod seconds to cool down.; sleep $mediumRestPeriod; fi
 					# echo ~ mgs_iter val is $imgs_iter ~
@@ -119,6 +118,7 @@ done
 # render-flames-anim-fractorium.sh
 
 # DEVELOPMENT HISTORY
+# 12/27/2018 09:56:19 PM Refactors to update tools, syntax, efficiency, comments, declutter, fix errors, ACTUALLY RENDER (several previous commits)
 # 01/10/2017 3:24 PM BUG FIX: existing file check before render was failing. Switched to use cygwinFind command to determine existence (instead of -e).
 # 07/08/2016 07:35:21 PM Eliminate ridiculous bool LATER_DELETE__test_wexEheVtcfysXww27E4g8JmeeCHBFVXH_flame_whatAnAwesomeVariableName and instead just copy corresponding test render fractal flame genome to current dir and then delete (*gasps for air*) conditionally--only do all that on condition of even doing a test render.
 # Before now:
