@@ -11,7 +11,7 @@ do
 	# echo element is\:
 	# echo $element
 	# echo with id\:
-	sheep_ID=`sed -n 's/.*sheep id="\([0-9]\{1,\}\).*/\1/p' $element`
+	sheep_ID=`gsed -n 's/.*sheep id="\([0-9]\{1,\}\).*/\1/p' $element`
 	# change sheep_ID value to be padded with zeros if necessary, according to $digits:
 	printf -v sheep_ID %0"$digits"d $sheep_ID
 	# if the target sheep rename does not exist (is not the same as the source), rename it.

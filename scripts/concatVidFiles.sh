@@ -17,7 +17,7 @@ if [ ! -z ${1+x} ]
 fi
 
 ls *.$vidExt > all$vidExt.txt
-sed -i "s/^\(.*\)/file '\1'/g" all$vidExt.txt
+gsed -i "s/^\(.*\)/file '\1'/g" all$vidExt.txt
 ffmpeg -f concat -i all$vidExt.txt -c copy _"$vidExt"sConcatenated.$vidExt
 rm all$vidExt.txt
 

@@ -33,17 +33,17 @@ do
 		supaHexBlock=`cat /dev/urandom | tr -dc '5-9a-f' | head -c $((32 * 48))`
 			# echo ---
 			echo supaHexBlock val before is\: $supaHexBlock
-	supaHexBlock=`echo $supaHexBlock | sed 's/\([a-z0-9]\{6\}\)/00\1/g'`
+	supaHexBlock=`echo $supaHexBlock | gsed 's/\([a-z0-9]\{6\}\)/00\1/g'`
 			# echo ---
 			# echo supaHexBlock val after is\: $supaHexBlock
 	# append random palette hex to xml, formatted with newlines per 64 hex chars:
-	# re genius breath (someday I'll just power learn sed?) : http://stackoverflow.com/a/1187225
-	echo $supaHexBlock | sed -e 's/.\{64\}/&\n/g' >> RND_palette_"$paletteName".xml
+	# re genius breath (someday I'll just power learn gsed?) : http://stackoverflow.com/a/1187225
+	echo $supaHexBlock | gsed -e 's/.\{64\}/&\n/g' >> RND_palette_"$paletteName".xml
 
 	# trim resultant redundant blank lines at end of file; re genius breath at: http://stackoverflow.com/q/16414410
-	sed -i '/^$/d' RND_palette_"$paletteName".xml
-	# MAC ALTERNATE re: http://www.markhneedham.com/blog/2011/01/14/sed-sed-1-invalid-command-code-r-on-mac-os-x/
-	# sed -i "" '/^$/d' RND_palette_"$paletteName".xml
+	gsed -i '/^$/d' RND_palette_"$paletteName".xml
+	# MAC ALTERNATE re: http://www.markhneedham.com/blog/2011/01/14/gsed-gsed-1-invalid-command-code-r-on-mac-os-x/
+	# gsed -i "" '/^$/d' RND_palette_"$paletteName".xml
 
 	# append closing xml to file.
 	printf "\"/>\n" >> RND_palette_"$paletteName".xml
