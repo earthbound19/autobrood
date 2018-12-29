@@ -25,8 +25,10 @@ echo Scanning parent directories \(up to three levels up\) for corresponding she
 
 while read element
 do
-	# trim any ./ off the start of the file name; also trim off extension:
-	element=`echo $element | gsed "s/\.\/\(.*\)\.$imgFormat/\1/g"`
+	# trim off extension:
+	element=${element%.*}
+	# also trim any ./ off the start of the file name
+	element=`echo $element | gsed 's|^./||' | tr -d '\15\32'`
 	# echo that is $element
 	# search down directories and moving file here if it exists; re a genius breath yon: http://stackoverflow.com/a/37012114
 # gfind ./ -name "$element" -exec mv '{}' './' ';'

@@ -12,8 +12,9 @@
 # NOTES: The flam3_genome tag name was found (in a .png image render saved from the running electric sheep screensaver) via:
 # exiftool -s -flam3_genome sheep_247_32990_478.png > hyarf.txt
 
-# Create an array of all png file names in the current directory:
-array=(`gfind . -maxdepth 1 -iname \*.png -printf '%f\n' | sort`)
+# Create array of all png and jpg file names in the current directory, re: https://superuser.com/a/126336/130772
+array=(`gfind . -maxdepth 1 \( -iname \*.png -o -iname \*.jpg \) -printf '%f\n' | sort`)
+
 for element in ${array[@]}			# iterate over all items in array
 do
 	fileNameNoExt=${element%.*}
