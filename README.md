@@ -10,6 +10,11 @@ At this writing, many of the scripts are defunct for various reasons and need re
 
 Get the binaries in the `/bin` subfolders appropriate for your platform in your $PATH, or for Mac, install fractorium from the distribution package and add to your path the console apps in that package: `/Applications/Fractorium.app/Contents/MacOS`
 
+# USAGE
+Correct. (Sorry.)
+
+In tandem with this you may find use of getFilePairs4Up.sh and getFilePairs4down.sh from my _ebDev repository (those scripts originated here and were generalized and moved there).
+
 # LICENSE
 All of my original contributions here (e.g. the batch scripts) I dedicate to the Public Domain. The Electric Sheep genomes in the _resources directory are licensed under Creative Commons Attribution 2.5.
 
