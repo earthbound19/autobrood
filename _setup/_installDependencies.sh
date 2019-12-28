@@ -31,7 +31,7 @@ if [ "$CONDITION" == "y" ]; then
 # IF YOU comment out the next two lines, make sure to install these modules via the Cygwin installer! :
 		apt-cyg install perl
 		apt-cyg install perl-libxml-perl
-		wget http://www.xmltwig.org/xmltwig/XML-Twig-3.50.tar.gz
+		curl -LO http://www.xmltwig.org/xmltwig/XML-Twig-3.50.tar.gz
 		tar xz < XML-Twig-3.50.tar.gz
 		cd XML-Twig-3.50
 		perl Makefile.PL -y
