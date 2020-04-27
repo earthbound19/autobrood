@@ -21,35 +21,29 @@ echo This script will attempt to install dependencies needed for the \.sh script
 echo "!============================================================"
 read -p "DO YOU WISH TO CONTINUE running this script? : y/n" CONDITION;
 if [ "$CONDITION" == "y" ]; then
-		# save current directory because some later commands move to other directories.
-		currDir=`pwd`
-				echo Trying some stuff to install dependencies for autobrood using cygwin . . .
-				# cat ./my.minttyrc.settings.txt > /home/$username/.minttyrc
 		# Re goodies divulged here: http://stackoverflow.com/q/9260014/1397555
-		# Only install apt-cyg if it is not installed:
-		if [ ! -e /usr/local/bin/apt-cyg ]
-		then
-			wget https://raw.github.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
-			chmod +x apt-cyg
-			mv apt-cyg /usr/local/bin
-		fi
+		rm ./apt-cyg
+		wget https://raw.github.com/transcode-open/apt-cyg/master/apt-cyg
+		chmod +x apt-cyg
 		# Optional but preferred:
-		apt-cyg install chere
-		chere -i -t mintty
-		apt-cyg install make
+		# ./apt-cyg install chere
+		# chere -i -t mintty
+
+		./apt-cyg install make
 # IF YOU comment out the next two lines, make sure to install these modules via the Cygwin installer! :
-		apt-cyg install perl
-		apt-cyg install perl-libxml-perl
-		wget https://www.xmltwig.org/xmltwig/XML-Twig-3.50.tar.gz
-		tar xz < XML-Twig-3.50.tar.gz
-		cd XML-Twig-3.50
+		./apt-cyg install perl
+		./apt-cyg install perl-libxml-perl
+		./apt-cyg install perl-XML-Parser
+		rm ./apt-cyg
+		wget https://www.xmltwig.org/xmltwig/XML-Twig-3.52.tar.gz
+		tar xz < XML-Twig-3.52.tar.gz
+		cd XML-Twig-3.52
 		perl Makefile.PL -y
 		make
 		make test
 		make install
 		cd ..
-		rm -rf XML-Twig-3.50 XML-Twig-3.50.tar.gz XML-Twig-3.50
-		cd $currDir
+		rm -rf XML-Twig-3.52 XML-Twig-3.52.tar.gz XML-Twig-3.52
 		xml_grep --pretty_print indented --wrap flames --descr 'name="Flock Hoibimonko"' --cond "flame" *.flame > flames.flame
 			# nah: --pretty_print indented -- WAIT actually yes.
 				echo "!============================================================"
