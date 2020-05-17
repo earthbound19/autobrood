@@ -1,3 +1,7 @@
+# DESCRIPTION
+# Installs Windows dependencies for this autobrood repository's scripts,
+# if you wish to run them from MSYS2.
+
 MSYS2_packages=" \
 perl \
 perl-XML-LibXML \
