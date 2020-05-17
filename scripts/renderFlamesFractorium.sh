@@ -47,14 +47,17 @@ mediumRestPeriod=180
 		# TO DO: make the following test portable (import the path from a file given in user root) and test if it works on Mac and Windows) :
 # ===== SET GLOBAL BOOLEAN based on pass/fail of --opencl render test, which we will use to decide whether to pass the --opencl parameter;
 	# EXCEPT DON'T EVEN run this test if the script is run with any parameter; the boolean will be set to an empty value or an actual command flag (string) value depending; if it's empty it simply won't have any effect when inserted into the command:
-	if [ -z ${1+x} ]
+	if [ ! "$1" ]
 		then
+			# extract path to _test_EheVtcfys.flame, then use that path to copy it here:
+			locStr=`whereis _test_EheVtcfys.flame`
+			locStr=`echo $locStr | gsed 's/_test_EheVtcfys: \(.*\)$/\1/g'`
 			# Why cat instead of cp? Stupid permissions things that sometimes arise from Windows. Why cat avoids the permissions garbage is a mystery:
-			cat /cygdrive/c/autobrood/scripts/_test_EheVtcfys.flame > _test_EheVtcfys.flame
+			cat $locStr > copied_test_2DhyfeMzUAzE.flame
 			echo No parameter passed to script\; will test \-\-opencl render flag with emberrender. To avoid this test\, invoke the script with any parameter\, e.g.\:
 			echo \<thisScriptName.sh floofyFloo\>\<enter\>.
 				echo RUNNING OPENCL RENDER TEST to determine settings for batch render of fractal flames . . .
-			emberrender --in=test.flame --out=test.png --format=png --progress --opencl --ss=.2 --qs=1
+			emberrender --in=copied_test_2DhyfeMzUAzE.flame --out=copied_test_2DhyfeMzUAzE.png --format=png --progress --opencl --ss=.2 --qs=1
 			errorLevel=$?
 			rm _test_EheVtcfys.flame
 			echo ~-~-
@@ -73,8 +76,8 @@ mediumRestPeriod=180
 	fi
 # ===== END SET GLOBAL BOOLEAN
 
-if [ -z ${ss+x} ]; then echo no value for ss\; setting default value of $def_ss; ss=$def_ss; else echo using environment value of ss=$ss; fi
-if [ -z ${qs+x} ]; then echo no value for qs\; setting default value of $def_qs; qs=$def_qs; else echo using environment value of qs=$qs; fi
+if [ ! "$ss" ]; then echo no value for ss\; setting default value of $def_ss; ss=$def_ss; else echo using environment value of ss=$ss; fi
+if [ ! "$qs" ]; then echo no value for qs\; setting default value of $def_qs; qs=$def_qs; else echo using environment value of qs=$qs; fi
 
 flamesList=(`gfind . -maxdepth 1 -type f -name "*.flame*" -o -name "*.flam3*" | tr -d '\15\32'`)
 
@@ -118,6 +121,7 @@ done
 # render-flames-anim-fractorium.sh
 
 # DEVELOPMENT HISTORY
+# 05/17/2020 Better test render file find/copy (didn't work at all--changed setup?), environment variable verify.
 # 12/27/2018 09:56:19 PM Refactors to update tools, syntax, efficiency, comments, declutter, fix errors, ACTUALLY RENDER (several previous commits)
 # 01/10/2017 3:24 PM BUG FIX: existing file check before render was failing. Switched to use cygwinFind command to determine existence (instead of -e).
 # 07/08/2016 07:35:21 PM Eliminate ridiculous bool LATER_DELETE__test_wexEheVtcfysXww27E4g8JmeeCHBFVXH_flame_whatAnAwesomeVariableName and instead just copy corresponding test render fractal flame genome to current dir and then delete (*gasps for air*) conditionally--only do all that on condition of even doing a test render.
