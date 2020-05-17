@@ -1,5 +1,6 @@
 # DESCRIPTION
-# Installs Windows dependencies for this autobrood repository's scripts.
+# Installs Windows dependencies for this autobrood repository's
+# scripts, if you wish to run them from Cygwin.
 
 # DEPENDENCIES
 # wget with https capability (since now everyone in the universe is encrypting all web traffice even if needlessly), which you can get and get in your path via my _ebSuperBin and _ebPathMan repositories. Cygwin.
