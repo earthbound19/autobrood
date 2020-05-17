@@ -23,7 +23,7 @@ read -p "DO YOU WISH TO CONTINUE running this script? : y/n" CONDITION;
 if [ "$CONDITION" == "y" ]; then
 		# Re goodies divulged here: http://stackoverflow.com/q/9260014/1397555
 		rm ./apt-cyg
-		wget https://raw.github.com/transcode-open/apt-cyg/master/apt-cyg
+		wget http://raw.github.com/transcode-open/apt-cyg/master/apt-cyg
 		chmod +x apt-cyg
 		# Optional but preferred:
 		# ./apt-cyg install chere
