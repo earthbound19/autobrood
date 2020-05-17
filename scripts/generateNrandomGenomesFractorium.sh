@@ -5,26 +5,33 @@
 # call this script with one parameter and another optional parameter:
 # $1 the number of random genomes to generate
 # $2 the color palette xml file to randomly pick a palette from.
+# $3 OPTIONAL. A list of OPENCL devices to use. See embergenome --help.
 
 # OTHER NOTES
 # At this writing, the script assumes that a specified palette file ($2) is in the same path this script is run from. Also, if there are spaces in the path name, it will probably break.
 
 # PREP BEGIN
 # PARAMATER CHECKS and resulting variable initialization.
-if [ -z ${1+x} ]
+if [ "$1" ]
 	then
-	howMany=14
-	else
 	howMany=$1
+	else
+	howMany=14
 fi
 		echo I\'ll generate $howMany genomes randomly.
-
 # If a palette file is specified ($2), construct a `--flame3_palettes=` parameter using it. Otherwise do nothing.
-if ! [ -z ${2+x} ]
+if [ "$2" ]
 	then
 		paletteParam="--flam3_palettes=$2"
 		echo paletteParam value is $paletteParam
+	else echo No palette file \$2 specified. Exit.
+	exit
 fi
+if [ "$3" ]
+	then
+		deviceParam=$3
+fi
+
 
 # WORK BEGIN
 
@@ -35,7 +42,7 @@ tries=2000
 
 for a in $( seq $howMany )
 do
-	timestamp=`gdate +"%Y%m%d_%H%M%S_%N"`
+	timestamp=`date +"%Y%m%d_%H%M%S_%N"`
 	echo rendering $timestamp.flame . . .
 	idParam="--id=RND"_"$timestamp"_from_""$paletteFile""
 			# echo idParam val is $idParam
