@@ -1,3 +1,286 @@
+1.0.0.20 4/11/2020
+--Bug fixes
+ -ETA time was wrong with incremental final renders after waiting for a period of time.
+ -Fix possible OpenCL bugs in cubic3D, cubicLattice_3D, dc_cube, falloff, falloff2, falloff3, waffle.
+
+--Code changes
+ -Small change to prevent parsing error when using tbb on some systems.
+ -Upgrade to Visual Studio 2019.
+
+1.0.0.19 3/13/2020
+--User changes
+ -Add backward compatibility option for the following variations: cos, cosh, cot, coth, csc, csch, sec, sech, sin, sinh, tan, tanh.
+ -Add the ability to re-order variations by dragging them in the Info tab.
+ -Add menu item to create a reference file using all variations in both a grid and bars pattern.
+ -Add menu item to open example flames files form many artists which are now included.
+ -Allow dragging in folders which will be recursively traversed for flame files.
+ -Allow for adjusting scale via keyboard with the < and > keys.
+ -Show the count of opened flames on the header of the library tree.
+ -Add radio buttons on the xaos tab to specify how pasting or duplicating xforms should preserve xaos.
+ -Preserve prefix and suffix fields between open/close of the Final Render dialog.
+ -Entering xaos cells will always select the entire cell to make editing easier.
+ -Allow right mouse drag + shift perform panning the same way middle mouse button drag does, for users without middle mouse buttons.
+ -Miscellaneous OpenCL optimizations.
+ -Change Blur Curve math to be centered on 0,0 and create a more dramatic effect at lower values.
+
+--Bug fixes
+ -Fix crash on palette editor when opening it with certain palette files in a particular order.
+ -An xform with only a post variation in it might have rendered wrong.
+ -The xforms combo box was obscuring the name of the xforms by not being wide enough.
+ -Make variation state preservation be a little bit more correct in OpenCL.
+ -Custom palettes were not being read correctly on non ANSI machines.
+ -EmberAnimate.exe was using 1-based indexing for filenames, but Fractorium and all of the documentation was using 0-based indexing. Make all use 0-based indexing.
+ -The left header column in the xaos visualization table had somehow disappeared.
+ -Fix OpenCL compilation bug when using Depth Blur with AMD on Mac.
+ -Blur Cuve never worked with strips.
+ -Images with temporal filter width values below 0.6 would sometimes create blank images.
+
+--Code changes
+ -Make all iterators on the CPU use a temporary point.
+ -DoubleSpinBox now has a boolean which specifies whether it clears its selection on enter. Default true.
+ -Make AddXformsWithXaos() be a static member of FractoriumEmberController for quicker build times.
+ -Make a #define for fma() testing, but seems to make no difference.
+ -Optimize some of the OpenCL iteration kernel generation code.
+
+1.0.0.18 1/31/2020
+--User changes
+ -Add entries for 1 and 101 in the affine rotation and scale combo boxes.
+ -Allow for resuming a finished render in the final render dialog with a higher quality.
+ --This only applies to rendering a single image with no strips.
+ --Applies values from coloring & filtering controls in the main window first.
+ -Allow for saving the output from the final render dialog as a different image format without starting the rendering process over.
+ --Applies values from coloring & filtering controls in the main window first.
+ ---These values will only be applied when rendering a single image with no strips.  
+ -Make Clear Xaos apply to all when Apply All is checked.
+ -Improve performance in the following variations: cpow2, dc_cube, julia3d, julia3dz, julian2, log_db, nblur, npolar, waffle, wavesn, xtrb.
+ -Make the xform name field be a standard edit control so it's always editable.
+ -Allow for saving EXR as full 32-bit float per component per pixel. Only of engineering interest.
+ -Make the thresholds for determining left and right mouse clicks on the color curves control more desirable and intuitive.
+ --Larger threshold for left click, same for right click.
+ -Add new style sheet called uranium that is reminiscent of the old Winamp color scheme of the same name.
+ -Allow for keyboard presses to edit affines.
+ --Q: rotate counter clockwise
+ --E: rotate clockwise
+ --W: move up
+ --S: move down
+ --A: move left
+ --D: move right
+ --G: shrink
+ --H: grow
+ --Hold shift to decrease amount, control to increase amount.
+ --P/shift+P toggles visibility of pre/post xforms
+ --L/shift+L toggles visibility of all/selected pre/post xforms
+ ---Change some menu shortcuts to accommodate these new affine editing shortcuts.
+ -Random xaos now just provides values of either 0 or 1, rather than 0-3. Hold control to get the old behavior.
+ -Changes to how xaos is "preserved" when adding new xforms, copying xforms and duplicating xforms.
+ --Duplicating xforms when no xaos is present in the flame now maintains not using xaos, and keeps all values as one.
+ --Duplicating xforms when xaos is present, will result in xaos rows and columns that are the same as the xforms being duplicated, with the new row and column area having values of 1.
+ --Duplicating xforms when xaos is present, while control is pressed, will result in xaos rows and columns that have values of 0, with the new row and column area having values of 1.
+ ---Copying xforms has the same behavior as duplicating with control pressed.
+ --This is a hybrid of the original behavior and the new behavior added a year or so ago.
+ -Add new Blur Curve field which controls how blurring increases when moving from the center out.
+ -Optimization and correction for hexaplay3D and hexnix3D. They now look the same on CPU/GPU.
+ -Major optimization on the GPU for flames which only have one xform, by skipping all random xform selection code.
+ -Show/hide selected/all pre/post affine controls have been moved from the affine tab to the toolbar.
+ 
+--Bug fixes
+ -Properly detect maximization of final render dialog when on linux.
+ -Fix variations: blob2 (broken on CPU), blur_zoom, epispiral, hole, waffle.
+ -Fix reading supershape variation from Apophysis.
+ -hexaplay3D, hexnix3D and post_smartcrop were wrong on the GPU because they are the rare variations which preserve state between iterations, and inter-iter state preservation has been incorrectly implemented until now.
+ -Changing the sub batch size would improperly run the wrong number of iterations.
+
+--Code changes
+ -Rand range now uses multiply + shift rather than modulo.
+ -Add an include for Variations01.h which will allow a developer to make a build which is fully compatible with flam3.
+ -Change some enumeration types to be unsigned char since they only hold a few values.
+ -Make StripsRender() handle memsetting the final output image so calling code no longer has to.
+ -Make FinalRenderEmberController<T>::SaveCurrentRender() return the path that the image was actually saved to.
+ -Flip precalc sina/cosa and apply everywhere by flipping the usage. Flam3 had these reversed and it made the code confusing to read.
+ -Recreate the final render dialog each time it's shown.
+ -Pre/post variations are now checked for precalcs and global function requirements when creating the OpenCL kernel code.
+ -Change some enumeration types to uchar from uint.
+ -Add new field to Ember called m_BlurCurve, and the corresponding xml field is called "blur_curve".
+ -Some functions in Affine2D made const.
+ -Some arguments in some member functions of GLEmberController made const.
+ -Change in the index at which points and variation state are preserved between kernel calls.
+
+1.0.0.17 6/24/2019
+--User changes
+ -Add hex_modulus, inkdrop, Truchet_hex_crop and Truchet_hex_fill variations.
+ -Remove "Current" option for xform selection options. Now only Selected and All are available. If none are explicitly selected, it defaults to current being selected.
+ -Prevent mouse scrolling when panning the image with the middle mouse button down.
+ 
+--Bug fixes
+ -Prevent the minus key from changing the current xform when being pressed in a textbox or spinner.
+ -Fix xform selection logic to prevent selecting hidden pre and post xforms.
+
+1.0.0.16 6/03/2019
+--User changes:
+ -Allow changes which do not trigger a full render to be added to the undo list.
+
+--Bug fixes:
+ -auger, falloff2, falloff3, hypertile, hypertile1, hypertile2, mirror_x, mirror_y and mirror_z variations were wrong.
+ -Dragging library items to a new position was not properly resetting the current flame pointer, so subsequent edits would unintentionally overwrite different flames.
+ -Switching between SP/DP was resetting palette rotation.
+ -Right clicking when showing only current affines caused a crash.
+
+--Code changes:
+ -Optimize hypercrop.
+ -Make dust, sin, cos, tan, sec, csc, cot, sinh, cosh, tanh, sech, csch, coth match Chaotica.
+ -Case insensitive comparisons via stricmp() were wrong on non-Windows systems.
+
+1.0.0.15 5/13/2019
+--User changes:
+ -Add a new stylesheet named lightdark.qss that provides a more modern looking dark theme.
+ -Show common folder locations such as documents, downloads, pictures in the sidebar in all file dialogs.
+ -Warning message about exceeding memory in final render dialog now suggests strips as the solution to the problem.
+ -Strips now has a tooltip explaining what it does.
+ -Allow more digits in the spinners on the color section the flame tab.
+ -Added a field called K2 which is an alternative way to set brightness, ignored when zero.
+ -Add manually adjustable size spinners in the final render dialog. Percentage scale and absolute size are fully synced.
+ -Default prefix in final render is now the filename when doing animations (coming from sequence section of the library tab).
+ -Changed the elliptic variation back to using a less precise version for float, and a more precise version for double. The last release had it always using double.
+ -New applied xaos table that shows a read-only view of actual weights by taking the base xform weights and multiplying them by the xaos values.
+ -New table in the xaos tab that gives a graphical representation of the probability that each xform is chosen, with and without xaos.
+ -Add button to transpose the xaos rows and columns.
+ -Add support for importing .chaos files from Chaotica.
+ --Pasting back to Chaotica will work for most, but not all, variations due to incompatible parameter names in some.
+ -Curves are now splines instead of Bezier. This adds compatibility with Chaotica, but breaks it for Apophysis. Xmls are still pastable, but the color curves will look different.	
+ --The curve editor on the palette tab can now add points by clicking on the lines and remove points by right clicking on the points themselves, just like Chaotica.
+ --Splines are saved in four new xml fields: overall_curve, red_curve, green_curve and blue_curve.
+ -Clear all color curves when clicking Reset while holding down Ctrl.
+ -Interpolate color curves when generating a sequence.
+ -Allow for specifying the percentage of a sub batch each thread should iterate through per kernel call when running with OpenCL. This gives a roughly 1% performance increase due to having to make less kernel calls while iterating.
+ --This field is present for interactive editing (where it's not very useful), in the final render dialog and on the command line.
+ --On the command line, this is specified as --sbpctth for EmberRender and EmberAnimate.
+ -Allow double clicking to toggle the supersample field in the flame tab between 1 and 2 for easily checking the effect of the field.
+ -When showing affine values as polar coordinates, show angles normalized to 360 to match Chaotica.
+ -Fuse Count spinner now toggles between 15 and 100 when double clicking for easily checking the effect of the field.
+ -Added field for limiting the range in the x and y direction that the initial points are chosen from.
+ --This has no effect for many variations, but has a noticeable effect for some.
+ -Linux installer now uses a technology called AppImage which makes installations painless and totally dependency free, like it's been on windows for the past 20 years.
+ --The AppImage is wrapped in a .deb package, so installation remains familiar to ubuntu/mint users.
+ --RPM installer is now provided for Red Hat users.
+ -Added new variations:
+	arcsech
+	arcsech2
+	arcsinh
+	arctanh
+	asteria
+	block
+	bwraps_rand
+	circlecrop2
+	coth_spiral
+	crackle2
+	depth_blur
+	depth_blur2
+	depth_gaussian
+	depth_gaussian2
+	depth_ngon
+	depth_ngon2
+	depth_sine
+	depth_sine2
+	dragonfire
+	dspherical
+	dust
+	excinis
+	exp2
+	flipx
+	flowerdb
+	foci_p
+	gaussian
+	glynnia2
+	glynnsim4
+	glynnsim5
+	henon
+	henon
+	hex_rand
+	hex_truchet
+	hypershift
+	lazyjess
+	lens
+	lozi
+	lozi
+	modulusx
+	modulusy
+	oscilloscope2
+	point_symmetry
+	pointsymmetry
+	projective
+	pulse
+	rotate
+	scry2
+	shift
+	smartshape
+	spher
+	squares
+	starblur2
+	swirl3
+	swirl3r
+	tanh_spiral
+	target0
+	target2
+	tile_hlp
+	truchet_glyph
+	truchet_inv
+	truchet_knot
+	unicorngaloshen
+	vibration
+	vibration2,
+	waves22,
+	waves23,
+	waves3,
+	waves4,
+	waves42,
+ --hex_truchet, hex_rand should always use double. They are extremely sensitive.
+
+--Bug fixes:
+ -Bounds sign was flipped for x coordinate of world space when center was not zero.
+ -Right clicking and dragging spinner showed menu on mouse up, even if it was very far away.
+ -Text boxes for size in final render dialog were hard to type in. Same bug as xform weight used to be so fixed the same way.
+ -Fix spelling to be plural in toggle color speed box.
+ -Stop using the blank user palette to generate flames. Either put colored palettes in it, or exclude it from randoms.
+ -Clicking the random palette button for a palette file with only one palette in it would freeze the program.
+ -Clicking none scale in final render did not re-render the preview.
+ -Use less precision on random xaos. No need for 12 decimal places.
+ -The term sub batch is overloaded in the options dialog. Change the naming and tooltip of those settings for cpu and opencl.
+ --Also made clear in the tooltip for the default opencl quality setting that the value is per device.
+ -The arrows spinner in palette editor appears like a read-only label. Made it look like a spinner.
+ -Fix border colors for various spin boxes and table headers in the style sheet. Requires reload.
+ -Fix a bug in the bwraps variation which would produce different results than Chaotica and Apophysis.
+ -Synth was allowed to be selected for random flame generation when using an Nvidia card but it shouldn't have been because Nvidia has a hard time compiling synth.
+ -A casting bug in the OpenCL kernels for log scaling and density filtering was preventing successful compilations on Intel iGPUs. Fixed even though we don't support anything other than AMD and Nvidia.
+ -Palette rotation (click and drag) position was not being reset when loading a new flame.
+ -When the xform circles were hidden, opening and closing the options dialog would improperly reshow them.
+ -Double click toggle was broken on integer spin boxes.
+ -Fixed tab order of some controls.
+ -Creating a palette from a jpg in the palette editor only produced a single color.
+ --Needed to package imageformats/qjpeg.dll with the Windows installer.
+ -The basic memory benchmark test flame was not really testing memory. Make it more spread out.
+ -Remove the temporal samples field from the flame tab, it was never used because it's only an animation parameter which is specified in the final render dialog or on the command line with EmberAnimate.
+ -The waves2b variation was never fully implemented on the GPU when the pwx or pwy value was between -1e-4 and 1e-4. Now the implementation is complete.
+ -EmberBench.ps1 would not run on linux.
+ -Deleting a flame in the library tree was taking three tries.
+ -Undo a change made last year which gave the wrong color index for final xforms when generating a sequence.
+  
+--Code changes:
+ -Add IsEmpty() to Palette to determine if a palette is all black.
+ -Attempt to avoid selecting a blank palette in PaletteList::GetRandomPalette().
+ -Add function ScanForChaosNodes() and some associated helper functions in XmlToEmber.
+ -Make variation param name correction be case insensitive in XmlToEmber.
+ -Add SubBatchPercentPerThread() method to RendererCL.
+ -Override enterEvent() and leaveEvent() in DoubleSpinBox and SpinBox to prevent the context menu from showing up on right mouse up after already leaving the spinner.
+ -Filtering the mouse wheel event in TableWidget no longer appears to be needed. It was probably an old Qt bug that has been fixed.
+ -Gui/ember syncing code in the final render dialog needed to be reworked to accommodate absolute sizes.
+ -Add fma() to a few more places in the OpenCL code.
+ -Add a new C# project named apoconv that attempts to convert Apophysis plugins to Fractorium style Variation classes. It's not entirely perfect, but gets most of the job done much more quickly than doing so manually.
+ -Remove unused OpenCL functions from variations: elliptic, poincare, mask, bMod, bSwirl, bTransform, bCollide, farblur, popcorn2_3D, falloff, falloff2, falloff3, crackle2, waves2b, hypercrop, depth_gaussian2, depth_sine, depth_sine2, dust, asteria, vibration, vibration2, arctanh, smartshape, squares, starblur2, Truchet.
+ --Add code in EmberTester to automatically detect such unused functions.
+ -No longer assume palettes are 256 elements. Can now read longer palettes.
+ -Ensure OpenCL images always get written when created.
+ -Change some menu capitalization to make the text easier on the eyes.
+
 1.0.0.14 10/20/2018
 --Bug fixes
  -File saving was broken.

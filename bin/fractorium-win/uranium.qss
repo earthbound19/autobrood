@@ -1,0 +1,851 @@
+* 
+{
+	font: 8.5pt "MS Shell Dlg 2";/*For some reason the font changes if you set any style. Set this to whatever font is the default on your system*/
+}
+
+QObject
+{
+	background-color: #706F77;
+	color: rgb(124, 232, 0);
+	alternate-background-color: #706F77;
+	selection-color: rgb(124, 232, 0);
+}
+
+QObject:disabled
+{
+	color: rgba(255, 255, 255, 40);
+}
+
+QStatusBar
+{
+	background-color: rgb(115, 133, 116);
+}
+
+/*This is needed to give the labels on the status bar some padding.*/
+QStatusBar QLabel { padding-left: 2px; padding-right: 2px; }
+
+Fractorium
+{
+	qproperty-VariationTreeColorNonZero: rgb(221, 255, 130);
+	qproperty-VariationTreeColorZero: rgb(124, 232, 0);
+	qproperty-VariationTreeBgColorNonZero: rgb(35, 36, 34);
+	qproperty-VariationTreeBgColorZero:#706F77;
+}
+
+/*==================================================================================================
+QTableView
+==================================================================================================*/
+
+/*For some reason, Qt does not draw table headers correctly, so the style must always be manually specified.*/
+QHeaderView::section::vertical:enabled
+{
+	width: 12px;
+	color: black;
+	background-color: rgb(176, 204, 177);
+	border: none;
+	padding: 0px;
+	padding-left: 4px;
+}
+
+QHeaderView::section::horizontal:enabled
+{
+	height: 18px;
+	color: black;
+	background-color: rgb(176, 204, 177);
+	border: none;
+	padding: 0px;
+	padding-left: 4px;
+}
+
+QHeaderView::section::vertical:disabled
+{
+	width: 12px;
+	color: rgb(35, 35, 35);
+	background-color: rgb(53, 53, 53);
+	border: none;
+	padding: 0px;
+	padding-left: 4px;
+}
+
+QHeaderView::section::horizontal:disabled
+{
+	height: 18px;
+	color:rgb(35, 35, 35);
+	background-color: rgb(53, 53, 53);
+	border: none;
+	padding: 0px;
+	padding-left: 4px;
+}
+
+QTableView
+{
+	border: 1px solid rgb(176, 204, 177);
+	gridline-color: rgb(176, 204, 177);
+	selection-background-color: rgb(115, 133, 116);
+}
+
+QTableView QTableCornerButton::section:enabled
+{
+	border: none;
+	background-color: rgb(176, 204, 177);
+}
+
+QTableView QTableCornerButton::section:disabled
+{
+	border: none;
+	background-color: rgb(53, 53, 53);
+}
+
+QTableView::indicator:disabled
+{
+	background-color: rgb(53, 53, 53);
+}
+
+QTableView:disabled
+{
+	color: rgb(35, 35, 35);
+	border: 1px solid rgb(53, 53, 53);
+	gridline-color: rgb(35, 35, 35);
+}
+
+QTableWidget
+{
+	border: 1px solid rgb(176, 204, 177);
+	selection-background-color: rgb(115, 133, 116);
+}
+
+QTableWidget::item:hover
+{
+	border: 0px none black;
+	color: rgb(221, 255, 130);
+	background-color: rgb(115, 133, 116);
+	outline: none;
+}
+
+QTableWidget::item:selected
+{
+	border: 0px none black;
+	color: rgb(221, 255, 130);
+	background-color: rgb(35, 36, 34);
+	outline: none;
+}
+
+/*==================================================================================================
+QScrollBar
+==================================================================================================*/
+
+QScrollBar::vertical
+{
+	background-color: rgb(115, 133, 116);
+	border: 0px solid rgb(115, 133, 116);
+	width: 15px;
+	margin: 22px 0 22px 0;
+}
+
+QScrollBar::handle::vertical
+{
+	background-color: rgb(176, 204, 177);
+	border-top: 1px solid rgb(115, 133, 116);
+	border-bottom: 1px solid rgb(115, 133, 116);
+	min-height: 20px;
+}
+
+QScrollBar::add-line::vertical
+{
+	border: 0px solid darkgray;
+	background-color: gray;
+	height: 22px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line::vertical
+{
+	border: 0px solid darkgray;
+	background-color: gray;
+	height: 22px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow::vertical, QScrollBar::down-arrow::vertical
+{
+	 border: 2px solid rgb(124, 232, 0);
+	 width: 5px;
+	 height: 12px;
+	 background-color: gray;
+}
+
+QScrollBar::add-page::vertical,
+QScrollBar::sub-page::vertical,
+QScrollBar::add-page::horizontal,
+QScrollBar::sub-page::horizontal
+{
+	 background-color: rgb(115, 133, 116);
+}
+
+QScrollBar::horizontal
+{
+	background-color: rgb(176, 204, 177);
+	border: 0px solid darkgray;
+	height: 15px;
+	margin: 0px 20px 0 20px;
+}
+
+QScrollBar::handle::horizontal
+{
+	background-color: rgb(176, 204, 177);
+	border-left: 1px solid rgb(115, 133, 116);
+	border-right: 1px solid rgb(115, 133, 116);
+	min-width: 20px;
+}
+
+QScrollBar::add-line::horizontal
+{
+	border: 0px solid darkgray;
+	background-color: gray;
+	width: 20px;
+	subcontrol-position: right;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line::horizontal
+{
+	border: 0px solid darkgray;
+	background-color: gray;
+	width: 20px;
+	subcontrol-position: left;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::left-arrow::horizontal,
+QScrollBar::right-arrow::horizontal
+{
+	border: 2px solid rgb(124, 232, 0);
+	width: 12px;
+	height: 5px;
+	background-color: gray;
+}
+
+/*==================================================================================================
+QMenu
+==================================================================================================*/
+
+QMenuBar
+{
+	background-color: rgb(115, 133, 116);
+}
+
+QMenuBar::item
+{
+	padding: 4px;
+	background-color: rgb(115, 133, 116);
+}
+
+QMenuBar::item:selected
+{
+	background-color: rgb(176, 204, 177);
+	color: black;
+}
+
+QMenu 
+{
+	border: none;
+	margin: 0;
+	menu-scrollable: 0;
+}
+
+QMenu::icon 
+{
+	margin: 5px;
+}
+
+QMenu::item  
+{
+	padding: 5px 30px 5px 30px;
+}
+
+QMenu::item:enabled:selected 
+{
+	background-color: rgb(176, 204, 177);
+	color: black;
+}
+
+QMenu::item:disabled 
+{
+	color: #A0A0A0;
+}
+
+QMenu::separator 
+{
+	height: 1px;
+	background-color: #A9A9A9;
+	margin: 0;
+}
+
+/*==================================================================================================
+Dock widget
+==================================================================================================*/
+
+QDockWidget::title 
+{
+	text-align: center;
+	background-color: rgb(115, 133, 116);
+	border: 2px solid #706F77; /* fix to simulate margin between this :title and tabs */ /* same as main background color */
+	border-radius: 6px; /* bigger than normal due to previous border fix */
+	padding: 4px 0px; /* also needed because of previous border fix */
+}
+
+QDockWidget::float-button 
+{
+	background-color: rgb(176, 204, 177);
+	border-radius: 3px;
+	subcontrol-origin: padding;
+	subcontrol-position: right center;
+}
+
+QDockWidget::float-button 
+{
+	right: 4px;
+}
+
+QDockWidget::float-button:hover 
+{
+	background-color: rgb(176, 204, 177);
+	border: 2px solid #706F77;
+}
+
+QDockWidget::float-button:pressed 
+{
+	background-color: rgba(176, 204, 177,30);
+	border: 2px solid #706F77;
+}
+
+/*==================================================================================================
+QTabWidget
+==================================================================================================*/
+
+QTabWidget::pane 
+{
+	background-color: transparent;
+	position: absolute;
+}
+QTabWidget::pane:top 
+{
+	top: -1px;
+	border-top: 1px solid #4a4a4a;
+}
+
+QTabWidget::pane:bottom 
+{
+	bottom: -1px;
+	border-bottom: 1px solid #4a4a4a;
+}
+
+QTabWidget::pane:left 
+{
+	right: -1px;
+	border-right: 1px solid #4a4a4a;
+}
+
+QTabWidget::pane:right 
+{
+	left: -1px;
+	border-left: 1px solid #4a4a4a;
+}
+
+QTabWidget::tab-bar:top,
+QTabWidget::tab-bar:bottom 
+{
+	left: 5px;
+}
+
+QTabWidget::tab-bar:left,
+QTabWidget::tab-bar:right 
+{
+	top: 5px;
+}
+
+/*==================================================================================================
+QTabBar
+==================================================================================================*/
+
+QTabBar
+{
+	qproperty-drawBase: 0; /* important */
+	background-color: transparent;
+}
+
+/* Workaround for QTabBars created from docked QDockWidgets which don't draw the border if not set and reseted as follows: */
+QTabBar 
+{
+	border-top: 0px;  
+	border-bottom: 1px solid #4a4a4a;
+}
+
+QDockWidget QTabBar 
+{
+	border-color: transparent; /* set color for all QTabBars but ones created from QDockWidget */
+}
+
+QDialog QTabBar 
+{
+	border-color: transparent; /* set color for QTabBars inside Preferences dialog */
+}
+/* end fix */
+
+QTabBar::tab 
+{
+	background-color: transparent;
+	border: 1px solid transparent;
+	padding: 4px 4px 4px 4px;
+	margin: 0px;
+}
+
+QDialog QTabBar::tab:top
+{
+	background-color: transparent;
+	border: 1px solid transparent;
+	padding: 4px 4px 4px 4px;
+	min-width: 20ex;
+}
+
+QTabBar::tab:left,
+QTabBar::tab:right 
+{
+	border-left-width: 0px;
+	border-right-width: 4px; 
+	min-height: 9ex;
+}
+
+QTabBar::tab:top,
+QTabBar::tab:bottom 
+{
+	border-top-width: 0px; 
+	border-bottom-width: 4px; 
+	min-width: 9ex;
+}
+
+QDialog QTabBar::tab:selected,
+QTabBar::tab:selected 
+{
+	background-color: #706F77; /* same as tab content background color */
+	border-color: #4a4a4a;
+}
+
+QTabBar::tab:top:selected 
+{
+	border-top: 3px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(176, 204, 177), stop:1 rgb(115, 133, 116)); /* selection color */
+	border-bottom-color: #706F77; /* same as tab content background color */
+}
+
+QTabBar::tab:bottom:selected 
+{
+	border-bottom: 3px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(176, 204, 177), stop:1 rgb(115, 133, 116)); /* selection color */
+	border-right-color: #706F77; /* same as tab content background color */
+}
+
+QTabBar::tab:right:selected 
+{
+	border-left: 3px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(176, 204, 177), stop:1 rgb(115, 133, 116)); /* selection color */
+	border-right-color: #706F77; /* same as tab content background color */
+}
+
+QTabBar::tab:left:selected 
+{
+	border-right: 3px solid qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, rgb(176, 204, 177), stop:1 rgb(115, 133, 116)); /* selection color */
+	border-left-color: #706F77; /* same as tab content background color */
+}
+
+QTabBar::tab:first:selected 
+{
+	margin-left: 4px; /* the first selected tab has nothing to overlap with on the left */
+}
+
+QTabBar::tab:last:selected 
+{
+	margin-right: 4px; /* the last selected tab has nothing to overlap with on the right */
+}
+
+QTabBar::tab:only-one 
+{
+	margin: 0; /* if there is only one tab, we don't want overlapping margins */
+}
+
+/*==================================================================================================
+QToolBar
+==================================================================================================*/
+
+QToolBar 
+{
+	padding: 0px;
+	border: 0px none gray;
+	background-color: rgb(115, 133, 116);
+}
+
+QToolBar > QToolButton
+{
+	margin: 1px;
+	padding: 1px;
+	border-radius: 3px;
+	color: rgb(124, 232, 0);
+	border: 1px solid rgb(115, 133, 116);
+	position: relative;
+	subcontrol-position: right;
+	subcontrol-origin: margin;
+	background-color: rgb(115, 133, 116);
+}
+
+QDialog > QToolBar > QToolButton
+{
+	width: 95px;
+	margin: 0px;
+	padding: 0px;
+	border-radius: 3px;
+	border: 1px solid rgb(115, 133, 116);
+}
+
+QDialog > QToolBar > QToolButton::menu-button
+{
+	left: -2px;
+	border-radius: 3px;
+	border: 1px solid rgb(115, 133, 116);
+}
+
+/* when QToolButton is checked: */
+QToolBar > QToolButton:checked 
+{
+	color: black;
+	border: 1px solid rgb(150, 179, 190);
+	background-color: rgb(150, 179, 190);
+}
+
+QToolBar > QToolButton:checked:hover 
+{
+	border: 1px solid rgb(124, 232, 0);
+	background-color: rgb(150, 179, 190);
+}
+
+QToolBar > QToolButton:hover 
+{
+	border: 1px solid rgb(124, 232, 0);
+	background-color: rgb(115, 133, 116);
+}
+
+QToolBar > QToolButton:pressed 
+{
+	background-color: rgba(0,0,0,40);
+}
+
+QToolBar > QToolButton:disabled
+{
+	background-color: rgba(0, 0, 0, 20);
+}
+
+/*==================================================================================================
+Remainder from the previous attempt at a stylesheet, dark_windows.qss
+==================================================================================================*/
+QPushButton
+{
+	margin: 1px;
+	padding: 4px;
+	color: black;
+	background-color: rgb(150, 179, 190);
+}
+
+QPushButton:pressed
+{
+	background-color: gray;
+}
+
+QPushButton:focus,
+QPushButton:hover,
+QPushButton:selected
+{
+	outline: none;
+	border: 1px solid rgb(124, 232, 0);
+	border-radius: 2px;
+}
+
+QPushButton:disabled
+{
+	color: #706F77;
+}
+
+QLineEdit, QTextEdit
+{
+	border: 1px solid rgb(150, 179, 190);
+	color: rgb(221, 255, 130);
+	background-color: rgb(115, 133, 116);
+	selection-color: rgb(124, 232, 0);
+	selection-background-color: rgb(150, 179, 190);
+}
+
+QSpinBox,
+QDoubleSpinBox
+{
+	padding-right: 0px;
+	selection-color: rgb(124, 232, 0);
+	selection-background-color: rgb(150, 179, 190);
+}
+
+QCheckBox
+{
+	spacing: 5px;
+}
+
+QCheckBox::indicator,
+QTableView::indicator,
+QGroupBox::indicator,
+QTreeView::indicator
+{
+	border-radius: 3px;
+}
+
+QCheckBox::indicator:enabled:unchecked,
+QTableView::indicator:enabled:unchecked,
+QGroupBox::indicator:enabled:unchecked,
+QTreeView::indicator:enabled:unchecked
+{
+	background-color: rgb(115, 133, 116);
+}
+
+QCheckBox::indicator:enabled:checked,
+QTableView::indicator:enabled:checked,
+QGroupBox::indicator:enabled:checked,
+QTreeView::indicator:enabled:checked
+{
+	background-color: rgb(124, 232, 0);
+}
+
+QCheckBox::indicator:disabled:unchecked,
+QTableView::indicator:disabled:unchecked,
+QGroupBox::indicator:disabled:unchecked,
+QTreeView::indicator:disabled:unchecked
+
+{
+	background-color: gray;
+	image: none;
+}
+
+QCheckBox::indicator:disabled:checked,
+QTableView::indicator:disabled:checked,
+QGroupBox::indicator:disabled:checked,
+QTreeView::indicator:disabled:checked
+{
+	background-color: gray;
+	image: none;
+}
+
+QRadioButton::indicator:checked
+{
+	background-color: rgb(176, 204, 177);
+	border: 2px solid rgb(115, 133, 116);
+	border-radius: 7px;
+	width: 8px;
+	height: 8px;
+	margin: 3px;
+	padding: 1px;
+}
+
+QRadioButton::indicator:checked:disabled
+{
+	background-color: rgb(115, 133, 116);
+}
+
+QRadioButton::indicator:unchecked
+{
+	border: 2px solid gray;
+	border-radius: 7px;
+	width: 8px;
+	height: 8px;
+	margin: 3px;
+	padding: 1px;
+}
+
+QComboBox
+{
+	margin: 1px;
+	padding-left: 4px;
+	border: 1px solid rgb(176, 204, 177);
+	selection-background-color: rgb(176, 204, 177);
+	selection-color: black;
+}
+
+QComboBox:disabled
+{
+	border: 1px solid gray;
+}
+
+QComboBox::down-arrow:enabled
+{
+	border: 1px solid rgb(124, 232, 0);
+	margin-right: 2px;
+	margin-top: 0px;
+	margin-bottom: 1px;
+}
+
+QComboBox::down-arrow:disabled
+{
+	border: 1px solid  gray;
+	margin-right: 2px;
+	margin-top: 0px;
+	margin-bottom: 1px;
+}
+
+QComboBox::drop-down
+{
+	border: none;
+}
+
+QComboBox QAbstractItemView
+{
+	border: 1px solid gray;
+	outline: none;
+	selection-background-color: rgb(176, 204, 177);
+	selection-color: black;
+}
+
+QProgressBar
+{
+	color: black;
+	background-color: gray;
+	border: 0px none gray;
+	border-radius: 3px;
+	text-align: center;
+}
+
+QProgressBar::chunk
+{
+	border-radius: 3px;
+	background-color: rgb(176, 204, 177);
+}
+
+QStatusBar QProgressBar
+{
+	min-width: 300px;
+	max-width: 300px;
+	margin-right: 4px;
+}
+
+QStatusBar QLabel
+{
+	background-color: rgb(115, 133, 116);
+}
+
+QGroupBox
+{
+	padding-top: 8px;
+	border: 2px solid rgb(115, 133, 116);
+	border-radius: 4px;
+	margin-top: 3ex;
+}
+
+QGroupBox::title
+{
+	subcontrol-origin: border;
+	subcontrol-position: top left;
+	margin-top: 1ex;
+	margin-left: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	top: -2ex;
+	left: 8px;
+}
+
+/*Setting this gives a more consistent look. Also, by omitting color and background color, it allows us to set it above with VariationTreeColorNonZero etc...*/
+QTreeView
+{
+	border: 1px solid rgb(176, 204, 177);
+	selection-background-color: #706F77;
+}
+
+QTreeView::item
+{
+	outline: none;
+	margin-right: 1px;
+}
+
+QTreeView::item:hover
+{
+	border: 0px none black;
+	color: rgb(221, 255, 130);
+	background-color: rgb(115, 133, 116);
+	outline: none;
+}
+
+QTreeView::item:selected
+{
+	border: 0px none black;
+	color: rgb(221, 255, 130);
+	background-color: rgb(115, 133, 116);
+	outline: none;
+}
+
+/*Specific controls*/
+QLineEdit#PaletteFilterLineEdit,
+QLineEdit#VariationsFilterLineEdit
+{
+	height: 20px;
+	min-height: 20px;
+	max-height: 20px;
+}
+
+QSpinBox#ThreadCountSpin,
+QSpinBox#RandomCountSpin,
+QSpinBox#CpuSubBatchSpin,
+QSpinBox#OpenCLSubBatchSpin,
+QSpinBox#CpuQualitySpin,
+QSpinBox#OpenCLQualitySpin,
+QDoubleSpinBox#OpenCLSubBatchPctSpin,
+QSpinBox#FinalRenderCurrentSpin,
+QSpinBox#FinalRenderThreadCountSpin,
+QDoubleSpinBox#FinalRenderOpenCLSubBatchPctSpin
+{
+	padding: 2px;
+	border: 1px solid rgb(115, 133, 116);
+}
+/*
+QSpinBox::up-arrow,
+QSpinBox::down-arrow
+{
+background-color: rgb(176, 204, 177);
+subcontrol-origin: border;
+subcontrol-position: top left;
+}
+*/
+QTableView#FinalRenderParamsTable QComboBox
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+QTableView#FinalRenderParamsTable QPushButton
+{
+	margin-top: 1px;
+	margin-bottom: 2px;
+}
+
+QTableView#XaosTableView QHeaderView::section::vertical,
+QTableView#XaosDistVizTableWidget QHeaderView::section::vertical,
+QTableView#XaosAppliedTableView QHeaderView::section::vertical
+{    
+	width: 19px;
+}
+
+QTableView#SummaryTable QHeaderView::section::vertical
+{    
+	width: 69px;
+}
+
+QssDialog QssTextEdit#QssEdit
+{
+	color: black;
+	background-color: #FFFCE1;
+}       
+
+QTextEdit#CreditsTextBrowser
+{
+	color: black;
+	background-color: #FFFCE1;
+}

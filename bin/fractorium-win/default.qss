@@ -1,0 +1,67 @@
+/*---Base Style---
+background-color: rgb(0, 0, 54);
+This is needed to deal with the large tabs in the fusion theme which is the default on Linux, and optional on Windows.
+It's not needed for other themes.You should keep this at the top of whatever custom style you make to ensure the tabs aren't unusually large.*/
+QTabBar::tab { height: 4ex; }
+
+/*This is needed to give the labels on the status bar some padding.*/
+QStatusBar QLabel { padding-left: 2px; padding-right: 2px; }
+
+Fractorium
+{
+	qproperty-VariationTreeColorNonZero:black;
+	qproperty-VariationTreeColorZero:black;
+	qproperty-VariationTreeBgColorNonZero:lightgray;
+	qproperty-VariationTreeBgColorZero:white;
+}
+
+/*For some reason, Qt does not draw table headers correctly, so the style must always be manually specified.*/
+QHeaderView::section::vertical:enabled
+{
+	color: black;
+	background-color: lightgray;
+	border: none;
+	border-bottom: 1px solid gray;
+	padding-left: 5px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font: 8pt "MS Shell Dlg 2";/*For some reason the font changes if you set any style. Set this to whatever font is the default on your system*/
+}
+
+QHeaderView::section::horizontal:enabled
+{
+	color: black;
+	background-color: lightgray;
+	border: 0px solid darkgray;
+	border-right: 1px solid gray;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 3px;
+	font: 8pt "MS Shell Dlg 2";/*For some reason the font changes if you set any style. Set this to whatever font is the default on your system*/
+}
+
+QHeaderView::section::vertical:disabled
+{
+	color: rgb(35, 35, 35);
+	background-color: rgb(53, 53, 53);
+	border: 0px none darkgray;
+	border-bottom: 1px solid rgb(53, 53, 53);
+	padding-left: 5px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font: 8pt "MS Shell Dlg 2";/*For some reason the font changes if you set any style. Set this to whatever font is the default on your system*/
+}
+
+QHeaderView::section::horizontal:disabled
+{
+	color:rgb(35, 35, 35);
+	background-color: rgb(53, 53, 53);
+	border: 0px none darkgray;
+	border-right: 0px solid rgb(53, 53, 53);
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 3px;
+	font: 8pt "MS Shell Dlg 2";/*For some reason the font changes if you set any style. Set this to whatever font is the default on your system*/
+}

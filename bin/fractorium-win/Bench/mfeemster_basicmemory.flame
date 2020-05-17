@@ -1,6 +1,6 @@
 <flames>
-<flame version="EMBER-WIN-1.0.0.7" time="0" name="mfeemster_basicmemory" size="1920 1280" center="0 0" scale="990" rotate="0" supersample="1" filter="1" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" background="0 0 0" brightness="4" gamma="4" highlight_power="1" vibrancy="1" estimator_radius="0" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0.1" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" palette_mode="linear" interpolation="smooth" interpolation_type="log" plugins="linear" new_linear="1" curves="0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 ">
-   <xform weight="0.333333" color="0.340114" var_color="1" color_speed="0.5" symmetry="0" name="" animate="0" linear="1" coefs="1 0 0 1 0 0" opacity="1"/>
+<flame version="EMBER-WIN-1.0.0.15" time="0" name="mfeemster_basicmemory" size="1920 1280" center="0 0" scale="990" rotate="0" supersample="2" filter="1" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" background="0 0 0" brightness="4" gamma="4" highlight_power="1" vibrancy="1" estimator_radius="0" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0.1" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="linear" new_linear="1" curves="0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 ">
+   <xform weight="0.333333" color="0.340114" var_color="1" color_speed="0.5" symmetry="0" name="" animate="0" linear="1" coefs="0.999822 -0.0188645 0.0188645 0.999822 0 0" opacity="1"/>
    <palette count="256" format="RGB">
       F1DFDDFAEAEDFDEDEEFDEFEFFFF0F3FCEBF3FDEBEBFBE7E8
       FEDADEF8D9E1F1D4D8DFC2C4D89CB8AB82A2934C6E814A5D
@@ -35,8 +35,10 @@
       E2D4E3C6B7CA9F8EAE667DA96B6071483B573A3247312A49
       28213320172A151314100702090001020001010000050100
    </palette>
-   <edit date="Wed Nov 15 21:20:27 -0800 2017" action="edit">
-      <edit filename="" index="0"/>
+   <edit date="Sun Feb 17 20:04:18 -0800 2019" action="edit">
+      <edit date="Wed Nov 15 21:20:27 -0800 2017" action="edit" filename="C:/D/Dev/fractorium/Bin/x64/Release/Bench/mfeemster_basicmemory.flame" index="0">
+         <edit filename="" index="0"/>
+      </edit>
    </edit>
 </flame>
 </flames>
