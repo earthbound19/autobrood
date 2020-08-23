@@ -10,6 +10,8 @@ perl-XML-Parser"
 
 for element in ${MSYS2_packages[@]}
 do
+	# UNINSTALL option:
+	# pacman -R --noconfirm $element
 	pacman -S --noconfirm $element
 done
 
