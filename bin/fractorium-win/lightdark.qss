@@ -228,7 +228,7 @@ QMenu
 	margin: 0;
 	menu-scrollable: 0;
 }
-
+/*
 QMenu::icon 
 {
 	margin: 5px;
@@ -238,7 +238,7 @@ QMenu::item
 {
 	padding: 5px 30px 5px 30px;
 }
-
+*/
 QMenu::item:enabled:selected 
 {
 	background: #7cabf9;

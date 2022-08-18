@@ -1,0 +1,590 @@
+<flames>
+<flame version="EMBER-WIN-1.0.0.19" time="0" name="Leaves_by_b33rheart" size="1280 800" center="-1.02941 -0.878842" scale="433.31" rotate="-165.601" supersample="2" filter="0.6" filter_shape="gaussian" temporal_filter_type="gaussian" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" rand_range="1" background="0 0 0" brightness="4" gamma="2.75" highlight_power="-0.5" logscale_k2="0" vibrancy="1.18" estimator_radius="20" estimator_minimum="0" estimator_curve="2.25" gamma_threshold="0" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" blur_curve="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="blur_linear post_gaussian pre_depth foci post_sphereblur cropn post_Mobius" new_linear="1" curves="0 0 1 0.270408 0.29898 1 0.565306 0.540816 1 0.717347 0.729592 1 0 0 1 0.164286 0.245918 1 0.344898 0.659184 1 0.754082 0.90102 1 0 0 1 0.245918 0.25 1 0.397959 0.471429 1 0.688776 0.668367 1 0 0 1 0.237755 0.205102 1 0.463265 0.471429 1 0.70102 0.770408 1 " overall_curve="0 0 0.270408 0.29898 0.565306 0.540816 0.717347 0.729592 1 1 " red_curve="0 0 0.164286 0.245918 0.344898 0.659184 0.754082 0.90102 1 1 " green_curve="0 0 0.245918 0.25 0.397959 0.471429 0.688776 0.668367 1 1 " blue_curve="0 0 0.237755 0.205102 0.463265 0.471429 0.70102 0.770408 1 1 ">
+   <xform weight="0.05" color="0.0941176" var_color="1" color_speed="0.9" symmetry="-0.8" name="" animate="1" blur_linear="2.5" blur_linear_length="0.03" blur_linear_angle="0" post_gaussian="0.05" coefs="0.533941 -0.328678 0.328678 0.533941 1.23364 -1.08271" post="-0.0154832 1.23404 -1.23193 -0.0737134 -2.95653 0.255059" chaos="0 1 0 " opacity="0"/>
+   <xform weight="0.45" color="0.235294" var_color="1" color_speed="0" symmetry="1" name="" animate="1" pre_depth="1.06" pre_depth_power="1" foci="1" post_sphereblur="0.001" post_sphereblur_power="0.01" coefs="0.92686 -0.375409 0.328391 0.944543 -0.0345039 -1.99332" post="1.13581 0.0371614 0.180943 1.12192 0.311443 0.0251334" chaos="0 1 1.1 " opacity="0"/>
+   <xform weight="0.15" color="0.964706" var_color="1" color_speed="0.5" symmetry="0" name="" animate="1" cropn="1" cropn_power="2" cropn_radius="2.9" cropn_scatterdist="0" cropn_zero="1" post_Mobius="1" post_Mobius_Re_A="0.95" post_Mobius_Im_A="0.1" post_Mobius_Re_B="0" post_Mobius_Im_B="0.01" post_Mobius_Re_C="-0.025" post_Mobius_Im_C="0.035" post_Mobius_Re_D="1" post_Mobius_Im_D="0.095" coefs="0.789139 0.00880288 0.137238 0.777163 0.579173 0.114565" post="1.10721 -0.798262 0.604643 1.22374 -1.12018 -0.317806" chaos="1 1.4 1.4 " opacity="1"/>
+   <palette count="256" format="RGB">
+      5BC2B455C0B34EBDB247BAB13EB3AF35ACAE2CA3AE249AAF
+      2094B21D90B62091BB2595C1309DC63BA6CB48AFCE53B6D1
+      5BBBD361BDD461BDD461BDD461BED564C1D66AC7D875CFDB
+      80D9DD8BE1E094E9E198EBE196EBE090E5DE83DDDB76D4D7
+      6ACBD460C5D25DC3D15EC3D165C6D26CC9D372CBD473CDD4
+      6FCAD369C8D162C5D05EC3CF5CC3CF5EC4CF5FC6D062C8D1
+      63C9D163C8D161C6D05FC4CF59C2CE55C0CD4EBDCA47B9C9
+      40B5C63CAFC435A8C231A0C02998BE2291BC1B8CBB1A8BBB
+      1C8EBD2395C02E9CC339A6C645ADC84FB3CA59B7CA5DBACA
+      64BDCA67C0CB6CC6CD72CDCE79D5D083DED28DE5D396ECD3
+      9DF1D3A0F4CF9FF3CD9AF0CA90EAC984E1C778D8C56CCEC4
+      61C4C259BAC150B1BE4BA9BB44A0B73D99B2348FAD2B86A7
+      217BA118739D126C9C0C679C09659C08659E09699F096B9F
+      0C73A00F759E137E9C1A839C248E9D3097A23CA2A747ACAE
+      51B7B35BC1BB63C9C06CD1C272D6C378DBBF7CDDBB7EDEB4
+      80DEB080DCAD7FDAAC7DD6AF78D1B171CCB46AC8B462C4B5
+      5BC2B455C0B34EBDB247BAB13EB3AF35ACAE2CA3AE249AAF
+      2094B21D90B62091BB2595C1309DC63BA6CB48AFCE53B6D1
+      5BBBD361BDD461BDD461BDD461BED564C1D66AC7D875CFDB
+      80D9DD8BE1E094E9E198EBE196EBE090E5DE83DDDB76D4D7
+      6ACBD460C5D25DC3D15EC3D165C6D26CC9D372CBD473CDD4
+      6FCAD369C8D162C5D05EC3CF5CC3CF5EC4CF5FC6D062C8D1
+      63C9D163C8D161C6D05FC4CF59C2CE55C0CD4EBDCA47B9C9
+      40B5C63CAFC435A8C231A0C02998BE2291BC1B8CBB1A8BBB
+      1C8EBD2395C02E9CC339A6C645ADC84FB3CA59B7CA5DBACA
+      64BDCA67C0CB6CC6CD72CDCE79D5D083DED28DE5D396ECD3
+      9DF1D3A0F4CF9FF3CD9AF0CA90EAC984E1C778D8C56CCEC4
+      61C4C259BAC150B1BE4BA9BB44A0B73D99B2348FAD2B86A7
+      217BA118739D126C9C0C679C09659C08659E09699F096B9F
+      0C73A00F759E137E9C1A839C248E9D3097A23CA2A747ACAE
+      51B7B35BC1BB63C9C06CD1C272D6C378DBBF7CDDBB7EDEB4
+      80DEB080DCAD7FDAAC7DD6AF78D1B171CCB46AC8B462C4B5
+   </palette>
+</flame>
+<flame version="EMBER-WIN-1.0.0.19" time="1" name="Nebula-like_(needs_DP_for_sharpness)_by_b33rheart" size="1280 1024" center="0.385117 0.487982" scale="562.86" rotate="-146.286" supersample="2" filter="0.8" filter_shape="gaussian" temporal_filter_type="gaussian" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" rand_range="1" background="0 0 0" brightness="11.2" gamma="2.18" highlight_power="-1" logscale_k2="0" vibrancy="1.064" estimator_radius="0" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="1.1" cam_zpos="0.3" cam_persp="-0.13" cam_yaw="0.122173" cam_pitch="0.628319" cam_dof="0.002" blur_curve="45" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="pre_foci pre_sineblur hypertile2 post_spherical post_curl" new_linear="1" curves="0 0 1 0.282653 0.160204 1 0.475511 0.459184 1 0.62347 0.807143 1 0 0 1 0.131633 0.266326 1 0.328571 0.569388 1 0.643877 0.92551 1 0 0 1 0.286735 0.221428 1 0.5 0.418368 1 0.705102 0.594898 1 0 0 1 0.213266 0.225511 1 0.393877 0.463265 1 0.782653 0.778571 1 " overall_curve="0 0 0.282653 0.160204 0.475511 0.459184 0.62347 0.807143 1 1 " red_curve="0 0 0.131633 0.266326 0.328571 0.569388 0.643877 0.92551 1 1 " green_curve="0 0 0.286735 0.221428 0.5 0.418368 0.705102 0.594898 1 1 " blue_curve="0 0 0.213266 0.225511 0.393877 0.463265 0.782653 0.778571 1 1 ">
+   <xform weight="0.25" color="0.254902" var_color="1" color_speed="0.4" symmetry="0.2" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.005" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" post_curl="1" post_curl_c1="0.175" post_curl_c2="-0.12" coefs="-0.212737 -0.453337 0.498335 -0.0493145 0.361807 -0.0553965" post="-0.0793591 -0.901482 0.827492 -0.366362 0.388635 0.441856" chaos="65 47.4 0 65 47.4 0 30 30 0 30 30 0 " opacity="1"/>
+   <xform weight="0.25" color="0.239216" var_color="1" color_speed="0.1" symmetry="0.8" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.005" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" coefs="-0.0860313 0.364989 -0.315378 -0.202865 0.781059 -0.141089" post="0.146579 -1.5846 1.59027 -0.0588654 0.0662911 0.21513" chaos="1 1.47 1.6 1 1.47 1.6 1 0 0 1 0 0 " opacity="0.4"/>
+   <xform weight="0.25" color="0.196078" var_color="1" color_speed="0.06" symmetry="0.88" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.005" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" post_curl="1" post_curl_c1="-0.15" post_curl_c2="0" coefs="0.751316 0.577004 -0.310368 0.895034 0.634952 -0.287429" post="2.50134 0.340282 0.460103 2.48209 -0.128733 0.669922" chaos="2 4 0.7 2 4 0.7 2 0 0 2 0 0 " opacity="0"/>
+   <xform weight="0.25" color="0.254902" var_color="1" color_speed="0.4" symmetry="0.2" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.005" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" post_curl="1" post_curl_c1="0.175" post_curl_c2="-0.12" coefs="-0.267237 -0.423504 0.488393 -0.110644 0.361807 -0.0553965" post="-0.931717 -0.445267 0.120358 -1.02561 0.362709 0.386301" chaos="65 47.4 0 1 1 1 0 0 0 0 0 0 " opacity="1"/>
+   <xform weight="0.25" color="0.239216" var_color="1" color_speed="0.1" symmetry="0.8" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.005" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" coefs="-0.17893 0.327146 -0.248711 -0.277817 0.806985 0.225577" post="1.51149 -0.44476 0.635848 1.44156 -0.0448198 0.0743894" chaos="1 1.47 1.6 1 1 1 0 0 0 0 0 0 " opacity="0.4"/>
+   <xform weight="0.25" color="0.196078" var_color="1" color_speed="0.06" symmetry="0.88" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.005" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" post_curl="1" post_curl_c1="-0.15" post_curl_c2="0" coefs="0.751316 0.577004 -0.310368 0.895034 0.634952 -0.287429" post="2.2954 -1.74029 2.37155 1.635 -0.128733 0.669922" chaos="2 4 0.7 1 1 1 0 0 0 0 0 0 " opacity="0"/>
+   <xform weight="0.025" color="0.211765" var_color="1" color_speed="-0.11" symmetry="1.22" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.005" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" post_curl="1" post_curl_c1="0.175" post_curl_c2="-0.12" coefs="1.25839 0.0341895 -0.452035 1.17489 1.163 0.446361" post="-0.959249 1.34808 -1.58571 -0.472249 0.177677 0.478383" chaos="40 20 3.3 0 0 0 0 0 0 0 0 0 " opacity="1"/>
+   <xform weight="0.025" color="0.211765" var_color="1" color_speed="-0.1" symmetry="1.2" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.005" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" coefs="-0.722561 -0.605411 0.811778 -0.479195 1.38225 0.560668" post="-2.08406 2.03019 -2.28184 -1.80502 -0.100223 0.255361" chaos="1 0.9 1.2 0 0 0 0 0 0 0 0 0 " opacity="1"/>
+   <xform weight="0.025" color="0.211765" var_color="1" color_speed="-0.1" symmetry="1.2" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.005" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" post_curl="1" post_curl_c1="-0.15" post_curl_c2="0" coefs="-2.14437 1.03573 -1.65962 -1.70784 1.43614 0.214328" post="-3.0755 -3.44123 2.30509 -3.99841 -0.347099 0.710154" chaos="2 0 64 0 0 0 0 0 0 0 0 0 " opacity="1"/>
+   <xform weight="0.025" color="0.211765" var_color="1" color_speed="-0.11" symmetry="1.22" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.005" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" post_curl="1" post_curl_c1="0.175" post_curl_c2="-0.12" coefs="0.816094 -0.967421 1.20313 0.392894 0.344481 0.757472" post="-1.34424 -0.423145 -0.0338648 -1.40887 0.181381 0.54505" chaos="40 20 3.3 0 0 0 0 0 0 1 1 1 " opacity="1"/>
+   <xform weight="0.025" color="0.211765" var_color="1" color_speed="-0.1" symmetry="1.2" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.005" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" coefs="-0.928912 0.188103 -0.52328 -0.79021 0.563731 0.871779" post="-2.19237 -1.15536 0.863169 -2.32298 -0.0965193 0.322028" chaos="1 0.9 1.2 0 0 0 0 0 0 1 1 1 " opacity="1"/>
+   <xform weight="0.025" color="0.211765" var_color="1" color_speed="-0.1" symmetry="1.2" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.005" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" post_curl="1" post_curl_c1="-0.15" post_curl_c2="0" coefs="-0.530995 2.33466 -1.62865 1.75502 0.617621 0.525439" post="1.98045 -3.39581 3.84518 0.817475 -0.343395 0.776821" chaos="2 0 64 0 0 0 0 0 0 1 1 1 " opacity="1"/>
+   <palette count="256" format="RGB">
+      C3C675D6D683E2E38FE2D691E0E38FDEDD80D6CD71C1AD55
+      B79037BA8527BD9117CBD13EE3DD63EFE676F7EC82F2ED8B
+      FFFEA1F3F394F9F49BFDF39CFAF299F8F58CFAEF7FF1F075
+      E7E069DCD262B7B75A8992385B8B30466E353A703037633A
+      2F5B3F255B41275438204F331F54313A61293E6B29576F2F
+      757F278C8C278C8C2D8381256479374C6F353F5B24295515
+      1C3F21243230273238223B441F5F40226E4D308C634B856D
+      52886F4F7A754A5E79445F64375E61315757264D5927434B
+      244C483B5A3F56703F8180369EA042B5B763C7CA6ED5CF7E
+      E5DF7AF1F47CF9F477EFE568E5D662CECC5DBAB037AF892B
+      8F86357C6A294E5E2A4A5B2856592F7D51249F621A866924
+      4F60244859223C511E1D47270F472B1A4B29165730236747
+      396F4C4786456D985C93B17DB3C9A6C0D5B5C2D6A6B3C190
+      8CAB776D846D466262335C4F2945340C3124081D20031E1C
+      0414140C110C0D0A0F0206141616080E15120D140E0A230D
+      161E0E181F17121F1810131A1117291728391731301C3A37
+      164849184A4B1D584F2757602C5F6E3C6B6B477A7B62908C
+      ACB190C4D899D2DEA4D8EAA5D8DD9DCBD687BDB874ACA066
+      91964665853A456A35314632243B2E182D251B261F202817
+      2A2C15312E1B262E273248374E5C4B697C6391A862BBCE86
+      D0DD99DFE3AEEFF4AAF0F3BCDFEDB0D5DCB4C9D9C0BBE2D0
+      8FCBCF91C1C6A4BCA36EA39150918A589271668A5E849361
+      93986D9FA06EC9C388D6CF93D7D89ED7DA98C8CF9585A082
+      60847E4B7E752C776A3570563D5948455C3E565B3A7B5E2A
+      A36323A86A259070366A6739566F43505E3E464D3834503B
+      2B573E326148385D51407258607C59687557848745A68852
+      B9AB63CBC46AD9D776DBDB72E2DE6CE2E275E3E586EBE28C
+      EFEC8FECEC8AEAE889F1EC89F4F184F6F188FCF28EFCEF89
+      FAF184F6EE7EEAE16DDCDA63C6C458A7B347969E2B919A3A
+      AA9D39BAB151BEB868C3B464B6AF57AB8F3B918A3C696E2E
+      4B52281B1708000000000000000000000600000D0702120C
+      132A171C3C1C31492A41692F5C7D3C7C8A4F96A056ADBA68
+   </palette>
+</flame>
+<flame version="EMBER-WIN-1.0.0.19" time="2" name="Nebula-like_2_(needs_DP_for_sharpness)_by_b33rheart" size="1280 1024" center="0.434082 1.09731" scale="584.47" rotate="-21.7214" supersample="2" filter="0.8" filter_shape="gaussian" temporal_filter_type="gaussian" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" rand_range="1" background="0 0 0" brightness="9.7" gamma="2.115" highlight_power="1" logscale_k2="0" vibrancy="1.082" estimator_radius="0" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="1.7" cam_zpos="0.3" cam_persp="-0.13" cam_yaw="0.122173" cam_pitch="0.628319" cam_dof="0.002" blur_curve="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="pre_foci pre_sineblur hypertile2 post_spherical post_curl" new_linear="1" curves="0 0 1 0.327551 0.184694 1 0.495919 0.536735 1 0.639797 0.831633 1 0 0 1 0.139796 0.184693 1 0.402041 0.446939 1 0.570408 0.741836 1 0 0 1 0.286735 0.233673 1 0.487755 0.438776 1 0.717347 0.619388 1 0 0 1 0.237756 0.254082 1 0.414285 0.455102 1 0.766327 0.790816 1 " overall_curve="0 0 0.327551 0.184694 0.495919 0.536735 0.639797 0.831633 1 1 " red_curve="0 0 0.139796 0.184693 0.402041 0.446939 0.570408 0.741836 1 1 " green_curve="0 0 0.286735 0.233673 0.487755 0.438776 0.717347 0.619388 1 1 " blue_curve="0 0 0.237756 0.254082 0.414285 0.455102 0.766327 0.790816 1 1 ">
+   <xform weight="0.277" color="0.254" var_color="1" color_speed="0.39" symmetry="0.22" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.001" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" post_curl="1" post_curl_c1="0.085" post_curl_c2="-0.02" coefs="0.0807629 -0.285106 0.259041 0.143897 0.186015 0.021056" post="-0.415122 -1.19897 1.14975 -0.536576 0.185741 1.33526" chaos="9 12 27 70 50 " opacity="1"/>
+   <xform weight="0.175" color="0.239216" var_color="1" color_speed="0.1" symmetry="0.8" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.001" hypertile2="0.340845" hypertile2_p="4" hypertile2_q="0.5" post_spherical="0.064" coefs="0.107465 0.13137 -0.165123 0.0392552 0.525952 -0.270897" post="3.45335 0.814504 -2.02251 2.91521 0.31473 0.628886" chaos="2 1.6 1.8 0.3 9.6 " opacity="0.4"/>
+   <xform weight="0.22" color="0.196078" var_color="1" color_speed="0.06" symmetry="0.88" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.001" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" post_curl="1" post_curl_c1="-1.45" post_curl_c2="0.35" coefs="-0.27815 0.486685 -0.522504 -0.203034 0.876299 0.15661" post="-2.14553 1.34487 -0.908698 -2.36353 0.924889 1.37452" chaos="1 11.8 0 1 0 " opacity="0"/>
+   <xform weight="0.2" color="0.254" var_color="1" color_speed="0.3" symmetry="0.4" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.001" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" post_curl="1" post_curl_c1="0.21" post_curl_c2="-0.11" coefs="-0.175278 -0.443592 0.474545 0.0479763 0.550405 -0.191843" post="-0.111894 1.02514 -1.01455 -0.184755 0.484087 0.988752" chaos="90 50 0 0 0 " opacity="1"/>
+   <xform weight="0.25" color="0.258824" var_color="1" color_speed="0.08" symmetry="0.84" name="" animate="1" pre_foci="-0.18789" pre_sineblur="0.001" pre_sineblur_power="0.001" hypertile2="0.340845" hypertile2_p="3" hypertile2_q="0.5" post_spherical="0.064" coefs="0.331294 0.112413 -0.245882 0.248864 0.659444 -0.089643" post="-0.0236157 1.26761 -1.26502 0.0844544 0.170153 1.32537" chaos="0 0.4 1.3 0.9 1.1 " opacity="1"/>
+   <palette count="256" format="RGB">
+      4E7C7F245D672A41421E2B272521152C120D251809230704
+      1A0F081320222438474D7276729EB5ADCECEBCE4E8C2E0E5
+      A4DBDD7AD8DA5FC0C759C6C160BDB896C6B99FCCBCA8C2C0
+      839996606D782A3A3F191C1B0A0B09050A070A06060E0A0E
+      29170637331E6B683D96985CC4C38FDADBAEE4E4C7CFE0D6
+      C4E7DDCAD5C0C8C69BBBB586B6B690A9C594ADCEC5C2E4C3
+      BCD4C8BFDACFB7D4D0B3DDDCBFDFDDC9E6DEC6E5E0C7E7E2
+      ADE9E8BBE7E2AFE4D7C8DBBED2BF99AE9B6F8C734556452E
+      3147403D56625E89977BB7C397CECB8ACCCCADD2BA91B3AD
+      989781737A6E403D363235254334173D20124A2D0E2A1810
+      1D1E1B21363551605A496C6B5D6E5B3C4E51152E25201B18
+      28200E4D3F24887F2FA39054C4B35F99894C7B583A38301A
+      1C0E080A09070B09081C1F123B392E5B7454778A60718465
+      656C44473C2A3F32233F3E225055497D8A64989F7DBDC5A2
+      AED09D869D8456796836494137332F685A3D87785CB9A465
+      BD9C5B9981528A66296E4E2C7A7041827167819C775F89A0
+      4E7C7F245D672A41421E2B272521152C120D251809230704
+      1A0F081320222438474D7276729EB5ADCECEBCE4E8C2E0E5
+      A4DBDD7AD8DA5FC0C759C6C160BDB896C6B99FCCBCA8C2C0
+      839996606D782A3A3F191C1B0A0B09050A070A06060E0A0E
+      29170637331E6B683D96985CC4C38FDADBAEE4E4C7CFE0D6
+      C4E7DDCAD5C0C8C69BBBB586B6B690A9C594ADCEC5C2E4C3
+      BCD4C8BFDACFB7D4D0B3DDDCBFDFDDC9E6DEC6E5E0C7E7E2
+      ADE9E8BBE7E2AFE4D7C8DBBED2BF99AE9B6F8C734556452E
+      3147403D56625E89977BB7C397CECB8ACCCCADD2BA91B3AD
+      989781737A6E403D363235254334173D20124A2D0E2A1810
+      1D1E1B21363551605A496C6B5D6E5B3C4E51152E25201B18
+      28200E4D3F24887F2FA39054C4B35F99894C7B583A38301A
+      1C0E080A09070B09081C1F123B392E5B7454778A60718465
+      656C44473C2A3F32233F3E225055497D8A64989F7DBDC5A2
+      AED09D869D8456796836494137332F685A3D87785CB9A465
+      BD9C5B9981528A66296E4E2C7A7041827167819C775F89A0
+   </palette>
+</flame>
+<flame version="EMBER-WIN-1.0.0.19" time="3" name="3D_parameters_example_(needs_DP_+_high_quality_)_by_b33rheart" size="1100 1100" center="-9.04302 8.85027" scale="25.37" rotate="-120.343" supersample="2" filter="0.6" filter_shape="gaussian" temporal_filter_type="gaussian" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" rand_range="1" background="0.0431373 0.0784314 0.0627451" brightness="4000" gamma="5.65" highlight_power="-1" logscale_k2="0" vibrancy="1.09" estimator_radius="0" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0" cam_zpos="0.4" cam_persp="-0.03" cam_yaw="3.22886" cam_pitch="-0.20944" cam_dof="1.5" blur_curve="60" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="hypertile3D2 post_Spherical3D pre_blur3D pre_curl3D hemisphere post_curl3D post_depth_blur2 post_smartcrop" new_linear="1" curves="0 0 1 0.294898 0.217347 1 0.463265 0.536735 1 0.709184 0.790816 1 0 0 1 0.196939 0.168367 1 0.528571 0.446939 1 0.676531 0.766327 1 0 0 1 0.266327 0.209184 1 0.463265 0.532653 1 0.721429 0.721429 1 0 0 1 0.209184 0.237755 1 0.471429 0.508163 1 0.607143 0.803061 1 " overall_curve="0 0 0.294898 0.217347 0.463265 0.536735 0.709184 0.790816 1 1 " red_curve="0 0 0.196939 0.168367 0.528571 0.446939 0.676531 0.766327 1 1 " green_curve="0 0 0.266327 0.209184 0.463265 0.532653 0.721429 0.721429 1 1 " blue_curve="0 0 0.209184 0.237755 0.471429 0.508163 0.607143 0.803061 1 1 ">
+   <xform weight="0.525" color="0.509804" var_color="1" color_speed="0.15" symmetry="0.7" name="hypertile_structure" animate="1" hypertile3D2="1" hypertile3D2_p="4" hypertile3D2_q="5" post_Spherical3D="5.03755" coefs="-1 -6.12323e-16 6.12323e-16 -1 0 0" post="3.747e-16 -1 1 3.747e-16 0 0" chaos="50 10 0.8 0.8 0.8 " opacity="0"/>
+   <xform weight="2.2" color="0" var_color="1" color_speed="0.56" symmetry="-0.12" name="hypertile_filler" animate="1" pre_blur3D="-6" pre_curl3D="-0.8" pre_curl3D_cx="-0.27" pre_curl3D_cy="0" pre_curl3D_cz="-0.15" hemisphere="5.03755" post_curl3D="1" post_curl3D_cx="0" post_curl3D_cy="0" post_curl3D_cz="-0.035" post_depth_blur2="1" post_depth_blur2_power="3" post_depth_blur2_range="-0.75" post_depth_blur2_blur="-0.2" post_depth_blur2_radius="0.9" post_depth_blur2_x0="0" post_depth_blur2_y0="0" post_depth_blur2_mulx="1" post_depth_blur2_muly="1" post_depth_blur2_exp="1.2" coefs="0.203222 0.0120835 -0.0120835 0.203222 0.4 -0.01875" post="1 2.44929e-16 -2.44929e-16 1 0 0" chaos="0 0 0 0 0 " opacity="0"/>
+   <xform weight="0.7" color="0.919" var_color="1" color_speed="0.945" symmetry="-0.89" name="cube_side" animate="1" pre_curl3D="1" pre_curl3D_cx="0" pre_curl3D_cy="0" pre_curl3D_cz="-0.15" post_smartcrop="2.8355" post_smartcrop_power="4" post_smartcrop_radius="3.24" post_smartcrop_roundstr="0" post_smartcrop_roundwidth="0" post_smartcrop_distortion="1" post_smartcrop_edge="0" post_smartcrop_scatter="0" post_smartcrop_offset="0" post_smartcrop_rotation="0" post_smartcrop_cropmode="2" post_smartcrop_static="2" coefs="1 1.04083e-17 -1.04083e-17 1 0 0" post="-0.866025 -0.5 -1.8735e-16 -1 0.012 0.004" chaos="0 1 0 0 0 " opacity="1"/>
+   <xform weight="1.9" color="0.919" var_color="1" color_speed="0.945" symmetry="-0.89" name="cube_side" animate="1" pre_curl3D="1" pre_curl3D_cx="0" pre_curl3D_cy="0" pre_curl3D_cz="-0.15" post_smartcrop="2.8355" post_smartcrop_power="4" post_smartcrop_radius="3.24" post_smartcrop_roundstr="0" post_smartcrop_roundwidth="0" post_smartcrop_distortion="1" post_smartcrop_edge="0" post_smartcrop_scatter="0" post_smartcrop_offset="0" post_smartcrop_rotation="0" post_smartcrop_cropmode="2" post_smartcrop_static="2" coefs="0.999999 -0.0010472 0.0010472 0.999999 0 0" post="0.866025 -0.5 -1.83697e-16 1 15.9275 0.005" chaos="0 1 0 0 0 " opacity="1"/>
+   <xform weight="1" color="0.919" var_color="1" color_speed="0.945" symmetry="-0.89" name="cube_side" animate="1" pre_curl3D="1" pre_curl3D_cx="0" pre_curl3D_cy="0" pre_curl3D_cz="-0.15" post_smartcrop="2.8355" post_smartcrop_power="4" post_smartcrop_radius="3.24" post_smartcrop_roundstr="0" post_smartcrop_roundwidth="0" post_smartcrop_distortion="1" post_smartcrop_edge="0" post_smartcrop_scatter="0" post_smartcrop_offset="0" post_smartcrop_rotation="0" post_smartcrop_cropmode="2" post_smartcrop_static="2" coefs="1 1.04083e-17 -1.04083e-17 1 0 0" post="-0.866025 -0.5 0.866025 -0.5 7.97075 -13.7782" chaos="0 1 0 0 0 " opacity="1"/>
+   <palette count="256" format="RGB">
+      7E5541B18A5AE4A994FF7C5EA2725F67534758482F4C442F
+      5842365B43434438322E2D233A3B2D4A4D3D505A6040787B
+      28576B1E2E380D18160B0C07141D23192B2F444535856B41
+      DAC280FFCFBBFFE4B4FFFFD1FFFFFFBDEFD4809B744C5F4F
+      3F5A57466C645E7D6A7C8F6D82835D67604B565239484A34
+      3E4A3A41544B3F65661F60732941462336302030312D3B30
+      3E3E30575D32626A4F6C7557637155616A5E407A785DA28F
+      74A4A3667C78616C5E8F8E62D7BD9CEFF0B853BBD73C7880
+      415757564F3E1C1A1C17190D1624271E292A1D231D1C1A0C
+      392D216B31235B59344D4A333B4532333E393E553B716548
+      CD846EFF6477E55B42733D352628212828186B6949D4AF7D
+      FF7996FF777FBA6951B059469D6B459E4A34BE4E43FF695F
+      FF844FFFAD6FD7B37A938F8D5869674271682F54532D3F3C
+      354940283B301A190F070600251F1C8F3C37FA4932DD5758
+      956D48554E2F2E341F2F2F23464A39737D5FA9A46FD6CA90
+      87D3DAACDDC1D6C289EE7067E84343D0583A955743823B2C
+      7E5541B18A5AE4A994FF7C5EA2725F67534758482F4C442F
+      5842365B43434438322E2D233A3B2D4A4D3D505A6040787B
+      28576B1E2E380D18160B0C07141D23192B2F444535856B41
+      DAC280FFCFBBFFE4B4FFFFD1FFFFFFBDEFD4809B744C5F4F
+      3F5A57466C645E7D6A7C8F6D82835D67604B565239484A34
+      3E4A3A41544B3F65661F60732941462336302030312D3B30
+      3E3E30575D32626A4F6C7557637155616A5E407A785DA28F
+      74A4A3667C78616C5E8F8E62D7BD9CEFF0B853BBD73C7880
+      415757564F3E1C1A1C17190D1624271E292A1D231D1C1A0C
+      392D216B31235B59344D4A333B4532333E393E553B716548
+      CD846EFF6477E55B42733D352628212828186B6949D4AF7D
+      FF7996FF777FBA6951B059469D6B459E4A34BE4E43FF695F
+      FF844FFFAD6FD7B37A938F8D5869674271682F54532D3F3C
+      354940283B301A190F070600251F1C8F3C37FA4932DD5758
+      956D48554E2F2E341F2F2F23464A39737D5FA9A46FD6CA90
+      87D3DAACDDC1D6C289EE7067E84343D0583A955743823B2C
+   </palette>
+</flame>
+<flame version="EMBER-WIN-1.0.0.19" time="4" name="Ethereal_passage_by_b33rheart" size="1280 720" center="0.042241 0.492431" scale="1578.63" rotate="-2.36566" supersample="2" filter="1.1" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="5000" fuse="15" rand_range="1" background="0 0 0" brightness="9.6" gamma="1.85" highlight_power="-0.9" logscale_k2="0" vibrancy="1.08" estimator_radius="9" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" blur_curve="0" palette_mode="step" interpolation="linear" interpolation_type="linear" plugins="pre_bcircle pre_foci_3D pre_falloff3 pre_falloff2 pre_falloff post_julian post_barycentroid pre_hypertile post_rotate_z pre_unpolar pre_cosh pre_waves pre_waves2 juliascope post_unpolar" new_linear="1" curves="0 0 1 0.188776 0.27449 1 0.487755 0.504082 1 0.643878 0.688775 1 0 0 1 0.278571 0.192857 1 0.483673 0.410204 1 0.705102 0.688776 1 0 0 1 0.258163 0.237755 1 0.495918 0.487755 1 0.705102 0.692857 1 0 0 1 0.168367 0.217347 1 0.340816 0.471429 1 0.696938 0.721429 1 " overall_curve="0 0 0.188776 0.27449 0.487755 0.504082 0.643878 0.688775 1 1 " red_curve="0 0 0.278571 0.192857 0.483673 0.410204 0.705102 0.688776 1 1 " green_curve="0 0 0.258163 0.237755 0.495918 0.487755 0.705102 0.692857 1 1 " blue_curve="0 0 0.168367 0.217347 0.340816 0.471429 0.696938 0.721429 1 1 ">
+   <xform weight="0.25" color="0.337" var_color="1" color_speed="-0.1" symmetry="1.2" name="" animate="1" pre_bcircle="0.75" pre_bcircle_scale="1" pre_bcircle_borderwidth="0" pre_foci_3D="2.45" pre_falloff3="0.3" pre_falloff3_blur_type="0" pre_falloff3_blur_shape="0" pre_falloff3_blur_strength="3" pre_falloff3_min_distance="0" pre_falloff3_invert_distance="0" pre_falloff3_mul_x="1" pre_falloff3_mul_y="1" pre_falloff3_mul_z="0" pre_falloff3_mul_c="1" pre_falloff3_center_x="1.6" pre_falloff3_center_y="0" pre_falloff3_center_z="0" pre_falloff3_alpha="0.35" pre_falloff2="1" pre_falloff2_scatter="0.45" pre_falloff2_mindist="0" pre_falloff2_mul_x="1" pre_falloff2_mul_y="1" pre_falloff2_mul_z="0.7" pre_falloff2_mul_c="0.75" pre_falloff2_x0="0.95" pre_falloff2_y0="0" pre_falloff2_z0="0" pre_falloff2_invert="1" pre_falloff2_type="0" pre_falloff="0.05" pre_falloff_scatter="1" pre_falloff_mindist="0.7" pre_falloff_mul_x="1" pre_falloff_mul_y="1" pre_falloff_mul_z="0" pre_falloff_x0="0" pre_falloff_y0="0" pre_falloff_z0="0.6" pre_falloff_invert="0" pre_falloff_type="2" pre_falloff_boxpow="2" post_julian="0.95" post_julian_dist="1.45" post_julian_power="4" post_barycentroid="-1.35" post_barycentroid_a="1" post_barycentroid_b="0" post_barycentroid_c="0" post_barycentroid_d="1" coefs="-2.69086 -0.576013 0.576013 -2.69086 0.362436 -0.304763" post="-0.00132114 6.52054 -6.52054 -0.00132114 0.55478 0.401787" chaos="0 1 2.14114 " opacity="1"/>
+   <xform weight="0.25" color="0.0397948" var_color="1" color_speed="0.4" symmetry="0.2" name="" animate="1" pre_hypertile="2.15" pre_hypertile_p="3.15" pre_hypertile_q="7" pre_hypertile_n="3" post_rotate_z="-0.25" coefs="-0.625924 1.25617 -1.25617 -0.625924 0.76422 -0.770218" post="0.0698202 -0.379387 0.379387 0.0698202 -2.07652 0.90075" chaos="0 0.080034 1 " opacity="1"/>
+   <xform weight="0.15" color="0.388235" var_color="1" color_speed="0.4" symmetry="0.2" name="" animate="1" pre_unpolar="7.25" coefs="0.228064 -0.593071 0.593071 0.228064 -0.920096 0.686297" post="-1.10967 -0.447953 0.447953 -1.10967 -1.32156 0.323311" chaos="1.91655 2.30032 2.04027 " opacity="1"/>
+   <finalxform color="0" var_color="1" color_speed="0.5" symmetry="0" name="" animate="0" pre_cosh="0.9" pre_falloff="1.7" pre_falloff_scatter="1.8" pre_falloff_mindist="1.3" pre_falloff_mul_x="0.35" pre_falloff_mul_y="1" pre_falloff_mul_z="0.1" pre_falloff_x0="0" pre_falloff_y0="0" pre_falloff_z0="0" pre_falloff_invert="1" pre_falloff_type="0" pre_falloff_boxpow="18" pre_waves="1.05" pre_waves2="0.75" pre_waves2_freqx="0.85" pre_waves2_scalex="-2.35" pre_waves2_freqy="3.45" pre_waves2_scaley="0.15" pre_waves2_freqz="0" pre_waves2_scalez="1.95" juliascope="1.05" juliascope_dist="1.1" juliascope_power="2" post_julian="-0.55" post_julian_dist="-1" post_julian_power="1" post_unpolar="3.15" coefs="0.025 0.59625 -0.59625 0.025 -0.637972 -0.129657" post="1 0 0 1 0.0101991 -0.00185238" opacity="1"/>
+   <palette count="256" format="RGB">
+      F8A5AFF5A0AAF09AA5EA959EE38E99DA8892D0818CC67B86
+      BA737FAD6D79A06572925E6C83576574505F654A5A574455
+      4C4152433D4F393A4C30364A2832471F30451A2E42162B40
+      14293E13273B1424391622361921341B20321E1F30211E2E
+      231D2D251C2B271C2A271B29281A29291A29291B29291B2A
+      291C2B291D2C271E2E261F30252132252434262636262839
+      252B3B252E3E243140243443243745263846273A472A3C48
+      2E3E49333F4A3A414B41454D484950504E5457535960595F
+      6B5E6677656C836C738F727A9B7A81A68188B1888FBC8F96
+      C5969CCE9BA2D6A0A6DCA3A8DFA4AAE0A4A9DDA2A8D99FA6
+      D29CA2CA969EC09199B68A94AB838DA07A8696727E8D6A77
+      8464717C5D6B7658667153626D4E5E6A4A5A684656674352
+      663F4E673C4A6738476835436A323F6C2F3B6D2C386E2A34
+      6F273070242D71212A721F27731D25751D25771D25791E26
+      7C202A81232D8728318E2C3696323D9E3A44A8414CB14A55
+      BB525DC35B66CB626DD16874D56F7AD8747FD97882D97B85
+      D97D86D77E87D47E86D07C84CC7980C7767CC37278BF6E74
+      BA686FB8646BB56066B35C62B2585FB2555CB1525AB14F58
+      B04D56AF4C56AD4C56AB4D57AA4D58A84D58A74E59A54F5A
+      A14F5A9D4F5A984F59934D578D4D56874C548149517B474E
+      76454B7143486C4045693D41653B3E63393C613739613637
+      613436623334633232643030642F2F642E2E642D2D642C2D
+      652C2D662C2E682C2F6A2D306D2E31703033743235783439
+      7C363C82393F873C428C3F4691434B97484F9C4C53A15057
+      A7535CAC575FB15962B65B64BA5D65BF5E67C25F68C65E67
+      C85D67C95C65CA5A64CA5963CA5761CA5560C9545FC9535E
+      CA525DCA525DCB535ECC535FCC5460CD5561CE5662CE5763
+      CE5763CE5763CE5763CC5662CB5460C8535FC5515CC24E59
+      BE4A57BA4752B6444FB3414CB03F4AAE3E48AC3E48AB3E48
+      AB404AAB434CAD4750B04B54B45059B8565FBD5D66C3656D
+      C86D75CF757DD57F86DB878FE18F97E7989FEC9FA6F0A5AC
+      F4A9B1F8ADB4FAB0B7FCB1B8FEB2B9FEB1B8FCAEB6FBABB3
+   </palette>
+</flame>
+<flame version="EMBER-WIN-1.0.0.19" time="5" name="julian+spherical+foci_by_b33rheart" size="1000 1000" center="0.170215 0.728427" scale="448.18" rotate="-71.5223" supersample="2" filter="0.7" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" rand_range="1" background="0 0 0" brightness="7" gamma="9.65" highlight_power="-0.3" logscale_k2="0" vibrancy="1.161" estimator_radius="0" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0" cam_zpos="0.08" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" blur_curve="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="julian pre_foci spherical linear post_circleblur post_bubble2 post_blur_zoom bubble" new_linear="1" curves="0 0 1 0.270408 0.176531 1 0.434694 0.434694 1 0.656122 0.811224 1 0 0 1 0.278571 0.196939 1 0.516327 0.512245 1 0.705102 0.786735 1 0 0 1 0.266327 0.209184 1 0.504082 0.459184 1 0.709184 0.709184 1 0 0 1 0.254082 0.20102 1 0.459184 0.54898 1 0.72551 0.807143 1 " overall_curve="0 0 0.270408 0.176531 0.434694 0.434694 0.656122 0.811224 1 1 " red_curve="0 0 0.278571 0.196939 0.516327 0.512245 0.705102 0.786735 1 1 " green_curve="0 0 0.266327 0.209184 0.504082 0.459184 0.709184 0.709184 1 1 " blue_curve="0 0 0.254082 0.20102 0.459184 0.54898 0.72551 0.807143 1 1 ">
+   <xform weight="25.15" color="0.216" var_color="1" color_speed="0.078" symmetry="0.844" name="iterator" animate="0" julian="0.89" julian_dist="1" julian_power="-3" coefs="0.10138 -0.142793 -0.142793 -0.10138 0.0179695 0.158807" post="-1.44285 1.42365 -1.42365 -1.44285 0.107401 1.08689" chaos="0 0 1 0 0 " opacity="0"/>
+   <xform weight="1" color="0.246" var_color="1" color_speed="-0.012" symmetry="1.024" name="base_structure" animate="0" pre_foci="0.794" spherical="0.962" coefs="0.255719 0.167884 0.167884 -0.255719 1.08329 0.538337" post="0.806804 0.283189 -0.283189 0.806804 0.046933 0.120761" chaos="1 0 0 1 1 " opacity="1"/>
+   <xform weight="1" color="0.02" var_color="1" color_speed="-0.008" symmetry="1.016" name="base_structure" animate="0" linear="1" spherical="0.125" coefs="-0.0927102 0.97953 -0.97953 -0.0927102 0.974455 -0.212981" post="1.01086 0.0251104 -0.0251104 1.01086 0.00268495 0.234361" chaos="0 1 0 0 0 " opacity="0"/>
+   <xform weight="5.7" color="0.282" var_color="1" color_speed="0.95" symmetry="-0.9" name="filler1" animate="0" post_circleblur="1" post_bubble2="-0.812" post_bubble2_x="1" post_bubble2_y="1" post_bubble2_z="0" post_blur_zoom="-1.947" post_blur_zoom_length="-0.035" post_blur_zoom_x="0" post_blur_zoom_y="0" coefs="-0.00268195 -0.00315662 0.00315662 -0.00268195 -0.159756 0.636659" post="-0.107006 -0.012985 0.012985 -0.107006 0.669729 0.62312" chaos="0 0 0 0 0 " opacity="0"/>
+   <xform weight="0.25" color="0.470588" var_color="1" color_speed="-0.015" symmetry="1.03" name="filler2" animate="1" bubble="1" coefs="0.911432 0.0689312 -0.0689312 0.911432 -0.0222225 -0.440741" post="0.703278 0 0 0.703278 0.0055821 0.236642" chaos="0 1 0 0 0 " opacity="0"/>
+   <palette count="256" format="RGB">
+      F4E4A4F2E29BDCD36EC3BD5F9AA13B72814E7A9B59929C7B
+      B8C38AE2D88FEDD98BDEBD76E5A552E5A248DEA158D6B87E
+      BDC09A82949C5E7C8632556A266275306F7758909875AAA3
+      B0A4A1A6AF82BE775C936C3C6750394536401A3446174A62
+      345A644C9C988DB7B4B4DAB2D4DEA8E6C77ED7C654EA9840
+      DF8B2BF67D31FF8B45F28B42FE8546EA7628E16520DF6F21
+      C28922C89C32C2A226C99925C68C2BB670299A671A803E25
+      5D5204503E1E283B201C3026202D1F403A185C4111764812
+      6E321D543E2A543C4A647661788C90B2A28AB5B671C6A34B
+      B6A830B9931FA4852A9E59157E3E146B1C00681D0048110D
+      38160444120D2D0B085022006319116E381F9A5028C25737
+      DD7830D26528CA5C1CAD6027A97C2FC99C59D5C86BF1D270
+      EAE35CE3CB52DFDB50DDD65CE2BE61E7B85ABC9E35887654
+      5464382E424E234236554A30909860C1BA8CF4E8AEF8F7D7
+      EEE1A2D2BA90AC88647A7146524B564669516B69687B6D4A
+      BA6332C45210AD4A21A6391B954940AC6158C6967EEFBC96
+      F4E4A4F2E29BDCD36EC3BD5F9AA13B72814E7A9B59929C7B
+      B8C38AE2D88FEDD98BDEBD76E5A552E5A248DEA158D6B87E
+      BDC09A82949C5E7C8632556A266275306F7758909875AAA3
+      B0A4A1A6AF82BE775C936C3C6750394536401A3446174A62
+      345A644C9C988DB7B4B4DAB2D4DEA8E6C77ED7C654EA9840
+      DF8B2BF67D31FF8B45F28B42FE8546EA7628E16520DF6F21
+      C28922C89C32C2A226C99925C68C2BB670299A671A803E25
+      5D5204503E1E283B201C3026202D1F403A185C4111764812
+      6E321D543E2A543C4A647661788C90B2A28AB5B671C6A34B
+      B6A830B9931FA4852A9E59157E3E146B1C00681D0048110D
+      38160444120D2D0B085022006319116E381F9A5028C25737
+      DD7830D26528CA5C1CAD6027A97C2FC99C59D5C86BF1D270
+      EAE35CE3CB52DFDB50DDD65CE2BE61E7B85ABC9E35887654
+      5464382E424E234236554A30909860C1BA8CF4E8AEF8F7D7
+      EEE1A2D2BA90AC88647A7146524B564669516B69687B6D4A
+      BA6332C45210AD4A21A6391B954940AC6158C6967EEFBC96
+   </palette>
+</flame>
+<flame version="EMBER-WIN-1.0.0.19" time="6" name="Darkness_by_b33rheart" size="1280 800" center="-2.67036 -0.833034" scale="407.93" zoom="0.8" rotate="101.331" supersample="2" filter="0.8" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" rand_range="1" background="0.0784314 0.0784314 0.109804" brightness="120" gamma="2.75" highlight_power="-1" logscale_k2="0" vibrancy="1.01" estimator_radius="9" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0" cam_zpos="0" cam_persp="0.11" cam_yaw="2.01586" cam_pitch="-0.959931" cam_dof="0.025" blur_curve="10" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="pre_foci_3D dc_ztransl post_Voron Mobius perspective post_foci_3D" new_linear="1" curves="0 0 1 0.254082 0.172449 1 0.463265 0.491837 1 0.692857 0.721429 1 0 0 1 0.221429 0.270408 1 0.47551 0.422449 1 0.684694 0.745918 1 0 0 1 0.270408 0.25 1 0.508163 0.483673 1 0.745918 0.737755 1 0 0 1 0.270408 0.156122 1 0.512245 0.504082 1 0.762245 0.758163 1 " overall_curve="0 0 0.254082 0.172449 0.463265 0.491837 0.692857 0.721429 1 1 " red_curve="0 0 0.221429 0.270408 0.47551 0.422449 0.684694 0.745918 1 1 " green_curve="0 0 0.270408 0.25 0.508163 0.483673 0.745918 0.737755 1 1 " blue_curve="0 0 0.270408 0.156122 0.512245 0.504082 0.762245 0.758163 1 1 ">
+   <xform weight="0.25" color="0.0145693" var_color="1" color_speed="0.5" symmetry="0" name="" animate="1" pre_foci_3D="1" dc_ztransl="0.75" dc_ztransl_x0="0" dc_ztransl_x1="1" dc_ztransl_factor="1" dc_ztransl_overwrite="1" dc_ztransl_clamp="0" post_Voron="1.25" post_Voron_K="0.99" post_Voron_Step="0.25" post_Voron_Num="1" post_Voron_XSeed="3" post_Voron_YSeed="7" coefs="0.47993 1.82192 -1.82192 0.47993 0 0" opacity="1"/>
+   <finalxform color="0" var_color="1" color_speed="0.5" symmetry="0" name="" animate="0" Mobius="0.35" Mobius_Re_A="1" Mobius_Im_A="0.7" Mobius_Re_B="0" Mobius_Im_B="0" Mobius_Re_C="0" Mobius_Im_C="0" Mobius_Re_D="1" Mobius_Im_D="2.05" perspective="2.55" perspective_angle="0" perspective_dist="0" post_foci_3D="-0.7" coefs="1 0 0 1 -1.5 0" opacity="1"/>
+   <palette count="256" format="RGB">
+      7D432F582F0D4C2C0E40290F332410271F12271D0E271B0A
+      2F16063F2004502B0360320971390F854618995421A1582B
+      A95C35BE8A4FC69860CFA772CCA473CAA174B99B76A89678
+      886D5F7A69556D664B7465407B6435826734896B34937731
+      9A8638BCA554C7BA6BD2CF83D8D197DFD4ABE2DAACE6E0AE
+      E2D5B1D5CAA3C9BF95BAAC7EAB9968A591619F895B94764B
+      957136AB7A23B18225B88A28B69037B59647AD914CA68D51
+      8D765D826451775246744B37724528724420734319694013
+      5B42123B3C123038192535202334202233202933243A382B
+      5B49396351426B5A4B64564A5D5249554C464D4743403F31
+      322C2119170F17180F15190F161D1118221426331E363E2D
+      4D4B34574433623E32613D35613D385C423757433A534E4A
+      585F60677E706982756C877B6D86786E867566816D5C7A61
+      63795F7683698A8E73919578989D7EA5B083AEAE88A6A67D
+      9AA66E7E9667789266728F65698E636190695789664D7657
+      3953373D4029422E1B452F184931165B32136B361B70431D
+      724F236A59326B603C6C68477275597A835D8E9668B1A570
+      D2C767E0C462EEC25DE8C05CE3BF5BDCB559D79E55D09252
+      C68D4FBB9250B79354B39459B49C64B5AE74B1B987BBC3A3
+      CDE3C8CCE5CDCCE7D2D7E9D2D5DDC7C8C1B5B9AD9CAC9B85
+      A77F729F6D429C693D996539976131955D2E845531734F36
+      52423A4C463D474A4045574D49675B537C6A5696846BAF97
+      85B69A88BAA594BDA9A1B19CA3A086A38D6F9E8063967350
+      8860408662428564458C6A4395743D997B3C9E742F9E761D
+      957518855E17754616633B1755311C4D29224726254B2B2A
+      52372D563D2E5E422B5F432A563B2B493321402B1D342423
+      2F2524332926392E31423A3748463948523F4E56445C6043
+      667240717C498B8A54A39C5DB6B06EC5BE7FCAC28BCEC59B
+      D2C6A3CBC39FC9BB9FD0BD9BD5C58DE1C686E9C884ECCC7C
+      EFCC74E7C375DDB777D2B174CAA277CC9986D19F95CFA1A5
+      D1AFB4D7C0C4CCC9CCC1D1CAB5D5C9A0CABF9CB8B19BAFA2
+      86A2917F8D7C8C7E698D735C856354845B4E864E3585402B
+   </palette>
+</flame>
+<flame version="EMBER-WIN-1.0.0.19" time="7" name="Cloud_(needs_high_qualiry_(100k))_by_b33rheart" size="1920 900" center="-0.172248 -0.958742" scale="862.79" rotate="212.503" supersample="2" filter="0.9" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" rand_range="1" background="0 0 0" brightness="94" gamma="2.32" highlight_power="0.13" logscale_k2="0" vibrancy="1.134" estimator_radius="0" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="8.87" cam_zpos="0.345" cam_persp="0.05" cam_yaw="-0.890118" cam_pitch="0.139626" cam_dof="0.06" blur_curve="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="curl3D pre_gaussian_blur pre_sineblur pre_curl3D bipolar" new_linear="1" curves="0 0 1 0.233674 0.15204 1 0.495919 0.344898 1 0.713265 0.696938 1 0 0 1 0.290816 0.217347 1 0.553062 0.459184 1 0.75 0.75 1 0 0 1 0.20102 0.156123 1 0.389796 0.348979 1 0.623469 0.607142 1 0 0 1 0.184694 0.298979 1 0.324489 0.634694 1 0.664285 0.880611 1 " overall_curve="0 0 0.233674 0.15204 0.495919 0.344898 0.713265 0.696938 1 1 " red_curve="0 0 0.290816 0.217347 0.553062 0.459184 0.75 0.75 1 1 " green_curve="0 0 0.20102 0.156123 0.389796 0.348979 0.623469 0.607142 1 1 " blue_curve="0 0 0.184694 0.298979 0.324489 0.634694 0.664285 0.880611 1 1 ">
+   <xform weight="0.6" color="0.764706" var_color="1" color_speed="-0.14" symmetry="1.28" name="" animate="0" curl3D="1" curl3D_cx="-0.545" curl3D_cy="-0.9" curl3D_cz="0.45" coefs="0.611852 -0.893264 0.893264 0.611852 0.4 -0.25" post="-0.805563 -0.505554 0.505554 -0.805563 -0.23108 -0.0999384" chaos="2.2 0.8 0.8 0 1.1 2.1 3.2 " opacity="1"/>
+   <xform weight="0.25" color="0.917647" var_color="1" color_speed="0.45" symmetry="0.1" name="" animate="0" curl3D="1" curl3D_cx="-0.55" curl3D_cy="-0.8" curl3D_cz="0.45" coefs="-1.24444 -0.265552 0.265552 -1.24444 0.529999 0.133335" post="-0.90342 -0.869529 0.869529 -0.90342 -0.505555 0.427778" chaos="1 1.2 1.3 0 0 2.7 0 " opacity="1"/>
+   <xform weight="0.4" color="0.886275" var_color="1" color_speed="0.09" symmetry="0.82" name="" animate="0" pre_gaussian_blur="0.014" curl3D="1" curl3D_cx="-0.55" curl3D_cy="-0.8" curl3D_cz="0.45" coefs="0.805555 -1.67111 1.67111 0.805555 0.722223 -0.105556" post="-0.4 0.200001 -0.200001 -0.4 0.166667 -0.116667" chaos="1.6 1.3 0.9 0 3.1 2.3 2.8 " opacity="1"/>
+   <xform weight="0.5" color="0.85098" var_color="1" color_speed="0.14" symmetry="0.72" name="" animate="0" curl3D="1" curl3D_cx="-0.55" curl3D_cy="-0.8" curl3D_cz="0.45" coefs="-0.783333 -0.487774 0.487774 -0.783333 0.751111 -0.237778" post="-1.22804 0.800847 -0.800847 -1.22804 0.0944452 0.0888888" chaos="1.6 1.3 0.9 0 0 3.4 4 " opacity="1"/>
+   <xform weight="0.55" color="0.945098" var_color="1" color_speed="0.03" symmetry="0.94" name="" animate="0" pre_sineblur="0.005" pre_sineblur_power="1" curl3D="1" curl3D_cx="-0.55" curl3D_cy="-0.8" curl3D_cz="0.45" coefs="-0.20592 -0.926638 0.926638 -0.20592 0.0177779 -0.157778" post="0.259722 -1.23722 1.23722 0.259722 -0.227574 -0.401173" chaos="2.2 0.8 0.8 0 3.7 2.9 4 " opacity="1"/>
+   <xform weight="0.15" color="0.921569" var_color="1" color_speed="0.63" symmetry="-0.26" name="" animate="0" curl3D="1" curl3D_cx="-0.55" curl3D_cy="-0.8" curl3D_cz="0.45" coefs="0.955559 -0.409997 0.409997 0.955559 0.411111 -0.0833331" post="-0.472224 1.21667 -1.21667 -0.472224 0.0944447 -0.0500001" chaos="1 1.2 1.3 5.2 1.3 1 0 " opacity="1"/>
+   <xform weight="0.15" color="0.886275" var_color="1" color_speed="0.16" symmetry="0.68" name="" animate="0" pre_gaussian_blur="0.014" curl3D="1" curl3D_cx="-0.55" curl3D_cy="-0.8" curl3D_cz="0.45" coefs="-0.349999 -1.50444 1.50444 -0.349999 0.433333 -0.561111" post="-0.67778 -0.0666662 0.0666662 -0.67778 0.0146788 -0.470642" chaos="1.6 1.3 0.9 3 0 0 2 " opacity="1"/>
+   <finalxform color="0" var_color="1" color_speed="0.024" symmetry="0.952" name="" animate="0" pre_curl3D="1" pre_curl3D_cx="0.045" pre_curl3D_cy="-0.035" pre_curl3D_cz="0.05" bipolar="1.3" bipolar_shift="0.3" coefs="0.411111 -0.655555 0.655555 0.411111 -0.8 -0.0388891" post="1.03333 0.233333 -0.233333 1.03333 -0.183333 -0.172222" opacity="1"/>
+   <palette count="256" format="RGB">
+      70847350747548696C505E575D5C4B6F604976604D776157
+      786E6977796C7A8267979551B1A856BEB261B5AD71A6A46C
+      9491696E68635653554A4E4B515C465C6C496C7B54697D5E
+      5B75735D6C7C5E63785C5F6957635B6D7E54A4A14FB2A854
+      AEA759999B638D96657282636C79646F7163757662707B5C
+      7D9065909B75999E7E8280727871648A7658B99D54C2A952
+      ACA04D84874D6F765B7676767979797B767570665968614F
+      73755B878A6AA5A47AB2AD7BA29C68988F5DA5995ABAA768
+      B4AA74949775717B715A6560535E5A55605960685F65625F
+      765D558C6A4FA57F4DAF8B4DAE8C4E987F4E75704D67794D
+      798A4C95984FA9A256ABA85698A15F70847350747548696C
+      505E575D5C4B6F604976604D776157786E6977796C7A8267
+      979551B1A856BEB261B5AD71A6A46C9491696E6863565355
+      4A4E4B515C465C6C496C7B54697D5E5B75735D6C7C5E6378
+      5C5F6957635B6D7E54A4A14FB2A854AEA759999B638D9665
+      7282636C79646F7163757662707B5C7D9065909B75999E7E
+      8280727871648A7658B99D54C2A952ACA04D84874D6F765B
+      7676767979797B767570665968614F73755B878A6AA5A47A
+      B2AD7BA29C68988F5DA5995ABAA768B4AA74949775717B71
+      5A6560535E5A55605960685F65625F765D558C6A4FA57F4D
+      AF8B4DAE8C4E987F4E75704D67794D798A4C95984FA9A256
+      ABA85698A15F70847350747548696C505E575D5C4B6F6049
+      76604D776157786E6977796C7A8267979551B1A856BEB261
+      B5AD71A6A46C9491696E68635653554A4E4B515C465C6C49
+      6C7B54697D5E5B75735D6C7C5E63785C5F6957635B6D7E54
+      A4A14FB2A854AEA759999B638D96657282636C79646F7163
+      757662707B5C7D9065909B75999E7E8280727871648A7658
+      B99D54C2A952ACA04D84874D6F765B7676767979797B7675
+      70665968614F73755B878A6AA5A47AB2AD7BA29C68988F5D
+      A5995ABAA768B4AA74949775717B715A6560535E5A556059
+      60685F65625F765D558C6A4FA57F4DAF8B4DAE8C4E987F4E
+      75704D67794D798A4C95984FA9A256ABA85698A15F708473
+   </palette>
+</flame>
+<flame version="EMBER-WIN-1.0.0.19" time="8" name="Monochrome_surface_example_by_b33rheart" size="1280 720" center="1.02855 -0.482974" scale="911.45" rotate="151.074" supersample="2" filter="0.6" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" rand_range="1" background="0 0 0" brightness="3.75" gamma="1.65" highlight_power="-0.6" logscale_k2="0" vibrancy="0.96" estimator_radius="0" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0.8" cam_zpos="0" cam_persp="0.32" cam_yaw="0" cam_pitch="0.244346" cam_dof="0" blur_curve="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="linear pre_log post_hyperbolic post_rblur post_sineblur" new_linear="1" curves="0 0 1 0.286735 0.20102 1 0.479592 0.483673 1 0.680612 0.762245 1 0 0 1 0.254082 0.205102 1 0.55102 0.469388 1 0.692857 0.684694 1 0 0 1 0.237755 0.254082 1 0.481633 0.485714 1 0.717347 0.766327 1 0 0 1 0.233673 0.254082 1 0.502041 0.497959 1 0.652041 0.729592 1 " overall_curve="0 0 0.286735 0.20102 0.479592 0.483673 0.680612 0.762245 1 1 " red_curve="0 0 0.254082 0.205102 0.55102 0.469388 0.692857 0.684694 1 1 " green_curve="0 0 0.237755 0.254082 0.481633 0.485714 0.717347 0.766327 1 1 " blue_curve="0 0 0.233673 0.254082 0.502041 0.497959 0.652041 0.729592 1 1 ">
+   <xform weight="0.333333" color="0.878431" var_color="1" color_speed="0.7" symmetry="-0.4" name="" animate="0" linear="1" coefs="0.138995 -1.03941 1.03941 0.138995 1.61096 1.93355" post="-0.173999 -0.4524 0.4524 -0.173999 -0.371 -0.167623" chaos="0.15 0 1.2 0.3 " opacity="1"/>
+   <xform weight="0.333333" color="0.87451" var_color="1" color_speed="0.4" symmetry="0.2" name="" animate="0" linear="1" coefs="0.732089 -0.227366 0.227366 0.732089 -1.30301 -0.164691" post="0.681945 -0.00374213 0.00374213 0.681945 1.38389 0.334899" chaos="1.4 1.8 2.4 0.5 " opacity="1"/>
+   <xform weight="0.333333" color="0.556863" var_color="1" color_speed="0.58" symmetry="-0.16" name="" animate="0" linear="1" coefs="-1.19497 -0.754294 0.754294 -1.19497 -0.584227 -0.147692" post="-0.68467 0.111236 -0.111236 -0.68467 0.231152 -0.122591" chaos="1.8 3.4 1.1 1.9 " opacity="1"/>
+   <xform weight="0.3" color="1" var_color="1" color_speed="0.09" symmetry="0.82" name="" animate="0" pre_log="3.15" pre_log_base="2.7183" post_hyperbolic="0.9" post_rblur="1.95" post_rblur_strength="1.75" post_rblur_offset="0.95" post_rblur_center_x="0" post_rblur_center_y="0" post_sineblur="3" post_sineblur_power="1" coefs="-0.12882 0.147834 -0.147834 -0.12882 0.537969 1.3021" post="-0.144996 -0.24696 0.24696 -0.144996 0.391395 -0.96279" chaos="0.5 1 4 1.1 " opacity="1"/>
+   <palette count="256" format="RGB">
+      8C70519174549175558F73538C70518D7252876E4E806749
+      775F44765D4570563E765C427E6548846C4E876D4F8B7053
+      8B7153836A4D7E65487B6248745B426C533B6A5139735941
+      7A5F4683674A937757977B5A9B7F5C9C7F5D987D5C8D7354
+      8167497B6147765D4570563E765C427E6548846C4E876D4F
+      8B70538B7153836A4D7E65487B6248745B426C533B6A5139
+      7359417A5F4683674A937757977B5A9B7F5C9C7F5D987D5C
+      8D73548167497B6147765D4570563E765C427E6548846C4E
+      876D4F8B70538B7153836A4D7E65487B6248745B426C533B
+      6A51397359417A5F4683674A937757977B5A9B7F5C9C7F5D
+      987D5C8D73548167497B6147765D4570563E765C427E6548
+      846C4E876D4F8B70538B7153836A4D7E65487B6248745B42
+      6C533B6A51397359417A5F4683674A937757977B5A9B7F5C
+      9C7F5D987D5C8D73548167497B6147765D4570563E765C42
+      7E6548846C4E876D4F8B70538B7153836A4D7E65487B6248
+      745B426C533B6A51397359417A5F4683674A937757977B5A
+      9B7F5C9C7F5D987D5C8D73548167497B6147765D4570563E
+      765C427E6548846C4E876D4F8B70538B7153836A4D7E6548
+      7B6248745B426C533B6A51397359417A5F4683674A937757
+      977B5A9B7F5C9C7F5D987D5C8D73548167497B6147765D45
+      70563E765C427E6548846C4E876D4F8B70538B7153836A4D
+      7E65487B6248745B426C533B6A51397359417A5F4683674A
+      937757977B5A9B7F5C9C7F5D987D5C8D73548167497B6147
+      765D4570563E765C427E6548846C4E876D4F8B70538B7153
+      836A4D7E65487B6248745B426C533B6A51397359417A5F46
+      83674A937757977B5A9B7F5C9C7F5D987D5C8D7354816749
+      7B6147765D4570563E765C427E6548846C4E876D4F8B7053
+      8B7153836A4D7E65487B6248745B426C533B6A5139735941
+      7A5F4683674A937757977B5A9B7F5C9C7F5D987D5C8D7354
+      8167497B6147765D4570563E765C427E6548846C4E876D4F
+      8B70538B7153836A4D7E65487B6248745B426C533B6A513A
+      6E553D6F543D765B4183664982674987694C896C4E8F7355
+   </palette>
+</flame>
+<flame version="EMBER-WIN-1.0.0.19" time="9" name="Starfield_example_by_b33rheart" size="1200 1200" center="-0.435442 -1.22644" scale="717.4" rotate="245.794" supersample="2" filter="1.7" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" rand_range="1" background="0 0 0" brightness="6.01" gamma="2.65" highlight_power="1" logscale_k2="0" vibrancy="0.18" estimator_radius="9" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0.23" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" blur_curve="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="linear Mobius" new_linear="1" curves="0 0 1 0.270408 0.172449 1 0.434693 0.479592 1 0.733673 0.77449 1 0 0 1 0.25 0.25 1 0.5 0.5 1 0.75 0.75 1 0 0 1 0.25 0.25 1 0.5 0.5 1 0.75 0.75 1 0 0 1 0.25 0.25 1 0.5 0.5 1 0.75 0.75 1 " overall_curve="0 0 0.270408 0.172449 0.434693 0.479592 0.733673 0.77449 1 1 " red_curve="0 0 0.25 0.25 0.5 0.5 0.75 0.75 1 1 " green_curve="0 0 0.25 0.25 0.5 0.5 0.75 0.75 1 1 " blue_curve="0 0 0.25 0.25 0.5 0.5 0.75 0.75 1 1 ">
+   <xform weight="0.4" color="0.508064" var_color="1" color_speed="0.5" symmetry="0" name="" animate="1" linear="1" coefs="-1.40545 -2.08463 2.08463 -1.40545 -0.319072 0.359288" post="-0.00385552 1.45294 -1.45294 -0.00385552 0.696435 0.446922" opacity="1"/>
+   <xform weight="0.4" color="0.295321" var_color="1" color_speed="0.5" symmetry="0" name="" animate="1" Mobius="-0.04" Mobius_Re_A="-0.92" Mobius_Im_A="0.262" Mobius_Re_B="-1.94" Mobius_Im_B="-0.12" Mobius_Re_C="0.04" Mobius_Im_C="-0.15" Mobius_Re_D="0.23" Mobius_Im_D="0.124" coefs="-0.0161673 -1.25621 1.4729 0.0146407 0.0239833 -1.31197" post="1.16537 2.20594 -2.79069 1.61605 -0.24727 -0.0508811" opacity="1"/>
+   <xform weight="1.45" color="0.0237016" var_color="1" color_speed="0.5" symmetry="0" name="" animate="1" linear="1.7" coefs="1.06659 -0.158095 0.230266 1.03549 1.01922 0.89188" post="-0.280616 -0.460417 0.480763 -0.340878 -0.504184 -0.184316" opacity="1"/>
+   <xform weight="0.2" color="0.336651" var_color="1" color_speed="0.5" symmetry="0" name="" animate="1" linear="1" coefs="-0.157208 1.17483 -1.29818 -0.32857 -0.43833 -0.011733" post="-0.863326 -1.05158 1.1627 -0.270662 -0.0258748 -0.271238" opacity="1"/>
+   <xform weight="0.25" color="0.117955" var_color="1" color_speed="0.5" symmetry="0" name="" animate="1" linear="1" coefs="-0.00024698 -7.3674e-05 7.3674e-05 -0.00024698 0.373897 -0.238696" post="-0.00282247 0.0141012 -0.0141012 -0.00282247 -0.116953 -0.352218" opacity="1"/>
+   <palette count="256" format="RGB">
+      878B8C868A8C868A8C868A8C86898C86898C878A8C888A8C
+      898B8C8A8C8C8B8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C
+      8C8C8C8C8C8C8C8C8C8C8B8C8B8A8B8A8989898788878686
+      868484848282838081827F7F817E7E807D7D807D7D7F7C7C
+      7F7C7C7F7C7D7F7C7D7F7D7E7F7D7E807E7E807E7F817F7F
+      817F80828081828081838182838283848283838384838384
+      838284838283828183828082818082807F82807F817F7F81
+      7F7E807E7D807E7D7F7E7D7F7E7D7F7E7D807E7E817F7F82
+      7F80837F818580828681848882858A83878B84888C84888C
+      84898C84898C84898C84898C84898C84898C84898C83898C
+      83898C83898C83898C84898C848A8C858A8C868B8C878B8C
+      888C8C888C8C898C8C898C8C8A8C8C8A8C8C8A8C8C8B8C8C
+      8B8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C
+      8C8C8C8B8C8C8B8C8C8B8C8C8A8C8C898C8C888C8C878C8C
+      878B8C878B8C878B8C878B8C878C8C878C8C888C8C888C8C
+      898C8C898C8C898B8C898B8C898A8B88898A878788868687
+      858485848384838183828081817F80817E80817E7F807E80
+      807F81807F8280808380818580828680838781848981858A
+      82868C83878C83888C84898C858A8C868B8C878B8C888C8C
+      898C8C8A8C8C8B8C8C8B8C8C8B8B8C8A8A8B8A898A898888
+      898787888686878585878585868484868484868484868485
+      87858687868688878888888888888988898A88898A88898A
+      888889888789878687858586848485848384838283838182
+      838182838182838182838182838182838182848283848283
+      8583848685858786868887878988888A89898B89898B8A8A
+      8C8B8A8C8B8B8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C8C
+      8C8C8C8C8C8C8B8B8C8A8A8B898A8B88898B87888A868789
+      868687858586848485838385838385838385848486838384
+      838283838182838181838181848181858383868484868484
+      868484868484868484868383868584878585878686878787
+      87878887878987888987888A88898A888A8B888A8C898B8C
+      898B8C888C8C888C8C888B8C878B8C878B8C878B8C878B8C
+   </palette>
+</flame>
+<flame version="EMBER-WIN-1.0.0.19" time="10" name="3D_illusion_by_b33rheart" size="1280 720" center="1.14653 1.10944" scale="584.4" rotate="88.3849" supersample="2" filter="1" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" rand_range="1" background="0.00784314 0 0.0784314" brightness="135" gamma="5.25" highlight_power="-0.5" logscale_k2="0" vibrancy="1" estimator_radius="0" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" blur_curve="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="nBlur linear hexes post_log" new_linear="1" curves="0 0 1 0.29898 0.180612 1 0.459184 0.495919 1 0.643877 0.754082 1 0 0 1 0.254082 0.192857 1 0.467347 0.532653 1 0.745918 0.733673 1 0 0 1 0.245918 0.282653 1 0.585714 0.569388 1 0.745918 0.778571 1 0 0 1 0.29898 0.262245 1 0.557143 0.495918 1 0.786735 0.721429 1 " overall_curve="0 0 0.29898 0.180612 0.459184 0.495919 0.643877 0.754082 1 1 " red_curve="0 0 0.254082 0.192857 0.467347 0.532653 0.745918 0.733673 1 1 " green_curve="0 0 0.245918 0.282653 0.585714 0.569388 0.745918 0.778571 1 1 " blue_curve="0 0 0.29898 0.262245 0.557143 0.495918 0.786735 0.721429 1 1 ">
+   <xform weight="0.6" color="0.729" var_color="1" color_speed="0" symmetry="1" name="" animate="1" nBlur="1" nBlur_numEdges="3" nBlur_numStripes="-15" nBlur_ratioStripes="0.45" nBlur_ratioHole="0.6" nBlur_circumCircle="0" nBlur_adjustToLinear="0" nBlur_equalBlur="0" nBlur_exactCalc="0" nBlur_highlightEdges="0.1" coefs="1.497 0 0 1.497 0 0" post="-0.667332 0 0 -0.222444 -0.00075 -0.888889" chaos="0 0 0 99 0 1.94428 2.90864 1.6827 1 0 1 " opacity="0"/>
+   <xform weight="0.6" color="0.784" var_color="1" color_speed="1" symmetry="-1" name="" animate="1" linear="1" coefs="0.498653 0.863691 -0.863691 0.498653 0 0" post="1.002 0 0 1.002 -0.00075 0" chaos="1 0.17209 0 2.91714 0.604784 2.91066 0 2.66243 0 0 2.12991 " opacity="0"/>
+   <xform weight="0.6" color="0.325" var_color="1" color_speed="1" symmetry="-1" name="" animate="1" linear="1" coefs="-0.499002 0.864296 -0.864296 -0.499002 0 0" post="1.002 0 0 1.002 -0.00075 0" chaos="1.75599 2.12989 0.841254 1.46722 0 1.15739 2.7377 1 1 2.20635 0 " opacity="0.6"/>
+   <xform weight="0.5" color="0.435" var_color="1" color_speed="0.5" symmetry="0" name="" animate="1" linear="1" coefs="-0.498504 -0.863433 0.863433 -0.498504 0 0" post="1.002 0 0 1.002 -0.00275 0" chaos="1.61785 1 0.556705 1 1.4167 2.02663 1 1.0005 0 1 0.80716 " opacity="0.4"/>
+   <xform weight="0.4" color="0.157" var_color="1" color_speed="0.07" symmetry="0.86" name="" animate="1" linear="1" coefs="0.499002 0.288099 -0.288099 0.499002 0 0" post="1.001 0 0 1.001 -0.00275 0" chaos="1 2.76853 0.950456 0 2.20763 0 0.641305 0.778168 0.030101 0 1.66016 " opacity="0.4"/>
+   <xform weight="0.3" color="0.631" var_color="1" color_speed="-1" symmetry="3" name="" animate="0" linear="1" coefs="0.998003 0 0 0.998003 0 -2" post="1.002 0 0 1.002 0.00025 0" chaos="0 0.270562 0 0 2.00567 1 1.45019 1.84467 1.63568 1 0 " opacity="0.4"/>
+   <xform weight="0.7" color="0.714" var_color="1" color_speed="0.7" symmetry="-0.4" name="" animate="0" linear="1" coefs="0.998003 0 0 0.998003 0 2" post="1.002 0 0 1.002 0.00025 0" chaos="0.190177 1.98376 1 1 2.6472 0.881403 0.385453 0 1.75299 2.47862 1.25705 " opacity="1"/>
+   <xform weight="0.7" color="0.624" var_color="1" color_speed="0.88" symmetry="-0.76" name="" animate="0" linear="1" coefs="0.998003 0 0 0.998003 1.73205 1" post="1.002 0 0 1.002 0.00025 0" chaos="1 0 1 0 0 0.510926 0.512649 1.34511 1 1 0 " opacity="1"/>
+   <xform weight="0.7" color="0.549" var_color="1" color_speed="1" symmetry="-1" name="" animate="0" linear="1" coefs="0.998003 0 0 0.998003 -1.73205 1" post="1.002 0 0 1.002 0.00025 0" chaos="2.81399 1.45281 0 0.26726 0 0 1 0 2.06882 2.6467 0.302765 " opacity="1"/>
+   <xform weight="0.7" color="0.988" var_color="1" color_speed="0.88" symmetry="-0.76" name="" animate="1" linear="1" coefs="0.998003 0 0 0.998003 -1.73205 -1" post="1.002 0 0 1.002 0.00025 0" chaos="2.23473 0 1 0.464249 0 0.229805 1 0 2.44519 1 1.94761 " opacity="1"/>
+   <xform weight="0.7" color="0.49" var_color="1" color_speed="1" symmetry="-1" name="" animate="0" linear="1" coefs="0.998003 0 0 0.998003 1.73205 -1" post="1.002 0 0 1.002 0.00025 0" chaos="1.29375 1 0 1 0 0.958644 0 0.692152 0.475094 1 1.39451 " opacity="1"/>
+   <finalxform color="0.612" var_color="1" color_speed="0.837" symmetry="-0.674" name="" animate="0" hexes="1" hexes_cellsize="1.155" hexes_power="1.55" hexes_rotate="0.2505" hexes_scale="1" post_log="1.05" post_log_base="3.1183" coefs="1 0 0 1 0 0" opacity="1"/>
+   <palette count="256" format="RGB">
+      8C4A617D6D72344A62997E775A435343666D583E4D1F5366
+      45546C135F7342455E626569194B616B5158766B67335660
+      8170644F5559375A693146544D586D26566B3E6378274A61
+      375D6219455B455461505D6264737E83606165746F4C5060
+      174C5763587F0B5B6D635D833F55701E5268643E60536073
+      3C4D659A86816D4A5A6C7371633E510E4A5C6E5A72095B6D
+      6D546B646273174C5F8C4A617D6D72344A62CA8E7D65495A
+      6C7371633E510E4A5C6E5A72095B6D6D546B646273174C5F
+      8C4A617D6D72344A62997E775A435343666D583E4D1F5366
+      45546C135F7342455E626569194B616B5158766B67335660
+      8170644F5559375A693146544D586D26566B3E6378274A61
+      375D6219455B455461505D6264737E83606165746F4C5060
+      174C5763587F0B5B6D635D833F55701E5268643E60536073
+      3C4D659A86816D4A5A6C7371633E510E4A5C6E5A72095B6D
+      6D546B646273174C5F8C4A617D6D72344A62CA8E7D65495A
+      6C7371633E510E4A5C6E5A72095B6D6D546B646273174C5F
+      8C4A617D6D72344A62997E775A435343666D583E4D1F5366
+      45546C135F7342455E626569194B616B5158766B67335660
+      8170644F5559375A693146544D586D26566B3E6378274A61
+      375D6219455B455461505D6264737E83606165746F4C5060
+      174C5763587F0B5B6D635D833F55701E5268643E60536073
+      3C4D659A86816D4A5A6C7371633E510E4A5C6E5A72095B6D
+      6D546B646273174C5F8C4A617D6D72344A62CA8E7D65495A
+      6C7371633E510E4A5C6E5A72095B6D6D546B646273174C5F
+      8C4A617D6D72344A62997E775A435343666D583E4D1F5366
+      45546C135F7342455E626569194B616B5158766B67335660
+      8170644F5559375A693146544D586D26566B3E6378274A61
+      375D6219455B455461505D6264737E83606165746F4C5060
+      174C5763587F0B5B6D635D833F55701E5268643E60536073
+      3C4D659A86816D4A5A6C7371633E510E4A5C6E5A72095B6D
+      6D546B646273174C5F8C4A617D6D72344A62CA8E7D65495A
+      6C7371633E510E4A5C6E5A72095B6D6D546B646273174C5F
+   </palette>
+</flame>
+<flame version="EMBER-WIN-1.0.0.19" time="11" name="cross_variation_example_by_b33rheart" size="1440 700" center="0.0382766 0.0138679" scale="2035.75" rotate="196.042" supersample="2" filter="1" filter_shape="mitchell" temporal_filter_type="box" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" rand_range="1" background="0 0 0" brightness="3.31" gamma="2.7" highlight_power="-0.3" logscale_k2="0" vibrancy="1.02" estimator_radius="0" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0" cam_zpos="0" cam_persp="-0.21" cam_yaw="0" cam_pitch="0.436332" cam_dof="0" blur_curve="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="cross sineblur blur_linear blur post_blur_circle pre_eJulia bipolar post_pow_block" new_linear="1" curves="0 0 1 0.184694 0.147959 1 0.618367 0.499999 1 0.884694 0.843877 1 0 0 1 0.205102 0.127551 1 0.412245 0.261224 1 0.459184 0.434693 1 0 0 1 0.221428 0.135715 1 0.528571 0.410203 1 0.758164 0.611224 1 0 0 1 0.130612 0.110204 1 0.270408 0.270408 1 0.532653 0.373469 1 " overall_curve="0 0 0.184694 0.147959 0.618367 0.499999 0.884694 0.843877 1 1 " red_curve="0 0 0.205102 0.127551 0.412245 0.261224 0.459184 0.434693 0.680612 0.758163 1 1 " green_curve="0 0 0.221428 0.135715 0.528571 0.410203 0.758164 0.611224 1 1 " blue_curve="0 0 0.130612 0.110204 0.270408 0.270408 0.532653 0.373469 0.652041 0.705102 1 1 ">
+   <xform weight="0.053" color="0.761" var_color="1" color_speed="-0.03" symmetry="1.06" name="" animate="1" cross="1.6" sineblur="0.0004" sineblur_power="0.75" coefs="-0.359091 0.00163096 -0.00163096 -0.359091 -0.802963 -0.147308" post="1.84988 0.0300783 -0.0300783 1.84988 1.19717 -0.859887" chaos="1 1 1 1 1 0 " opacity="1"/>
+   <xform weight="1" color="0.717" var_color="1" color_speed="0.49" symmetry="0.02" name="" animate="1" cross="1.6" sineblur="0.0004" sineblur_power="0.75" coefs="-0.359091 0.00163096 -0.00163096 -0.359091 -0.802963 -0.147308" post="1.84988 0.0300783 -0.0300783 1.84988 1.19717 -0.859887" chaos="1 1 1 1 1 0 " opacity="1"/>
+   <xform weight="1" color="0.741" var_color="1" color_speed="0.18" symmetry="0.64" name="" animate="1" cross="1.6" sineblur="0.0004" sineblur_power="0.75" coefs="-0.359091 0.00163096 -0.00163096 -0.359091 -0.802963 -0.147308" post="1.84988 0.0300783 -0.0300783 1.84988 1.19717 -0.859887" chaos="1 1 1 1 1 0 " opacity="1"/>
+   <xform weight="1" color="0.729" var_color="1" color_speed="-0.52" symmetry="2.04" name="" animate="1" cross="1.6" sineblur="0.0004" sineblur_power="0.75" coefs="-0.359091 0.00163096 -0.00163096 -0.359091 -0.802963 -0.147308" post="1.84988 0.0300783 -0.0300783 1.84988 1.19717 -0.859887" chaos="1 1 1 1 1 0 " opacity="1"/>
+   <xform weight="0.044" color="0" var_color="1" color_speed="-0.7" symmetry="2.4" name="" animate="1" sineblur="1.2" sineblur_power="1" coefs="-5.50897 5.67447 -5.67447 -5.50897 -67.6689 11.6064" post="-1.70451 -4.14109 4.14109 -1.70451 11.5652 5.53237" chaos="0 0 0 0 0 1 " opacity="0"/>
+   <xform weight="0.102" color="0.251" var_color="1" color_speed="-0.7" symmetry="2.4" name="" animate="1" blur_linear="0.55" blur_linear_length="20" blur_linear_angle="1" blur="8.75" post_blur_circle="30.05" coefs="1 0 0 1 -20.6323 -6.14302" post="-0.0582857 0.017674 -0.017674 -0.0582857 1.11829 2.14233" chaos="1 1 1 1 1 0 " opacity="0"/>
+   <finalxform color="0" var_color="1" color_speed="0.5" symmetry="0" name="" animate="0" pre_eJulia="1" pre_eJulia_power="2" bipolar="2.95" bipolar_shift="0" post_pow_block="1.4" post_pow_block_numerator="4" post_pow_block_denominator="2" post_pow_block_root="1" post_pow_block_correctn="1" post_pow_block_correctd="1" coefs="-14.992 5.54689 -2.30699 -16.9057 -2.40336 -1.79072" opacity="1"/>
+   <palette count="256" format="RGB">
+      24339E4F2B814A436F6A414AA33F19B54E03BF6C00CB8A18
+      E0A055EEB67DEFC696D7E3D4B5EBFA8EE5FC71EAFD72EAFB
+      48E0FA1DBFF638ACC64A958D3267781C40491F2B10262600
+      181700080A1002193304263E041D4000164C031C44032337
+      02192706160F171A073C2D125567306D8561A18F81C2B087
+      CEB981E1C37CF0CE5FF4BE3ACFBB5793D07CA7E198BED8C6
+      94D2CC8BDBAFA8C58D9DA8726392703E64731F4C8F0C48BD
+      2050C71F61BB116DD42083E91F7EBD1C6385405C7863717C
+      8B8576BA945CC8B932A1C95B88BC7B9EC02E93C83480C277
+      AAB15CDBBD4AC7D799B9D1BED7C6A7CDD1B8C0E0C6DFD79D
+      F2BE78F4B359E2B520E5B300ECAF00C6C000C1CB00B9AD00
+      B19100C67C00B6680E956539837E5F6C9A8241A0B419A0D9
+      2BA0C14A9A8955877A7D824C9A970E8EB50F91990F8B6D00
+      58973E7BA160A9863190A344B7CD59E7CF31CEA716AD9208
+      B08100B55500AA3B00B64900DD5500F75300FB6700FA5A14
+      D54516A757028F4C155D421D2A442B143C55054D70005695
+      24339E4F2B814A436F6A414AA33F19B54E03BF6C00CB8A18
+      E0A055EEB67DEFC696D7E3D4B5EBFA8EE5FC71EAFD72EAFB
+      48E0FA1DBFF638ACC64A958D3267781C40491F2B10262600
+      181700080A1002193304263E041D4000164C031C44032337
+      02192706160F171A073C2D125567306D8561A18F81C2B087
+      CEB981E1C37CF0CE5FF4BE3ACFBB5793D07CA7E198BED8C6
+      94D2CC8BDBAFA8C58D9DA8726392703E64731F4C8F0C48BD
+      2050C71F61BB116DD42083E91F7EBD1C6385405C7863717C
+      8B8576BA945CC8B932A1C95B88BC7B9EC02E93C83480C277
+      AAB15CDBBD4AC7D799B9D1BED7C6A7CDD1B8C0E0C6DFD79D
+      F2BE78F4B359E2B520E5B300ECAF00C6C000C1CB00B9AD00
+      B19100C67C00B6680E956539837E5F6C9A8241A0B419A0D9
+      2BA0C14A9A8955877A7D824C9A970E8EB50F91990F8B6D00
+      58973E7BA160A9863190A344B7CD59E7CF31CEA716AD9208
+      B08100B55500AA3B00B64900DD5500F75300FB6700FA5A14
+      D54516A757028F4C155D421D2A442B143C55054D70005695
+   </palette>
+</flame>
+<flame version="EMBER-WIN-1.0.0.19" time="12" name="Cocoons_by_b33rheart" size="1440 700" center="0.935549 -0.220572" scale="1108.63" rotate="72.5161" supersample="2" filter="0.6" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" rand_range="1" background="0 0 0" brightness="2.71" gamma="3.1" highlight_power="-0.6" logscale_k2="0" vibrancy="0.97" estimator_radius="0" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0" blur_curve="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="pre_mirror_x foci post_csch post_sineblur post_square bipolar pre_cylinder post_spherical post_blur_linear post_bipolar pre_bipolar" new_linear="1" curves="0 0 1 0.188776 0.103061 1 0.44898 0.37551 1 0.705102 0.660204 1 0 0 1 0.221429 0.209184 1 0.491837 0.516327 1 0.676531 0.95 1 0 0 1 0.27449 0.184693 1 0.536734 0.397958 1 0.705102 0.639796 1 0 0 1 0.172449 0.233673 1 0.357143 0.483673 1 0.672448 0.856122 1 " overall_curve="0 0 0.188776 0.103061 0.44898 0.37551 0.705102 0.660204 1 1 " red_curve="0 0 0.221429 0.209184 0.491837 0.516327 0.676531 0.95 1 1 " green_curve="0 0 0.27449 0.184693 0.536734 0.397958 0.705102 0.639796 1 1 " blue_curve="0 0 0.172449 0.233673 0.357143 0.483673 0.672448 0.856122 1 1 ">
+   <xform weight="0.95" color="0.870588" var_color="1" color_speed="0.39" symmetry="0.22" name="" animate="0" pre_mirror_x="0.05" foci="1.199" post_csch="0.99" post_sineblur="0.009" post_sineblur_power="2" post_square="0.042" coefs="0.713867 0.412904 -0.412904 0.713867 -1.29135 0.242931" post="0.738071 0.71095 -0.71095 0.738071 1.01941 0.298045" chaos="0.2 0.6 0.9 0 " opacity="0"/>
+   <xform weight="1" color="1" var_color="1" color_speed="-0.001" symmetry="1.002" name="" animate="0" pre_mirror_x="0.05" foci="0.986" bipolar="-0.2" bipolar_shift="0.5" post_csch="1.093" coefs="0.0531637 0.457309 -0.465194 0.0495044 -0.463984 0.478954" post="0.917681 -0.0561272 0.0561272 0.917681 0.381665 0.407859" chaos="1.2 2.9 0.1 0 " opacity="1"/>
+   <xform weight="0.3" color="0.878431" var_color="1" color_speed="0.84" symmetry="-0.68" name="" animate="0" pre_cylinder="1.022" pre_mirror_x="1" foci="1.245" post_csch="1.34" post_spherical="0.014" post_blur_linear="0.95" post_blur_linear_length="1.785" post_blur_linear_angle="0" post_sineblur="0.55" post_sineblur_power="0.0001" coefs="0.110457 -0.0660557 0.0660557 0.110457 -0.854999 0.0690825" post="0.430538 1.71129 -1.71129 0.430538 1.07102 -0.0787078" chaos="0 3 0 0 " opacity="0"/>
+   <xform weight="0.019" color="1" var_color="1" color_speed="-0.001" symmetry="1.002" name="" animate="0" pre_mirror_x="0.05" foci="0.986" bipolar="-0.2" bipolar_shift="0.5" post_csch="1.093" post_bipolar="0.15" post_bipolar_shift="0" coefs="0.319872 -0.178368 0.17808 0.32678 -0.725911 0.699721" post="0.910198 -0.0598691 0.0598691 0.910198 0.39289 0.400375" chaos="1.2 2 0 99 " opacity="0"/>
+   <finalxform color="0" var_color="1" color_speed="0" symmetry="1" name="" animate="0" pre_bipolar="1.45" pre_bipolar_shift="0" foci="0.35" coefs="3.05099 0.724981 -0.724981 3.05099 -0.115262 -0.554018" opacity="1"/>
+   <palette count="256" format="RGB">
+      481765401792291AC82A39E8476EE85B8FE6568ED04E87A0
+      487A6040632F484E2C5637366939317C3B2288371C86392A
+      794638706C3D6C92417CBD5996D376B9D076D7DB50C3D535
+      9FC53F8AB4677FA09A74879B659E986ABDA087DA8FCDDA73
+      E8C745D3A02E9E7B385C6B484078564A8F3C78B03798BF41
+      92A55F675C944E28A25822A58149AFAB7AB4B59F818B8262
+      52456F3B2A883D2099431E9F3E27A2282FA0394892644472
+      692945551A3E3B1D4A171E40171E2D181D1E211B1D38173A
+      481765401792291AC82A39E8476EE85B8FE6568ED04E87A0
+      487A6040632F484E2C5637366939317C3B2288371C86392A
+      794638706C3D6C92417CBD5996D376B9D076D7DB50C3D535
+      9FC53F8AB4677FA09A74879B659E986ABDA087DA8FCDDA73
+      E8C745D3A02E9E7B385C6B484078564A8F3C78B03798BF41
+      92A55F675C944E28A25822A58149AFAB7AB4B59F818B8262
+      52456F3B2A883D2099431E9F3E27A2282FA0394892644472
+      692945551A3E3B1D4A171E40171E2D181D1E211B1D38173A
+      481765401792291AC82A39E8476EE85B8FE6568ED04E87A0
+      487A6040632F484E2C5637366939317C3B2288371C86392A
+      794638706C3D6C92417CBD5996D376B9D076D7DB50C3D535
+      9FC53F8AB4677FA09A74879B659E986ABDA087DA8FCDDA73
+      E8C745D3A02E9E7B385C6B484078564A8F3C78B03798BF41
+      92A55F675C944E28A25822A58149AFAB7AB4B59F818B8262
+      52456F3B2A883D2099431E9F3E27A2282FA0394892644472
+      692945551A3E3B1D4A171E40171E2D181D1E211B1D38173A
+      481765401792291AC82A39E8476EE85B8FE6568ED04E87A0
+      487A6040632F484E2C5637366939317C3B2288371C86392A
+      794638706C3D6C92417CBD5996D376B9D076D7DB50C3D535
+      9FC53F8AB4677FA09A74879B659E986ABDA087DA8FCDDA73
+      E8C745D3A02E9E7B385C6B484078564A8F3C78B03798BF41
+      92A55F675C944E28A25822A58149AFAB7AB4B59F818B8262
+      52456F3B2A883D2099431E9F3E27A2282FA0394892644472
+      692945551A3E3B1D4A171E40171E2D181D1E211B1D38173A
+   </palette>
+</flame>
+<flame version="EMBER-WIN-1.0.0.19" time="13" name="Loopholes_by_b33rheart" size="1280 800" center="1.38952 -0.223691" scale="627.24" rotate="96.6529" supersample="2" filter="1" filter_shape="gaussian" temporal_filter_type="box" temporal_filter_width="1" quality="1000" temporal_samples="100" sub_batch_size="10240" fuse="15" rand_range="1" background="0 0 0" brightness="19.7" gamma="2.55" highlight_power="-1" logscale_k2="0" vibrancy="1.23" estimator_radius="0" estimator_minimum="0" estimator_curve="0.4" gamma_threshold="0" cam_zpos="0" cam_persp="0" cam_yaw="0" cam_pitch="0" cam_dof="0.001" blur_curve="0" palette_mode="linear" interpolation="linear" interpolation_type="log" plugins="spherical eyefish hemisphere post_crackle post_circlecrop pre_sineblur blur_zoom circlecrop bipolar" new_linear="1" curves="0 0 1 0.147959 0.115306 1 0.430612 0.516327 1 0.680612 0.811225 1 0 0 1 0.205102 0.270408 1 0.45102 0.512245 1 0.692857 0.807143 1 0 0 1 0.147959 0.184694 1 0.406122 0.455102 1 0.709184 0.75 1 0 0 1 0.241837 0.229592 1 0.47551 0.5 1 0.619388 0.721429 1 " overall_curve="0 0 0.147959 0.115306 0.430612 0.516327 0.680612 0.811225 1 1 " red_curve="0 0 0.205102 0.270408 0.45102 0.512245 0.692857 0.807143 1 1 " green_curve="0 0 0.147959 0.184694 0.406122 0.455102 0.709184 0.75 1 1 " blue_curve="0 0 0.241837 0.229592 0.47551 0.5 0.619388 0.721429 1 1 ">
+   <xform weight="7" color="0.039" var_color="1" color_speed="0.05" symmetry="0.9" name="" animate="1" spherical="1" eyefish="0.151" coefs="-0.465701 -0.145238 0.145238 -0.465701 0.259086 0.0606369" post="0.513656 0.447472 -0.447472 0.513656 -0.0294646 0.126275" chaos="0 0.8 1.28 0 1.5 0 " opacity="1"/>
+   <xform weight="0.5" color="0.004" var_color="1" color_speed="0.52" symmetry="-0.04" name="" animate="1" hemisphere="0.287" coefs="-1.42095 0.27832 -0.27832 -1.42095 0.0700241 0.439298" post="0.449967 1.69687 -1.69687 0.449967 -0.134225 0.230381" chaos="0 0.3 0 0 0.5 1 " opacity="0"/>
+   <xform weight="7" color="0.276" var_color="1" color_speed="-0.005" symmetry="1.01" name="" animate="0" spherical="1" eyefish="0.058" coefs="0.497845 -0.228507 0.228507 0.497845 -0.53875 0.237897" post="0.186719 -0.0116033 0.0116033 0.186719 0.200452 0.00661273" chaos="0 0 0 1 0 0 " opacity="0"/>
+   <xform weight="0.5" color="0.027" var_color="1" color_speed="-0.03" symmetry="1.06" name="" animate="0" spherical="1" coefs="1.15069 -0.312721 0.312721 1.15069 0.0230643 -0.04574" post="0.954711 0.410039 -0.410039 0.954711 -0.4392 -0.421825" chaos="0 0 0 0 0 0 " opacity="0"/>
+   <xform weight="0.5" color="0.027" var_color="1" color_speed="0.26" symmetry="0.48" name="" animate="0" post_crackle="0.15" post_crackle_cellsize="0.0001" post_crackle_power="1" post_crackle_distort="1" post_crackle_scale="1" post_crackle_z="0" post_circlecrop="1" post_circlecrop_radius="0.11" post_circlecrop_x="0.05" post_circlecrop_y="0.05" post_circlecrop_scatter_area="1.15" post_circlecrop_zero="1" coefs="-0.0171183 0.0445968 -0.0445968 -0.0171183 -1.90483 1.09691" post="1.00001 -0.827775 0.827775 1.00001 0.181073 0.0247501" chaos="0 0 0 2 1 0 " opacity="0"/>
+   <xform weight="0.5" color="0.008" var_color="1" color_speed="0" symmetry="1" name="" animate="1" pre_sineblur="-0.0007" pre_sineblur_power="1" blur_zoom="1" blur_zoom_length="0" blur_zoom_x="0" blur_zoom_y="0" circlecrop="1" circlecrop_radius="0.1175" circlecrop_x="0" circlecrop_y="0" circlecrop_scatter_area="0" circlecrop_zero="1" coefs="0.975646 -0.0445315 0.0445315 0.975646 0.13503 0.030856" post="0.853872 -0.0269677 0.0269677 0.853872 -0.0224252 0.131587" chaos="0 2 1 0 0 0 " opacity="1"/>
+   <finalxform color="0.984" var_color="1" color_speed="0.049" symmetry="0.902" name="" animate="0" bipolar="3.2" bipolar_shift="0" coefs="0.541303 -1.11516 1.11516 0.541303 1.05439 0.303895" opacity="1"/>
+   <palette count="256" format="RGB">
+      575A005D5D2E38823829844A4B2F21852B10D9772ADB5634
+      CA6761A93920723E105A51074B883456A14D4565605C4A53
+      6C49098A4B0B7F7C3F72A057DDB2577E479A6A202564120A
+      70000F1C00001700092D000973002372001D42532A285356
+      0A4C33002B000804010A001D00000A370E0C0B2331001C24
+      000A1E031F210033420E426D26746E2152523A3E2D593413
+      5C00226C002D700034540028600C8C650067810023720000
+      680C00380000170500001900009A7F1A8CA100AE5F007B13
+      404014AB499EC87AAFCE0084D500369400008D00009B1C00
+      494200007800008D2425A37852CFEB76A7EBF573E3FF9E6D
+      CAD36DD09577A65F4273362C0E22002935000D49000C4731
+      0E680F004C47006D2500B62A18BD3834AE27468080B8747A
+      E3370F881F0C4B1E3702383D4B064C9C462DE2440D9C0000
+      5817004504121800370800140B1100001701000100000001
+      00000E00001F00112C37182D4B0703160000000A0500374A
+      00725C0E7D311C5D4A221E3538000039040056180098261A
+      575A005D5D2E38823829844A4B2F21852B10D9772ADB5634
+      CA6761A93920723E105A51074B883456A14D4565605C4A53
+      6C49098A4B0B7F7C3F72A057DDB2577E479A6A202564120A
+      70000F1C00001700092D000973002372001D42532A285356
+      0A4C33002B000804010A001D00000A370E0C0B2331001C24
+      000A1E031F210033420E426D26746E2152523A3E2D593413
+      5C00226C002D700034540028600C8C650067810023720000
+      680C00380000170500001900009A7F1A8CA100AE5F007B13
+      404014AB499EC87AAFCE0084D500369400008D00009B1C00
+      494200007800008D2425A37852CFEB76A7EBF573E3FF9E6D
+      CAD36DD09577A65F4273362C0E22002935000D49000C4731
+      0E680F004C47006D2500B62A18BD3834AE27468080B8747A
+      E3370F881F0C4B1E3702383D4B064C9C462DE2440D9C0000
+      5817004504121800370800140B1100001701000100000001
+      00000E00001F00112C37182D4B0703160000000A0500374A
+      00725C0E7D311C5D4A221E3538000039040056180098261A
+   </palette>
+</flame>
+</flames>

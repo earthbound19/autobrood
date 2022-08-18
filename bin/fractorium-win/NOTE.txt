@@ -1,1 +1,0 @@
-opencl must be installed for the programs in this directory to work.

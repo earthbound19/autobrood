@@ -1,3 +1,61 @@
+22.21.4.2 4/19/2021
+
+--User changes
+ -Allow users to set the Exp value when using the Exp temporal filter type.
+ -Set the default temporal filter type to be Box, which does not alter the palette values at all during animation. This is done to avoid confusion when using Gaussian or Exp which can produce darkened images.
+
+--Bug fixes
+ -Sending a sequence to the final render dialog when the keyframes had non zero rotate and center Y values would produce off center animations when rendered.
+ -Temporal filters were being unnecessarily recreated many times when rendering or generating sequences.
+ -Exp filter was always treated like a Box filter.
+
+--Code changes
+ -Add a new member function SaveCurrentAsXml(QString filename = "") to the controllers which is only used for testing.
+ -Modernize some C++ code.
+
+21.21.4.1 4/7/2021
+
+--User changes
+ -Sort palette filename combo box.
+ -GPU rendering improvement on Mac.
+ -Fix misaligned menu icons in uranium.css stylesheet, requires reload.
+ -Rotate field now allows continuous adjustment and will loop around when reaching 180/-180.
+ -Tooltips for the show/hide affine toolbar buttons show the keyboard shortcut.
+ -Add vignette variation.
+ -Pitch and yaw can now be changed by dragging with the right mouse button while holding Shift and Alt.
+ -Allow for an opacity greater than 1, which can have the effect of highlighting a specific xform.
+ -Make a space bar press be the equivalent of a double click when inside of a spin box. This makes it easy to toggle without using the mouse.
+ -Make Shift+F keys select the flames in the file, and Shift +/- cycle through them.
+ -Allow for specifying linear or smooth interpolation when generating a sequence in the Library tab (was formerly hardcoded to smooth). This has the effect of exposing the --unsmoother option used in EmberGenome in the GUI.
+ -Clarify tool tips of the sequence interpolation fields in the animation group on the Flame tab.
+ -Change caption of the Bounds tab to be Bounds & Log.
+ -Change versioning scheme to be [TOTAL RELEASE COUNT].[2 DIGIT YEAR OF RELEASE].[MONTH OF RELEASE].[TOTAL RELEASE COUNT FOR THE YEAR].
+
+--Bug fixes
+ -Add support for Chaotica files which specify xform weight as "Base weight" instead of "base_weight".
+ -Fix bug where Fractorium would crash when a new file was dragged in while previews were still rendering.
+  --This was done by changing the TreeItemChanged() events in the library tab use a direct connection rather than a queued connection.
+  --This obviated the need for QCoreApplication::processEvents() calls in the library tree code.
+ -Fix bug where renaming a flame within a file, then tabbing away did not commit the name change.
+ -Strip illegal characters from filenames before saving.
+ -Fix improper usage of rand() in cpow2, cpow3, hypertile1, hypertile3D1, hypertile3D2, juliac, juliaq.
+ -Fix program crashing during density filtering on some Nvidia cards.
+ -Parsing phoenix_julia when coming from Apophysis was wrong.
+ -Pixel_flow sincos x,y was inverted.
+ -bcircle was not properly setting output values to zero when the bcircle_borderwidth was zero.
+ -depth_blur2 was wrong.
+ -ETA in the final render dialog was not correct when doing incremental renders.
+ -Sequence generation was generating the wrong color curves when a non-default curve had less than 5 nodes in it.
+ 
+--Code changes
+ -Migrate to Qt 5.12.8.
+ -Clean up some warnings about const variables.
+ -Upgrade installer to latest update of Visual Studio 2019.
+ -Optimize juliac, npolar.
+ -Add a new function Crand() which behaves like the legacy C rand() which returns an integer between 0 and 32766, inclusive.
+ -Use RandBit() in some places.
+ -Restructure OpenCL code for density filtering such that it does not hang after being compiled on some Nvidia cards, such as the gtx 1660. Remove barriers from conditionals where possible.
+
 1.0.0.20 4/11/2020
 --Bug fixes
  -ETA time was wrong with incremental final renders after waiting for a period of time.
