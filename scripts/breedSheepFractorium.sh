@@ -22,19 +22,19 @@ if [ ! -d children ]; then mkdir children; fi
 
 # This convoluted crap trims off leading ./ from file names, and deletes windows newlines in the stream which can muck with the array even being properly created at all:
 # SOLVES problem that was too difficult of finding .flame AND/OR .flam3 files:
-flamesList=(`gfind . -maxdepth 1 -type f -name "*.flame*" -o -name "*.flam3*" | tr -d '\15\32'`)
-# TO DO: printf here (copy it from where I do this elsewhere) that removes leading ./ from that; then toast the next two lines that use gsed.
+flamesList=( $(find . -maxdepth 1 -type f -name "*.flame*" -o -name "*.flam3*" | tr -d '\15\32') )
+# TO DO: printf here (copy it from where I do this elsewhere) that removes leading ./ from that; then toast the next two lines that use sed.
 
 renderCount=0
 for cross0 in ${flamesList[@]}
 do
   # trim any ./ off the start:
-  cross0=`echo $cross0 | gsed 's/^\.\/\(.*\)/\1/g' | tr -d '\15\32'`
+  cross0=$(echo $cross0 | sed 's/^\.\/\(.*\)/\1/g' | tr -d '\15\32')
   outer_imageFileNameNoExt=${cross0%.*}
   for cross1 in ${flamesList[@]}
   do
   # trim any ./ off the start:
-  cross1=`echo $cross1 | gsed 's/^\.\/\(.*\)/\1/g' | tr -d '\15\32'`
+  cross1=$(echo $cross1 | sed 's/^\.\/\(.*\)/\1/g' | tr -d '\15\32')
   inner_imageFileNameNoExt=${cross1%.*}
     for method in ${methods[@]}
     do
@@ -49,7 +49,7 @@ do
 			then
 			   echo "This file was created when an interbreed render (of the genomes in this file name) was started. Processes that check for this file will therefore avoid duplicate work. If no renders are underway, this file was probably leftover from an interrupted render and you may delete it and start renders again so that the desired render target will be created." > $renderingNoticeStubFile
 			renderCount=$((renderCount + 1))
-			moduloCheck=`echo $(($renderCount % $shortRestsInterval))`
+			moduloCheck=$(echo $(($renderCount % $shortRestsInterval)))
 				echo moduloCheck is $moduloCheck
 			  if [ $moduloCheck == "0" ]; then echo cooling down . . .; sleep $shortRestSeconds; fi
 				echo will render . . .

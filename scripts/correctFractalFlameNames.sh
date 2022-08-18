@@ -3,7 +3,7 @@
 flock_ID=242
 digits=4
 
-gfind . -iname \*.flam3 -o -iname \*.flame -o -iname \*.xml > all_flames.txt
+find . -iname \*.flam3 -o -iname \*.flame -o -iname \*.xml > all_flames.txt
 mapfile -t all_flames < all_flames.txt
 
 for element in "${all_flames[@]}"
@@ -11,7 +11,7 @@ do
 	# echo element is\:
 	# echo $element
 	# echo with id\:
-	sheep_ID=`gsed -n 's/.*flame name="\([^\"]\{1,\}\).*/\1/p' $element`
+	sheep_ID=$(sed -n 's/.*flame name="\([^\"]\{1,\}\).*/\1/p' $element)
 	# if the target sheep rename does not exist (is not the same as the source), rename it.
 	# echo val of sheep_ID is
 	# echo $sheep_ID

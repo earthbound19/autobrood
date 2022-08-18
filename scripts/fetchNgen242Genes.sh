@@ -1,5 +1,11 @@
+# TO DO
+# - use my genome archive repository (of so many collected genomes), https://github.com/earthbound19/electric_sheep_genomes, in a standardized path?
+# - Check the path at the start of the script and throw an error if absent?
+# - Make a genome delivery API (web service) from that archive?
+# - more efficient random genome selection in-memory (from an array, not disk)?
+
 # GLOBALS:
-sheepDir=`cygpath -u "C:\_resources\gen242"`
+sheepDir=$(cygpath -u "C:\_resources\electric_sheep_gen242")
 sheepToFetch=18
 
 ls $sheepDir > sheep.txt
@@ -13,7 +19,7 @@ mapfile -t randomSheepIndexes < gen242randomGenomes.txt
 rm gen242randomGenomes.txt
 
 # create directory named after current date, time and microsecond, to put our randomly collected sheep genomes in:
-timeStamp=`date +"%Y_%d_%m__%H_%M_%S__%N"`
+timeStamp=$(date +"%Y_%d_%m__%H_%M_%S__%N")
 broodDir=brood_$timeStamp
 mkdir $broodDir
 cd $broodDir

@@ -13,7 +13,7 @@
 # exiftool -s -flam3_genome sheep_247_32990_478.png > hyarf.txt
 
 # Create array of all png and jpg file names in the current directory, re: https://superuser.com/a/126336/130772
-array=(`gfind . -maxdepth 1 \( -iname \*.png -o -iname \*.jpg \) -printf '%f\n' | sort`)
+array=( $(find . -maxdepth 1 \( -iname \*.png -o -iname \*.jpg \) -printf '%f\n' | sort) )
 
 for element in ${array[@]}			# iterate over all items in array
 do

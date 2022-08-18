@@ -50,8 +50,8 @@ mediumRestPeriod=180
 	if [ ! "$1" ]
 		then
 			# extract path to _test_EheVtcfys.flame, then use that path to copy it here:
-			locStr=`whereis _test_EheVtcfys.flame`
-			locStr=`echo $locStr | gsed 's/_test_EheVtcfys: \(.*\)$/\1/g'`
+			locStr=$(whereis _test_EheVtcfys.flame)
+			locStr=$(echo $locStr | sed 's/_test_EheVtcfys: \(.*\)$/\1/g')
 			# Why cat instead of cp? Stupid permissions things that sometimes arise from Windows. Why cat avoids the permissions garbage is a mystery:
 			cat $locStr > copied_test_2DhyfeMzUAzE.flame
 			echo No parameter passed to script\; will test \-\-opencl render flag with emberrender. To avoid this test\, invoke the script with any parameter\, e.g.\:
@@ -79,7 +79,7 @@ mediumRestPeriod=180
 if [ ! "$ss" ]; then echo no value for ss\; setting default value of $def_ss; ss=$def_ss; else echo using environment value of ss=$ss; fi
 if [ ! "$qs" ]; then echo no value for qs\; setting default value of $def_qs; qs=$def_qs; else echo using environment value of qs=$qs; fi
 
-flamesList=(`gfind . -maxdepth 1 -type f -name "*.flame*" -o -name "*.flam3*" | tr -d '\15\32'`)
+flamesList=( $(find . -maxdepth 1 -type f -name "*.flame*" -o -name "*.flam3*" | tr -d '\15\32') )
 
 # To allow rest periods every nth frame:
 imgs_iter=1
@@ -87,14 +87,14 @@ imgs_iter=1
 for element in ${flamesList[@]}
 do
 	# strip everything up to any leading forward slashes \(from paths\) from the $element\:
-	elementNoPath=`echo $element | gsed 's/\(.*\/\)\(.*\)/\2/g'`
+	elementNoPath=$(echo $element | sed 's/\(.*\/\)\(.*\)/\2/g')
 			# echo element is\: $element
 			# formerly checked for ./$element.png; using wildcards instead now because I don't want it to render if an existing rendered file of the same target name exists in *any* subdirectory. This allows e.g. sorting favorite renders into subfolders without re-rendering them if I run a render batch again (e.g. against new fractal flame genome files).
 			# echo val of elementNoPath is\: $elementNoPath
 
 	renderTarget=${elementNoPath%.*}.png
 	renderNotifyStub="$renderTarget"_rendering.txt
-	foundCount=`gfind . -name $renderTarget | wc -l`
+	foundCount=$(find . -name $renderTarget | wc -l)
 		if [ $foundCount == "0" ]
 		then
 			echo target file $renderTarget does not exist in this or any subfolder. will render.

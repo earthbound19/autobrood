@@ -13,7 +13,7 @@ vidExt=mp4
 # if [ ! -d vidListOdds ]; then mkdir vidListOdds; fi
 
 ls *.$vidExt > all$vidExt.txt
-gsed -i "s/^\(.*\)/file '\1'/g" all$vidExt.txt
+sed -i "s/^\(.*\)/file '\1'/g" all$vidExt.txt
 printf "" > vidListOdds.txt
 
 mapfile -t allVidFiles < all$vidExt.txt

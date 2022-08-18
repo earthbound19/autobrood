@@ -7,7 +7,7 @@
 # Fixed? The following if block didn't (doesn't?) work as expected:
 if ! [ -d render_output ]; then mkdir render_output; fi
 
-gfind . -maxdepth 1 -iname \*.flame -o -iname \*.flam3 > fractal_flames_list.txt
+find . -maxdepth 1 -iname \*.flame -o -iname \*.flam3 > fractal_flames_list.txt
     
 # Optional specifier of device to use:
 # deviceParam="--device 1"
@@ -18,7 +18,7 @@ do
   element=${element%.*}
 
   # Only render the frame if the target render file does not exist; NOTE that the find command searches subfolders too (to only search the current folder, pass `-maxdepth 1`) :
-	foundCount=`gfind . -name $element.png | wc -l`
+	foundCount=`find . -name $element.png | wc -l`
 	if [ $foundCount == "0" ]		
 	# NOTE for the following command: for 800 x 592 or whatever flame, ss=2.4 offers high def (1080p) image area. ss=1.6 offers HD 720p area.
 	then
