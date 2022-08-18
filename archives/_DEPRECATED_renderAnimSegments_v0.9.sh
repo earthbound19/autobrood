@@ -49,7 +49,7 @@ do
 			else
 				continue
 			fi
-	targ_end_numPadded=`printf "%07d\n" $((imgs_iter))`
+	targ_end_numPadded=$(printf "%07d\n" $((imgs_iter)))
 	if (( $imgs_iter % $n_frames_per_seq == 0 )); then
 		if [ -e ./vid/dist/_anim_toEndFR_$targ_end_numPadded.mp4 ]
 		then

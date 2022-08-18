@@ -15,7 +15,7 @@
 
 # GLOBAL VAR:
 n_frames_per_seq=$(< ../../ANIM_INFO.txt)
-n_frames_per_seq=`echo $n_frames_per_seq | gsed 's/.*\: \([0-9]\{1,\}\).*/\1/g'`
+n_frames_per_seq=$(echo $n_frames_per_seq | sed 's/.*\: \([0-9]\{1,\}\).*/\1/g')
 		echo Frames per sequence taken from ../../ANIM_INFO.txt is\:
 		echo $n_frames_per_seq
 
@@ -51,7 +51,7 @@ do
 			else
 				continue
 			fi
-	targ_end_numPadded=`printf "%07d\n" $((imgs_iter))`
+	targ_end_numPadded=$(printf "%07d\n" $((imgs_iter)))
 	if (( $imgs_iter % $n_frames_per_seq == 0 )); then
 				# ENCODING COMMANDS:
 		# IF TARGET avi file does not exist, render. Otherwise skip (do not clobber).
