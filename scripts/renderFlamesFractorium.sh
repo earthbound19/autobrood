@@ -79,22 +79,21 @@ mediumRestPeriod=180
 if [ ! "$ss" ]; then echo no value for ss\; setting default value of $def_ss; ss=$def_ss; else echo using environment value of ss=$ss; fi
 if [ ! "$qs" ]; then echo no value for qs\; setting default value of $def_qs; qs=$def_qs; else echo using environment value of qs=$qs; fi
 
-flamesList=( $(find . -maxdepth 1 -type f -name "*.flame*" -o -name "*.flam3*" | tr -d '\15\32') )
+flamesList=( $(find . -maxdepth 1 -type f \( -iname \*.flame -o -iname \*.flam3 \) -printf "%P\n" | tr -d '\15\32') )
 
 # To allow rest periods every nth frame:
 imgs_iter=1
 # Only render the frame if the target render file does not exist:
 for element in ${flamesList[@]}
 do
-	# strip everything up to any leading forward slashes \(from paths\) from the $element\:
-	elementNoPath=$(echo $element | sed 's/\(.*\/\)\(.*\)/\2/g')
+	# get base filename (no extension):
+	fileNameNoExt=${element%.*}
 			# echo element is\: $element
 			# formerly checked for ./$element.png; using wildcards instead now because I don't want it to render if an existing rendered file of the same target name exists in *any* subdirectory. This allows e.g. sorting favorite renders into subfolders without re-rendering them if I run a render batch again (e.g. against new fractal flame genome files).
-			# echo val of elementNoPath is\: $elementNoPath
-
-	renderTarget=${elementNoPath%.*}.png
+			# echo val of fileNameNoExt is\: $fileNameNoExt
+	renderTarget=$fileNameNoExt.png
 	renderNotifyStub="$renderTarget"_rendering.txt
-	foundCount=$(find . -name $renderTarget | wc -l)
+	foundCount=$(find . -name "*$renderTarget" | wc -l)
 		if [ $foundCount == "0" ]
 		then
 			echo target file $renderTarget does not exist in this or any subfolder. will render.
@@ -103,7 +102,7 @@ do
 					printf "rendering an image for this file name . . ." > ./$renderNotifyStub
 					# Optional flag in the following command; WARNING: it will reduce render speed by 10% :
 					# --progress
-			emberrender --in=$element --out=$element.png --format=png --ss=$ss --qs=$qs $deviceParam $openclFlag
+			emberrender --in=$element --out=$renderTarget --format=png --ss=$ss --qs=$qs $deviceParam $openclFlag
 			rm $renderNotifyStub
 					imgs_iter=$((imgs_iter + 1))
 			if (( $imgs_iter % 125 == 0 )); then echo I have rendered 76 images\, and I am resting for $mediumRestPeriod seconds to cool down.; sleep $mediumRestPeriod; fi
